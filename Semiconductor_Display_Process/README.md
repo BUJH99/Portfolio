@@ -1,42 +1,42 @@
-# 🧪 반도체 디스플레이 공정 설계 (Semiconductor Process Design)
+# ⚗️ 반도체 소자 및 공정 설계 (Semiconductor Device & Process Design)
 
 ## 📅 프로젝트 정보
-- **진행 기간**: 2024.11.26 ~ 2024.12.10
-- **관련 과목**: 반도체디스플레이공정
-- **주요 내용**: `CMOS LDO`, `8대 공정`, `Process Integration`
+- **진행 기간**: 2024 (3학년)
+- **주제**: LDO(Low-Dropout) 레귤레이터 회로 구현을 위한 반도체 공정(Process Flow) 및 레이아웃 설계
+- **기술 스택**: `Semiconductor Process (8대 공정)`, `Layout Design`, `LDO Regulator`, `MIMIM Capacitor`
 
 ---
 
 ## 📝 프로젝트 개요
-반도체 8대 공정 이론을 바탕으로, **CMOS LDO(Low Drop-Out) Regulator** 회로를 구현하기 위한 전체 **공정 흐름(Process Flow)** 을 설계한 프로젝트입니다.
+아날로그 회로인 **LDO(Low-Dropout) Regulator**를 실제 반도체 칩으로 제조하기 위한 **전체 공정 시퀀스(Process Flow)** 를 설계한 프로젝트입니다. 회로 스펙을 만족하면서 칩 면적을 최소화하기 위해 소자 배치(Layout)와 공정 파라미터를 최적화했습니다.
 
-## 🔑 주요 수행 내용
-### 1. Full Process Flow 설계
-- **Flow Design**: 웨이퍼 준비부터 산화, 포토, 식각, 이온 주입, 배선까지 전공정 단계 설계.
-- **CMOS Integration**: N-Well/P-Well 형성을 통해 PMOS와 NMOS를 단일 기판에 집적하는 공정 시퀀스 구성.
+## 🔑 주요 설계 내용
+### 1. 소자 및 레이아웃 설계 (Device & Layout)
+- **LDO 회로 구현**: 1.8V 입력을 받아 안정적인 출력을 내는 LDO 레귤레이터 설계.
+- **MIMIM 커패시터**: 일반적인 MIM(Metal-Insulator-Metal) 구조보다 단위 면적당 정전용량이 높은 **MIMIM(5층 구조)** 커패시터를 설계하여 칩 면적을 획기적으로 줄임 (Cc: 0.5pF, CL: 1pF 달성).
+- **HCI 방지 설계**: **LDD(Lightly Doped Drain)** 구조를 적용하여 Hot Carrier Injection에 의한 소자 열화를 방지하고 신뢰성 확보.
 
-### 2. 소자 특성 제어
-- **Threshold Voltage**: Gate Oxide 두께 조절을 통한 문턱 전압 제어 설계.
-- **Annealing**: 열처리 공정에 따른 Dopant 확산 프로파일 및 소자 특성 변화 분석.
+### 2. 공정 통합 설계 (Process Integration)
+- **Active Area 정의**: **STI(Shallow Trench Isolation)** 공정을 도입하여 소자 간 누설 전류를 차단하고 집적도 향상.
+- **Gate 형성**: Poly-Si 증착 및 패터닝을 통해 Gate 전극 형성.
+- **Photo & Etch**: PR(Positive) 도포, 노광, 현상 및 **Dry/Wet Etching**을 조합하여 미세 패턴 형성 (Design Rule: 3um).
+- **Ion Implantation**: N-Well, Source/Drain 형성을 위한 이온 주입 및 **RTA(Rapid Thermal Annealing)** 열처리 공정 설계.
+- **Metalization**: 다층 배선(Multilevel Interconnect) 및 MIMIM 구조 형성을 위한 금속 증착 및 식각 공정.
 
 ---
 
-## 🚀 문제 해결 (Troubleshooting)
-### 1. 공정 통합(Integration) 이슈
-- **문제**: 공정 순서 배치에 따라 이전에 형성된 구조가 파괴되거나 원치 않는 기생 성분 발생.
-- **해결**: Thermal Budget(열 예산)을 고려하여 고온 공정을 앞단에 배치하는 등 최적의 공정 순서 도출.
-
-### 2. 마스크(Mask) 설계
-- **문제**: 2D 평면 설계를 3D 적층 구조로 구현하기 위한 마스크 레이어 정의의 어려움.
-- **해결**: 각 공정 단계별 단면도(Cross-sectional view)를 그려가며 역설계 방식으로 필요한 마스크 레이어 확정.
+## 🔬 공정 및 분석 결과
+- **Chip Size**: 118um x 100um (초소형 레이아웃 달성)
+- **Design Rule Check**: 3um 공정 마진과 1um 정렬 오차(Alignment Tolerance)를 고려하여 양산 가능한 수준의 설계 검증.
+- **Capacitor Efficiency**: MIMIM 병렬 적층 구조를 통해 단일 레이어 대비 면적 효율 극대화.
 
 ---
 
 ## 📚 배운점
-- **Process Integration**: 단위 공정들이 모여 하나의 소자를 형성하는 통합적 공정 설계 중요성 이해.
-- **3D 구조 이해**: 2D 레이아웃과 실제 3D 소자 구조 간의 관계 파악.
+- **Unit Process to Integration**: 개별 단위 공정(증착, 식각, 노광 등)들이 어떻게 유기적으로 연결되어 하나의 칩을 완성하는지 전체 흐름(Flow)을 체득.
+- **Design-Process Interaction**: 회로 성능(Capacitance, R)을 만족시키기 위해 공정 구조(MIMIM, LDD)를 어떻게 변경해야 하는지, 설계와 공정 간의 상호 의존성 이해.
 
 ---
 
 ## 📂 포트폴리오 목차
-- **[📂 Presentation](./Presentation)** : 공정 설계 발표 자료
+- **[📂 Report](./Presentation)** : 설계 상세 내용이 담긴 최종 보고서
