@@ -34,12 +34,12 @@ MCU 없이 **Discrete Logic Gate**만을 조합하여 1층부터 9층까지 동�
 
 ---
 
-## 📚 배운점
-- **Digital Logic Flow**: 인코딩 ➡ 저장 ➡ 비교 ➡ 카운팅으로 이어지는 순차 논리 회로의 전체적인 데이터 흐름 체득.
-- **PCB Design Rule**: 부품의 Footprint 생성부터 배선(Routing), 거버 파일 생성까지의 하드웨어 제작 공정 숙지.
+## 📚 배운점 및 Tool 활용 역량
+- **OrCAD Capture 숙련도**: 기본 라이브러리에 없는 소자를 위한 **Part Library 생성**, **Footprint 매칭**, **Netlist 오류 디버깅** 등 툴의 고급 기능을 활용하여 회로 설계의 완성도 향상.
+- **PCB Editor 전문성**: 부품 간 간섭을 최소화하는 **Placement(배치)** 전략 수립 및 신호 무결성을 고려한 **Manual Routing(수동 배선)**, **Copper Pouring** 기법 체득.
+- **Digital Logic Flow**: 인코딩 ➡ 저장 ➡ 비교 ➡ 카운팅으로 이어지는 순차 논리 회로의 전체적인 데이터 흐름을 하드웨어 레벨에서 이해.
 
 ---
 
 ## 📂 포트폴리오 목차
-- **[📂 Source Code](./Source_Code)** : OrCAD 설계 파일
-- **[📂 Report](./Report)** : 실습 결과 보고서
+- **[📂 Report](./Report)** : 실습 결과 보고서 및 회로도(Schematic)
