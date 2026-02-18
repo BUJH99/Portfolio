@@ -3,42 +3,43 @@
 ## 📅 프로젝트 정보
 - **진행 기간**: 2025.07.14 ~ 2025.07.26
 - **주관 및 수강**: 나인ES캠퍼스
-- **기술 스택**: `OrCAD Capture`, `PCB Editor`, `Soldering`
+- **기술 스택**: `OrCAD Capture`, `PCB Editor`, `Discrete Logic (CD4000/74HC Series)`
 
 ---
 
 ## 📝 프로젝트 개요
-**OrCAD** 툴을 활용하여 엘리베이터 제어 회로를 설계하고, 실제 **PCB Artwork** 및 부품 실장(Soldering) 과정을 통해 하드웨어를 제작한 실무형 프로젝트입니다.
+MCU 없이 **Discrete Logic Gate**만을 조합하여 1층부터 9층까지 동작하는 엘리베이터 제어 회로를 설계하고, **OrCAD**를 이용해 실제 PCB로 제작한 프로젝트입니다.
 
-## 🔑 주요 수행 내용
-### 1. 회로 및 PCB 설계
-- **Schematic**: 엘리베이터 로직 제어, 모터 구동, 전원부 회로 도면 작성.
-- **Artwork**: PCB Editor를 이용한 부품 배치(Placement) 및 배선(Routing) 설계, Gerber 파일 생성.
+## 🔑 주요 구현 내용
+### 1. 제어 회로 설계 (Discrete Logic)
+- **Input & Encoding**: 9개의 층 버튼 입력을 **Priority Encoder (`CD4532B`)** 를 통해 BCD 데이터로 변환.
+- **State Storage**: **D-Latch (`CD4042A`)** 를 사용하여 목표 층 데이터를 저장하고, **Group Select (GS)** 신호로 래치 타이밍 제어.
+- **Up/Down Logic**: **Magnitude Comparator (`74HC85`)** 가 현재 층과 목표 층을 비교하여 Up/Down 신호 생성.
+- **Position Counting**: **Up/Down Counter (`CD4516B`)** 가 클럭에 맞춰 층수를 카운팅하고 7-Segment로 디스플레이.
 
-### 2. 제작 및 검증
-- **Soldering**: 발주된 PCB 기판에 DIP/SMD 부품 직접 납땜.
-- **Testing**: 제작된 보드의 전원 인가 및 도통 테스트, 기능 동작 확인.
+### 2. 클럭 생성 및 PCB 제작
+- **Clock Generator**: 트랜지스터(`2N3904/3906`) 기반의 비안정 멀티바이브레이터로 약 **100Hz**의 구동 클럭 생성.
+- **PCB Artwork**: Bottom Layer 배선을 위해 **Mirror(좌우 반전)** 설계를 적용하고, Through-hole 부품 실장.
 
 ---
 
 ## 🚀 문제 해결 (Troubleshooting)
-### 1. 배선 공간 부족
-- **문제**: 양면 기판(2-Layer)의 한정된 공간 내에서 배선 시 신호선 간 간섭 및 공간 부족 발생.
-- **해결**: Via hole을 적절히 사용하여 레이어를 변경하며 배선하고, 주요 전원/신호선을 수동으로 우선 배선하여 공간 효율화.
+### 1. 래치 타이밍 불안정 (Latch Stability)
+- **문제**: 버튼을 누르는 순간의 채터링(Chattering)이나 신호 지연으로 인해 엉뚱한 층 값이 저장되는 현상.
+- **해결**: 인코더의 **GS(Group Select)** 신호를 래치의 클럭 입력으로 활용하여, 유효한 버튼 입력이 들어온 순간에만 데이터가 래치되도록 동기화.
 
-### 2. 납땜 불량 수정
-- **문제**: SMD 부품 실장 시 냉납이나 브릿지(Short) 현상 발생.
-- **해결**: 플럭스(Flux) 활용 및 적절한 온도 조절로 Rework 작업을 수행하여 불량 해결.
+### 2. 발진 주파수 오차 보정
+- **문제**: 시뮬레이션상의 클럭 주파수와 실제 제작된 회로의 주파수 차이로 엘리베이터 이동 속도가 부자연스러움.
+- **해결**: 발진 회로에 **가변저항(VR1)** 을 배치하여 오실로스코프로 파형을 관측하며 최적의 주파수(약 100Hz)로 튜닝.
 
 ---
 
 ## 📚 배운점
-- **EDA 툴 활용**: OrCAD를 이용한 회로 설계부터 PCB 제작 데이터 생성까지의 흐름 숙지.
-- **제조 공정 이해**: PCB 제조 및 조립(PCBA) 공정에 대한 실무적 이해.
-- **하드웨어 디버깅**: 물리적 회로에서의 문제 원인 파악 및 해결 능력.
+- **Digital Logic Flow**: 인코딩 ➡ 저장 ➡ 비교 ➡ 카운팅으로 이어지는 순차 논리 회로의 전체적인 데이터 흐름 체득.
+- **PCB Design Rule**: 부품의 Footprint 생성부터 배선(Routing), 거버 파일 생성까지의 하드웨어 제작 공정 숙지.
 
 ---
 
 ## 📂 포트폴리오 목차
 - **[📂 Source Code](./Source_Code)** : OrCAD 설계 파일
-- **[📂 Report](./Report)** : 결과 보고서
+- **[📂 Report](./Report)** : 실습 결과 보고서
