@@ -18,6 +18,7 @@ C언어와 WinAPI를 사용하여 다수의 **AGV(Automated Guided Vehicle)** �
 ### 2. 다개체 충돌 회피 (Multi-Agent)
 - **WHCA* (Windowed Hierarchical Cooperative A*)**: 시간축(t)을 포함한 3차원(x, y, t) 공간 탐색으로 AGV 간 충돌 예측 및 회피.
 - **CBS (Conflict Based Search)**: 개별 경로 탐색 후 충돌 발생 시 제약 조건을 추가하여 경로를 수정하는 방식 연구.
+- **Tarjan's Algorithm (SCC)**: **강한 연결 요소(Strongly Connected Components)** 를 탐색하는 타잔 알고리즘을 구현. AGV 이동 경로 상에서 발생할 수 있는 순환 대기(Circular Wait) 형태의 데드락을 그래프 이론적으로 분석하고 감지.
 
 ---
 
