@@ -1,0 +1,12 @@
+# .bashrc
+
+source /user/stu2/cad_digi.cshrc
+
+xrun -sv \
+     -access +rwc \
+     -log ./Log/Lab1.log \
+#    -log ./Log/Lab1_wTask.log \
+#    -log ./Log/Lab1_wTaskFor.log \
+     -f ./List/TEST_LIST.vc \
+#    -f ./List/TEST_LIST_wTask.vc \
+#    -f ./List/TEST_LIST_wTaskFor.vc

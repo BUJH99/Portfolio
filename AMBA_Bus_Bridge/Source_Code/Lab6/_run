@@ -1,0 +1,9 @@
+# .bashrc
+
+source /user/student/stu2/cad_digi.cshrc
+
+xrun -sv \
+     -access +rwc \
+#    -define Burst4Case \
+     -log ./Log/Lab6.log \
+     -f ./List/TEST_LIST.vc

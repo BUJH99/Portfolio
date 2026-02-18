@@ -1,0 +1,64 @@
+xrun: 23.03-s008: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	23.03-s008: Started on Jul 11, 2025 at 16:19:08 KST
+xrun
+	-sv
+	-access +rwc
+	-log ./Log/pro1.log
+	-f ./List/TEST_LIST.vc
+		/user/student/stu2/Internship_JH/pro1/Testbench/Tbtop/TbTop_prj.v
+		/user/student/stu2/Internship_JH/pro1/RTL/Src/Project_Top.v
+		/user/student/stu2/Internship_JH/pro1/RTL/Src/Ahb2Apb_Top.v
+		/user/student/stu2/Internship_JH/pro1/RTL/Src/ApbIfBlk.v
+		/user/student/stu2/Internship_JH/pro1/RTL/Src/ApBSlave_Top.v
+		/user/student/stu2/Internship_JH/pro1/RTL/Src/SpSram16x32.v
+Recompiling... reason: file './Tbtop/TbTop_prj.v' is newer than expected.
+	expected: Fri Jul 11 14:55:05 2025
+	actual:   Fri Jul 11 16:18:46 2025
+file: /user/student/stu2/Internship_JH/pro1/Testbench/Tbtop/TbTop_prj.v
+	module worklib.TbTop_prj:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TbTop_prj
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TbTop_prj:v <0x65186cc2>
+			streams:  25, words: 25251
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  6       6
+		Registers:               22      22
+		Scalar wires:            22       -
+		Vectored wires:          15       -
+		Always blocks:            8       8
+		Initial blocks:           4       4
+		Cont. assignments:       12      27
+		Pseudo assignments:       7       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TbTop_prj:v
+Loading snapshot worklib.TbTop_prj:v .................... Done
+xcelium> source /user/tools/cadence/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> run
+TIME: 2500ns -> OOOOO Reset released !!! OOOOO
+TIME: 4500ns -> AHB Write to Addr: 0x70008000, Data: 0xdeadbeef
+TIME: 6500ns -> Write transaction finished.
+TIME: 9500ns -> AHB Write to Addr: 0x7000803c, Data: 0x12345678
+TIME: 11500ns -> Write transaction finished.
+TIME: 17500ns -> AHB Read from Addr: 0x70008000
+TIME: 20500ns -> Read data available. Read: 0xdeadbeef, Expected: 0xdeadbeef
+>>>>> [SUCCESS] Read data matches!
+TIME: 21500ns -> Read transaction finished.
+TIME: 24500ns -> AHB Read from Addr: 0x7000803c
+TIME: 27500ns -> Read data available. Read: 0x12345678, Expected: 0x12345678
+>>>>> [SUCCESS] Read data matches!
+TIME: 28500ns -> Read transaction finished.
+======================================================
+>>>>> ALL TESTS PASSED <<<<<
+======================================================
+Simulation complete via $finish(1) at time 485 NS + 0
+./Tbtop/TbTop_prj.v:221     $finish;
+xcelium> exit
+TOOL:	xrun	23.03-s008: Exiting on Jul 11, 2025 at 16:19:08 KST  (total: 00:00:00)

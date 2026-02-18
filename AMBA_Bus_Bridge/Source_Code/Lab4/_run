@@ -1,0 +1,10 @@
+# .bashrc
+
+source /user/student/stu2/cad_digi.cshrc
+
+xrun -sv \
+     -access +rwc \
+     -define testc \
+     -log ./Log/Lab4.log \
+     -f ./List/TEST_LIST.vc
+
