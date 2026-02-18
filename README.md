@@ -31,16 +31,16 @@
 
 | Project Name | Description | Tech Stack | Period |
 | :--- | :--- | :--- | :--- |
-| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** | 🏆 **(우수상)** Zynq SoC 기반 Softmax 연산 가속기 설계 (SW 대비 13배 성능) | `Verilog`, `Vivado`, `AXI` | '25.08 ~ '25.09 |
-| **[AGV Parking System](./AGV_Parking_System)** | 🏆 **(형남과학상 동상)** C언어 기반 다개체 AGV 경로 탐색 시뮬레이터 | `C`, `Algorithm`, `Simulation` | '25.03 ~ '25.12 |
-| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | Ultra96-V2 활용 실시간 CNN 영상 필터링 시스템 구현 | `Verilog`, `Image Processing` | '25.10 ~ '25.12 |
-| **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | 고속 푸리에 변환(FFT) 알고리즘 하드웨어 구현 | `Verilog`, `DSP` | '25.11 ~ '25.12 |
-| **[AMBA Bus Bridge](./AMBA_Bus_Bridge)** | AHB-APB Bridge 설계 및 검증 (1-wait state FSM) | `Verilog`, `Bus Protocol` | '25.06 ~ '25.07 |
-| **[Virtuoso 4bit ALU](./Virtuoso_4bit_ALU)** | Cadence Virtuoso 활용 Full-Custom 4bit ALU 설계 및 레이아웃 | `Cadence`, `Analog/Digital` | '25.06 ~ '25.06 |
-| **[Elevator PCB Design](./Elevator_Circuit_PCB)** | 엘리베이터 제어 회로 설계 및 PCB 제작/실장 | `OrCAD`, `PCB`, `Soldering` | '25.07 ~ '25.07 |
+| **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 아두이노와 파이썬을 연동한 터치식 리듬게임 제작 | `Arduino`, `Python`, `Serial` | '24.04 ~ '24.05 |
 | **[MCU Firmware](./MCU_Control)** | 레지스터 직접 제어(Bare-metal) 기반 MCU 펌웨어 개발 | `Embedded C`, `Datasheet` | '24.09 ~ '24.11 |
 | **[Process Design](./Semiconductor_Display_Process)** | 반도체 8대 공정 기반 CMOS LDO 제조 공정 설계 | `Semiconductor Process` | '24.11 ~ '24.12 |
-| **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 아두이노와 파이썬을 연동한 터치식 리듬게임 제작 | `Arduino`, `Python`, `Serial` | '24.04 ~ '24.05 |
+| **[AGV Parking System](./AGV_Parking_System)** | 🏆 **(형남과학상 동상)** C언어 기반 다개체 AGV 경로 탐색 시뮬레이터 | `C`, `Algorithm`, `Simulation` | '25.03 ~ '25.12 |
+| **[Virtuoso 4bit ALU](./Virtuoso_4bit_ALU)** | Cadence Virtuoso 활용 Full-Custom 4bit ALU 설계 및 레이아웃 | `Cadence`, `Analog/Digital` | '25.06 ~ '25.06 |
+| **[AMBA Bus Bridge](./AMBA_Bus_Bridge)** | AHB-APB Bridge 설계 및 검증 (1-wait state FSM) | `Verilog`, `Bus Protocol` | '25.06 ~ '25.07 |
+| **[Elevator PCB Design](./Elevator_Circuit_PCB)** | 엘리베이터 제어 회로 설계 및 PCB 제작/실장 | `OrCAD`, `PCB`, `Soldering` | '25.07 ~ '25.07 |
+| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** | 🏆 **(우수상)** Zynq SoC 기반 Softmax 연산 가속기 설계 (SW 대비 13배 성능) | `Verilog`, `Vivado`, `AXI` | '25.08 ~ '25.09 |
+| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | Ultra96-V2 활용 실시간 CNN 영상 필터링 시스템 구현 | `Verilog`, `Image Processing` | '25.10 ~ '25.12 |
+| **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | 고속 푸리에 변환(FFT) 알고리즘 하드웨어 구현 | `Verilog`, `DSP` | '25.11 ~ '25.12 |
 
 ---
 
