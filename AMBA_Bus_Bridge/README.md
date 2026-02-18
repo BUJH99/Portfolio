@@ -40,6 +40,28 @@ System-on-Chip (SoC) 설계의 핵심인 **AMBA(Advanced Microcontroller Bus Arc
 
 ---
 
+## 🚀 직면한 어려움 및 해결 (Troubleshooting)
+
+### 1. Wait State를 통한 버스 속도 동기화
+- **문제상황**: AHB는 파이프라인(Pipeline) 기반으로 매 클럭 주소/데이터 페이즈가 진행되는 반면, APB는 `SETUP` -> `ACCESS`의 최소 2클럭주기가 필요했습니다. 이로 인해 AHB 마스터가 APB의 처리 속도를 넘어서는 요청을 보낼 경우 데이터 손실(Data Loss) 발생 가능성이 있었습니다.
+- **해결방안**:
+  - `Ahb2Apb_Top.v`의 **FSM** 설계 시 `SETUP` 상태에서 강제로 `HREADYout = 0`을 출력하여 AHB 마스터를 **Stall(대기)** 시키는 로직을 구현했습니다.
+  - `ENABLE` 상태에서는 APB 슬레이브의 완료 신호(`PREADY`)를 그대로 AHB로 전달(`Bypass`)하여, 슬레이브가 준비될 때까지 마스터가 대기하도록 동기화를 완벽하게 수행했습니다.
+
+### 2. 파이프라인 프로토콜 간 데이터 무결성 보장
+- **문제상황**: AHB 프로토콜은 주소 페이즈(Address Phase)와 데이터 페이즈(Data Phase)가 겹쳐서 들어오는데, APB는 주소와 데이터를 동시에 요구합니다. AHB의 주소 신호는 다음 사이클에 바로 변하므로, 이를 APB에 그대로 연결하면 타이밍 위반이 발생했습니다.
+- **해결방안**:
+  - **Latching Logic 구현**: AHB의 주소 페이즈가 유효한 시점(`HREADYin=1`)에 주소(`HADDR`)와 제어 신호(`HWRITE`)를 내부 레지스터(`rHADDR`, `rHWRITE`)에 캡처(Capture)하여 저장했습니다.
+  - 저장된 레지스터 값을 APB 인터페이스에 연결함으로써, AHB 버스의 상태 변화와 무관하게 APB 트랜잭션 내내 안정적인 신호를 공급했습니다.
+
+### 3. 유효 주소 필터링 (Address Decoding)
+- **문제상황**: APB 버스에 연결된 SRAM의 주소 영역(`0x8000` ~ `0x803C`) 이외의 잘못된 접근 요청이 들어올 경우, 오동작하거나 버스 에러가 발생할 수 있었습니다.
+- **해결방안**:
+  - `ApbIfBlk.v` 모듈 내에 **Address Decoder**를 구현했습니다.
+  - 입력 주소가 `BASE_ADDR`와 `END_ADDR` 사이에 있는 경우에만 `ADDRInRANGE` 신호를 활성화하고, 이 신호가 유효할 때만 SRAM의 `Chip Select (CSn)`와 `Write Enable (WEn)`이 동작하도록 안전장치를 마련했습니다.
+
+---
+
 ## 📚 배운점 및 성과
 - **타이밍 다이어그램 해석 능력**: AMBA 규격 문서를 통해 `SETUP`, `ACCESS` 페이즈의 정확한 타이밍 요건을 파악하고 코드로 구현.
 - **Cross-Domain 설계 경험**: 고속 도메인(AHB)과 저속 도메인(APB) 간의 핸드셰이킹 메커니즘을 FSM으로 제어하며 시스템 안정성 확보.
