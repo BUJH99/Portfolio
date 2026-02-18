@@ -1,9 +1,6 @@
 # 📟 Embedded & Semiconductor Engineering Portfolio
 
-> **"Hardware for AI, Logic for Silicon"**
->
-> 하드웨어 가속기(IP) 설계부터 펌웨어 개발, 그리고 아날로그 회로 설계 및 공정에 이르기까지.
-> 반도체 및 임베디드 시스템 분야의 전 영역을 아우르는 엔지니어를 목표로 합니다.
+
 
 ---
 

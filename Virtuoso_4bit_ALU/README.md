@@ -1,6 +1,6 @@
 # 🎨 Cadence Virtuoso 활용 4bit ALU 설계 (Full-Custom Layout Design)
 
-> **"트랜지스터 하나부터 칩 레이아웃까지: Bottom-up 방식의 디지털 IC 설계"**
+
 
 ## 📅 프로젝트 정보
 - **진행 기간**: 2025.06.03 ~ 2025.06.19
