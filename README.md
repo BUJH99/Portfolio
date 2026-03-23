@@ -26,7 +26,7 @@
 ### 🌟 Digital Logic & SoC Design
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
-| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** | Softmax 연산 하드웨어 가속기 및 Zynq SoC 구현 | `Verilog`, `AXI`, `Zynq` |
+| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** 🏆 | Softmax 연산 하드웨어 가속기 및 Zynq SoC 구현, **차세대반도체학과 주관 경진대회 우수상** | `Verilog`, `AXI`, `Zynq`, `UVM` |
 | **[AMBA AHB-APB Bridge](./AMBA_Bus_Bridge)** | AHB-APB 버스 브리지 IP 설계 및 검증 | `Verilog`, `AMBA`, `FSM` |
 | **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | FPGA 기반 FFT 알고리즘 하드웨어 구현 | `Verilog`, `DSP` |
 | **[FPGA Image Filtering](./FPGA_Image_Filtering)** | Ultra96-V2 활용 실시간 영상 필터링 시스템 | `Verilog`, `CNN`, `AXI Stream` |
