@@ -1,25 +1,33 @@
+/*
+[MODULE_INFO_START]
+Name: Counter
+Role: Wrap-around counter utility
+Summary:
+  - Counts with clear and increment controls
+  - Wraps to zero at the configured terminal value
+[MODULE_INFO_END]
+*/
 `timescale 1ns/1ps
-
-module counter #(
-    parameter WIDTH = 8,   // 출력 비트폭
-    parameter integer CNT_MAX  = 8
+module Counter #(
+    parameter integer P_WIDTH      = 8,
+    parameter integer P_WRAP_VALUE = 255
 )(
-    input  wire              clk,    // 클럭
-    input  wire              rst_n,  // 비동기 active-low reset
-    input  wire              inc,    // 증가 신호
-    output reg [WIDTH-1:0]   out     // 카운터 값
+    input  wire                 iClk,
+    input  wire                 iRstn,
+    input  wire                 iClr,
+    input  wire                 iInc,
+    output reg  [P_WIDTH-1:0]   oCnt
 );
-
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            out <= {WIDTH{1'b0}};   // 리셋 시 0으로 초기화
-        end else if (inc) begin
-             if (out == (CNT_MAX-1)) begin
-                out <= 1'b0;
-             end else begin
-                 out <= out + 1'b1;  // inc=1일 때만 카운트 증가
-             end
+    always @(posedge iClk or negedge iRstn) begin
+        if (!iRstn) begin
+            oCnt <= {P_WIDTH{1'b0}};
+        end else if (iClr) begin
+            oCnt <= {P_WIDTH{1'b0}};
+        end else if (iInc) begin
+            if (oCnt == P_WRAP_VALUE[P_WIDTH-1:0])
+                oCnt <= {P_WIDTH{1'b0}};
+            else
+                oCnt <= oCnt + 1'b1;
         end
     end
-
 endmodule
