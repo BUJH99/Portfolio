@@ -36,7 +36,7 @@
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
 | **[MCU Register Control](./MCU_Control)** | 라이브러리 없는 Bare-metal 펌웨어 개발 | `Embedded C`, `AVR/ARM` |
-| **[AGV Parking System](./AGV_Parking_System)** | 다개체 AGV 경로 탐색 및 충돌 회피 알고리즘 구현 | `C`, `Algorithm` |
+| **[AGV Parking System](./AGV_Parking_System)** 🏆 | 다개체 AGV 경로 탐색 및 충돌 회피 알고리즘 구현, **형남과학상 동상** | `C`, `Algorithm` |
 | **[Elevator PCB Design](./Elevator_Circuit_PCB)** | 엘리베이터 제어 회로 설계 및 PCB 제작 | `OrCAD`, `PCB` |
 | **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 아두이노 터치 센서 연동 리듬 게임 제작 | `Arduino`, `Python` |
 
