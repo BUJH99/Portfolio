@@ -1,0 +1,17 @@
+/.sim_build/
+/results/
+/output/
+/.Xil/
+/xsim.dir/
+/csrc/
+/simv*
+/ucli.key
+/DVEfiles/
+*.log
+*.jou
+*.pb
+*.wdb
+*.wcfg
+*.vcd
+*.fsdb
+dfx_runtime.txt
