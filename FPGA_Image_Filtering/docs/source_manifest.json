@@ -1,0 +1,317 @@
+{
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "git/Project/Image_Filtering/PERFORMANCE_BENCHMARK_REPORT.md",
+      "destination": "FPGA_Image_Filtering/Report/PERFORMANCE_BENCHMARK_REPORT.md",
+      "original_sha256": "f3d5ec50d0ff6a06619b412c55c4e115e63dec3e9ba7a71cdc05c33d691e12ac",
+      "published_sha256": "f3d5ec50d0ff6a06619b412c55c4e115e63dec3e9ba7a71cdc05c33d691e12ac",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/constrs/test.xdc",
+      "destination": "FPGA_Image_Filtering/Code/Constraints/test.xdc",
+      "original_sha256": "0418903c8e516a1c08a57e1a5c39103106cd604ccb56a6782493281f75e918e2",
+      "published_sha256": "0418903c8e516a1c08a57e1a5c39103106cd604ccb56a6782493281f75e918e2",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/CamI2c.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/CamI2c.sv",
+      "original_sha256": "9cf6a07f166f68fa7d8c98e1a05885446d498c015099bcf954d68cb3f314ffea",
+      "published_sha256": "9cf6a07f166f68fa7d8c98e1a05885446d498c015099bcf954d68cb3f314ffea",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/CamI2cCommand.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/CamI2cCommand.sv",
+      "original_sha256": "97fab2b476e5e28a6becb63f841f9a410afdd71e6ca910758ca26b0b8b5cef50",
+      "published_sha256": "97fab2b476e5e28a6becb63f841f9a410afdd71e6ca910758ca26b0b8b5cef50",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/CamI2cRom.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/CamI2cRom.sv",
+      "original_sha256": "1ee1e824160bf40b5eff3baaadc1039d6a2652faaff728d0a1eccaebc3caac60",
+      "published_sha256": "1ee1e824160bf40b5eff3baaadc1039d6a2652faaff728d0a1eccaebc3caac60",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/CameraToRam.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/CameraToRam.sv",
+      "original_sha256": "5bcedad1f68b0d94a95d3f1027bbc06cb1c5c0598f771cdab33b0fb5e823f6dc",
+      "published_sha256": "5bcedad1f68b0d94a95d3f1027bbc06cb1c5c0598f771cdab33b0fb5e823f6dc",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/ClkDivider.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/ClkDivider.sv",
+      "original_sha256": "3f243d3f6856c4d8e16d5ab12f91740d6f193425b76b5cf85e3ce61d4289085f",
+      "published_sha256": "3f243d3f6856c4d8e16d5ab12f91740d6f193425b76b5cf85e3ce61d4289085f",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/ClockEnableGenerator.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/ClockEnableGenerator.sv",
+      "original_sha256": "12a65eda3c970a217b48537f6fca67e572dca86736eb799f4abdf61bfa5cd96b",
+      "published_sha256": "12a65eda3c970a217b48537f6fca67e572dca86736eb799f4abdf61bfa5cd96b",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/Conv3x3ReluParam.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/Conv3x3ReluParam.sv",
+      "original_sha256": "049ce48e2cd4453c04f0525c2a28c52c9ca1e758c93e3b05b59ce9a066ee55b9",
+      "published_sha256": "049ce48e2cd4453c04f0525c2a28c52c9ca1e758c93e3b05b59ce9a066ee55b9",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/MemToTftLcd.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/MemToTftLcd.sv",
+      "original_sha256": "b267079a8b5d93233825bbd8c50c3f7bc02233b5cbe50b65e4b3599306cc7af0",
+      "published_sha256": "b267079a8b5d93233825bbd8c50c3f7bc02233b5cbe50b65e4b3599306cc7af0",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/RasterAddrGen.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/RasterAddrGen.sv",
+      "original_sha256": "dd4d422241a61463e1aa18b43ad7a5dfec80973e6359e6909e45ab579b58d502",
+      "published_sha256": "dd4d422241a61463e1aa18b43ad7a5dfec80973e6359e6909e45ab579b58d502",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/Rgb565ToRgb888.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/Rgb565ToRgb888.sv",
+      "original_sha256": "12a02fe5f25c7c2f728b551369d44aa0f7112e80834dff29602f152ed373615c",
+      "published_sha256": "12a02fe5f25c7c2f728b551369d44aa0f7112e80834dff29602f152ed373615c",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/Rgb888ToRgb565.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/Rgb888ToRgb565.sv",
+      "original_sha256": "89e968a63ae79a2f4c6b144d480c4a6f3e49a478586334413ccf080a1369f066",
+      "published_sha256": "89e968a63ae79a2f4c6b144d480c4a6f3e49a478586334413ccf080a1369f066",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/TOP.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/TOP.sv",
+      "original_sha256": "b2545eb53644199f8dd83f89da2d10d3d1db6cd6fd50e93bd1167a20c2d3b5fe",
+      "published_sha256": "b2545eb53644199f8dd83f89da2d10d3d1db6cd6fd50e93bd1167a20c2d3b5fe",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/Window3x3Case9.sv",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/reference/Window3x3Case9.sv",
+      "original_sha256": "95a26a46d21c788334bac1339c530755b5e3e33599fb4171654b7c9ea23c83f6",
+      "published_sha256": "95a26a46d21c788334bac1339c530755b5e3e33599fb4171654b7c9ea23c83f6",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/src/Window3x3LineBuffer.sv",
+      "destination": "FPGA_Image_Filtering/Code/Source/Window3x3LineBuffer.sv",
+      "original_sha256": "93c61aa27400b41af405e1ebff5ea8cc6990df45cecc37c16f045eba37c922a1",
+      "published_sha256": "93c61aa27400b41af405e1ebff5ea8cc6990df45cecc37c16f045eba37c922a1",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/sw/apps/source_code.c",
+      "destination": "FPGA_Image_Filtering/Code/SW/source_code.c",
+      "original_sha256": "4a6bc2c9440b3543a98aa87d7ed03f87aaa0956d42675478f9d53d3030c19ad8",
+      "published_sha256": "4a6bc2c9440b3543a98aa87d7ed03f87aaa0956d42675478f9d53d3030c19ad8",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/sw/apps/source_code.h",
+      "destination": "FPGA_Image_Filtering/Code/SW/source_code.h",
+      "original_sha256": "b1e9094f861a63b16cc82d6736e43416e44694df36e9f240c40fb6ea2f98efc6",
+      "published_sha256": "b1e9094f861a63b16cc82d6736e43416e44694df36e9f240c40fb6ea2f98efc6",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/TbTop_module_perf.sv",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/TbTop_module_perf.sv",
+      "original_sha256": "96f88363c2fdefcda6a457a4ff5c4b8858e57a5cc78d2aee7a3d8eab266f00b6",
+      "published_sha256": "96f88363c2fdefcda6a457a4ff5c4b8858e57a5cc78d2aee7a3d8eab266f00b6",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_linebuffer_ooc.bat",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_linebuffer_ooc.bat",
+      "original_sha256": "15e024fa8c82ca1b6e1b894574bb6a4b5d553847cae12cc5d4d2a30144c23a85",
+      "published_sha256": "cbe03fbc77e2180b3b0af652f44339d95b6a61c59a7bb1eae106da2142779918",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_linebuffer_ooc.tcl",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_linebuffer_ooc.tcl",
+      "original_sha256": "b7e849b04199245a34aba02f93c6db2ba260512381673311ac92dbaeb4d2f62a",
+      "published_sha256": "9cb9b476a746ffadad9a6ec676f49cc67b92a40c7fbffc98ffa188892ce257d9",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_module_perf_tb.bat",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_module_perf_tb.bat",
+      "original_sha256": "7eb0ae9f0758eeb143a805ccbdc267caf1fddae9207361d845891d0abf54c2df",
+      "published_sha256": "1cd94e7d92b7864277bf8446ad20795eabbf2b98966359c1cb2c8d489616df4d",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_ooc_timing.bat",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_ooc_timing.bat",
+      "original_sha256": "f5e0005c2369edf81e211f65b403319b6c0bf961e2914c71303590ee61e4ca74",
+      "published_sha256": "dcee89f37a2aee2c98d2ec42f022a89976defca6ec8bde08f3e613ee93f019f0",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_ooc_timing.tcl",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_ooc_timing.tcl",
+      "original_sha256": "22023936896cbd7fdc3a0730b5cdf0d752976c580c76f71d9f6c42c55c7e1c80",
+      "published_sha256": "5bb12807abcf0af203ec50d50960cf07b2790b6415f13478cd5ae8ef5b4a89c7",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/run_perf_tb.bat",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/run_perf_tb.bat",
+      "original_sha256": "1af49d2220953a637742c18ef4fd51cedbb7546419c63b46d89e2f300bbbdc7b",
+      "published_sha256": "8d0c8b83ec2a306b3e76171fb7979722d7b0f049b90a9572bea3c1de8563a2b7",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/tb_memory_models.v",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/tb_memory_models.v",
+      "original_sha256": "b111c1dfbb0aec43c16d89e55887bf09ce912e69df28b7a9c99609cd8eb86f2b",
+      "published_sha256": "b111c1dfbb0aec43c16d89e55887bf09ce912e69df28b7a9c99609cd8eb86f2b",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/tb/tb_top.v",
+      "destination": "FPGA_Image_Filtering/Code/TestBench/tb_top.v",
+      "original_sha256": "f252bcc92f2ca58e7f18c192251e50a9a0e2f1b554aca4fd0b23688db50e7c8b",
+      "published_sha256": "f252bcc92f2ca58e7f18c192251e50a9a0e2f1b554aca4fd0b23688db50e7c8b",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Conv3x3ReluParam_timing_summary.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Conv3x3ReluParam_timing_summary.rpt",
+      "original_sha256": "b1ce04f58302c291801138f49ed81fa78533b21d54a4ff10d09a78a49376726a",
+      "published_sha256": "48afb5e5095dfe8eca44dc2ad09082007665bdf823dfc5e9a71c9689496fafe5",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Conv3x3ReluParam_utilization.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Conv3x3ReluParam_utilization.rpt",
+      "original_sha256": "74dfd3bb00221335e42966be66e2a93aff9434fe2f7632a8df38282712db5f33",
+      "published_sha256": "091025529d04d061c44c9d7f4b3d28383f017517b02ccfe94a5d0a191b8dabc2",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/integrated_mode1_PRELOAD_INPUT.log",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/integrated_mode1_PRELOAD_INPUT.log",
+      "original_sha256": "12cfaaf91f14a8804bba10a5825ca11bc8398607fe9063fd2bcfe29633dc9ad6",
+      "published_sha256": "7bed164d2102d26a8641bbba80fb42e997f7c0d42603770e8108842e95510941",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/integrated_mode1_STREAM_INPUT.log",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/integrated_mode1_STREAM_INPUT.log",
+      "original_sha256": "51e1eae45030444ed5c1f0f1eb850caa4d5ed43005acf5c2328737faa5317124",
+      "published_sha256": "2ca55826902ffce7a85dc6d1fa5ac9415db0ecbe5d3331f2df0730eded9a7ac6",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/module_perf_xsim.log",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/module_perf_xsim.log",
+      "original_sha256": "5faab6e4c8631560ea5fad258608ab341ae94253a0a0beb831b861ff9d0d86ba",
+      "published_sha256": "7363e3f3e1ff7fd1335aa0b3835270baf32eb858507b2d815c8dfc78dbeecc38",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Window3x3Case9_timing_summary.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Window3x3Case9_timing_summary.rpt",
+      "original_sha256": "aa053968d9e664de5239813734e44a6a5219f1af9864b57e22d7d9df6d2c2ea3",
+      "published_sha256": "8c31aa40615cfd93f96d108b165080c5bec36894e32d01834996dded428edee7",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Window3x3Case9_utilization.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Window3x3Case9_utilization.rpt",
+      "original_sha256": "84e9e026cfdf240c5315cb7f1dedcdb5ae1b85f2553025ba6c34eef4c9e9a105",
+      "published_sha256": "a063ad97f4b268737f7773bba322568ce340e64ef79e519298b958ccb44174b1",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Window3x3LineBuffer_timing_summary.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Window3x3LineBuffer_timing_summary.rpt",
+      "original_sha256": "00c92320532f406d3eb7a55572e7112c1213ff5b1ec0d5a628785d8500a17962",
+      "published_sha256": "d8cc75fcda4e2d05aace91d76352dd8fa06a963a6233a060c636140bc16e65cc",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/Image_Filtering/output/benchmark/Window3x3LineBuffer_utilization.rpt",
+      "destination": "FPGA_Image_Filtering/Report/benchmark_2026-08-01/Window3x3LineBuffer_utilization.rpt",
+      "original_sha256": "7334b3b978560cf0812a79674c068d82036bcafdca2ca684a6318f44d684150c",
+      "published_sha256": "f253f1d13d6b12a2a8b08730e9ff3953dd4d291ed6f505b4087e9485e041c9cb",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Zynq_SoC_Video_Filtering/Overall Architecture.png",
+      "destination": "FPGA_Image_Filtering/Report/images/Overall Architecture.png",
+      "original_sha256": "54f203ddcda3a938855f28e9dde17fac70bd469d4c44ee3f359ea64381f06ae3",
+      "published_sha256": "54f203ddcda3a938855f28e9dde17fac70bd469d4c44ee3f359ea64381f06ae3",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Zynq_SoC_Video_Filtering/ResultVideoImage.png",
+      "destination": "FPGA_Image_Filtering/Report/images/ResultVideoImage.png",
+      "original_sha256": "93c68b806b6637bbc942e4630d71958bdd14f708e63166af81cb1f6dcde2f1ad",
+      "published_sha256": "93c68b806b6637bbc942e4630d71958bdd14f708e63166af81cb1f6dcde2f1ad",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Zynq_SoC_Video_Filtering/Performance.png",
+      "destination": "FPGA_Image_Filtering/Report/images/Performance.png",
+      "original_sha256": "edda433ed529d18a955a39b7847b8fee944617cf72d12b4313a498c14a9720ea",
+      "published_sha256": "edda433ed529d18a955a39b7847b8fee944617cf72d12b4313a498c14a9720ea",
+      "commit": null,
+      "status": "packaged"
+    }
+  ]
+}

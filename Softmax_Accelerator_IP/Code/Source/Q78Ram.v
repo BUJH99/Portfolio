@@ -7,6 +7,7 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module Q78Ram #(
     parameter integer P_DEPTH  = 1024,
     parameter integer P_ADDR_W = 10
@@ -14,12 +15,12 @@ module Q78Ram #(
     input  wire                 iClk,
     input  wire                 iWrEn,
     input  wire [P_ADDR_W-1:0]  iWrAddr,
-    input  wire signed [15:0]   iWrData,
+    input  wire signed [`DEF_SOFTMAX_Q78_W-1:0]   iWrData,
     input  wire                 iRdEn,
     input  wire [P_ADDR_W-1:0]  iRdAddr,
-    output reg  signed [15:0]   oRdData
+    output reg  signed [`DEF_SOFTMAX_Q78_W-1:0]   oRdData
 );
-    reg signed [15:0] memQ78 [0:P_DEPTH-1];
+    reg signed [`DEF_SOFTMAX_Q78_W-1:0] memQ78 [0:P_DEPTH-1];
 
     always @(posedge iClk) begin
         if (iWrEn)

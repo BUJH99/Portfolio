@@ -1,0 +1,53 @@
+{
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/TableofContetns.png",
+      "destination": "ChipBook/docs/images/TableofContetns.png",
+      "original_sha256": "e833772c5ea348ea22ae89e690c4a8838c69a6379c50c63e469c4b38f0a3566c",
+      "published_sha256": "e833772c5ea348ea22ae89e690c4a8838c69a6379c50c63e469c4b38f0a3566c",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/Ex1_Flow.png",
+      "destination": "ChipBook/docs/images/Ex1_Flow.png",
+      "original_sha256": "5c0ae262dc85236b504292b0204aa8cec36c8448376a667644c496c371c56b47",
+      "published_sha256": "5c0ae262dc85236b504292b0204aa8cec36c8448376a667644c496c371c56b47",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/Ex2_Ram.png",
+      "destination": "ChipBook/docs/images/Ex2_Ram.png",
+      "original_sha256": "aba6138c0037fa8c1051d5f1c172463b5c44629226ba44dce37d4fe0b0320d96",
+      "published_sha256": "aba6138c0037fa8c1051d5f1c172463b5c44629226ba44dce37d4fe0b0320d96",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/Ex3_MOS_3D.png",
+      "destination": "ChipBook/docs/images/Ex3_MOS_3D.png",
+      "original_sha256": "f0152392f5756ef3f09614fd611166d68b8ceda143e49b02adeae03bf9456387",
+      "published_sha256": "f0152392f5756ef3f09614fd611166d68b8ceda143e49b02adeae03bf9456387",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/Ex4_UVM.png",
+      "destination": "ChipBook/docs/images/Ex4_UVM.png",
+      "original_sha256": "07dfa7c7efc37dd2082dcbacebf0251666758e1ade62d9be5093b394733a182d",
+      "published_sha256": "07dfa7c7efc37dd2082dcbacebf0251666758e1ade62d9be5093b394733a182d",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/ChipBook/Ex5_nand.png",
+      "destination": "ChipBook/docs/images/Ex5_nand.png",
+      "original_sha256": "4856c7078ea9b592271ac4c431bfe24cb161456691de3ecf39d7a46e67cb6e39",
+      "published_sha256": "4856c7078ea9b592271ac4c431bfe24cb161456691de3ecf39d7a46e67cb6e39",
+      "commit": null,
+      "status": "packaged"
+    }
+  ]
+}

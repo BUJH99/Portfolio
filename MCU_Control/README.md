@@ -76,5 +76,7 @@ MCU(Micro Controller Unit)의 다양한 주변장치(Peripheral) 제어 능력�
 ---
 
 ## 📂 포트폴리오 목차
-- **[📂 Source Code](./Source_Code)** : C언어 펌웨어 소스
-- **[📂 Presentation](./Presentation)** : 발표 자료
+- **[📂 Source Code](./Preliminaries/Source_Code)** : C언어 펌웨어 소스
+- **[📂 Presentation](./Preliminaries/Presentation)** : 발표 자료
+
+- **본선 코드**: [Round 1](<./Main Tournament/Round1/Source_Code>) · [Round 2](<./Main Tournament/Round2/Source_Code>) · [Round 3](<./Main Tournament/Round3/Source_Code>)

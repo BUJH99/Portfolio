@@ -26,28 +26,34 @@
 ### 🌟 Digital Logic & SoC Design
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
-| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** 🏆 | Softmax 연산 하드웨어 가속기 및 Zynq SoC 구현, **차세대반도체학과 주관 경진대회 우수상** | `Verilog`, `AXI`, `Zynq`, `UVM` |
+| **[RISC-V SoC](./RISC_V_SoC)** | Basys3 RV32I 5-stage, UART InstDMA, AXI4-Lite–APB 및 펌웨어 연동 검증 | `SystemVerilog`, `RISC-V`, `C` |
+| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** 🏆 | FP32 스트림 가속기, 포맷 계약·참조 모델 통합, **경진대회 우수상** | `Verilog`, `AXI-Stream`, `SV TB` |
 | **[SPI / I2C Multi-Agent UVM](./UVM_SPI_I2C)** | 독립 SPI·I2C Agent, Virtual Sequence, wire-level Scoreboard 및 4개 topology·20회 회귀 검증 | `SystemVerilog`, `UVM 1.2`, `SVA`, `XSim` |
+| **[FIFO UVM](./UVM_FIFO)** | 경계 조건·랜덤 명령, 실제 수락 기반 Scoreboard와 3-seed 회귀 | `SystemVerilog`, `UVM 1.2`, `SVA` |
 | **[AMBA AHB-APB Bridge](./AMBA_Bus_Bridge)** | AHB-APB 버스 브리지 IP 설계 및 검증 | `Verilog`, `AMBA`, `FSM` |
-| **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | FPGA 기반 FFT 알고리즘 하드웨어 구현 | `Verilog`, `DSP` |
-| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | Ultra96-V2 활용 실시간 영상 필터링 시스템 | `Verilog`, `CNN`, `AXI Stream` |
-| **[Virtuoso 4-bit ALU](./Virtuoso_4bit_ALU)** | Cadence Virtuoso 활용 Full-Custom Layout 설계 | `Virtuoso`, `Layout` |
+| **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | 21-bit 입력·32-bit 연산의 8-point FFT와 키패드·표시 제어 | `SystemVerilog`, `DSP` |
+| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | 두 줄 Line Buffer로 입력 BRAM 읽기 감소 및 코어 처리량 개선 | `SystemVerilog`, `Image Processing`, `BRAM` |
+| **[FPGA Sensor Hub](./FPGA_Sensor_Hub)** | HC-SR04·DHT11·UART·FND 통합 RTL과 센서 smoke 검증 | `Verilog`, `Sensors`, `XSim` |
+| **[Virtuoso 4-bit ALU](./Virtuoso_4bit_ALU)** | 트랜지스터 수준 게이트·1-bit ALU 설계와 4-bit 확장 | `Virtuoso`, `ADE` |
 
 ### 🛠 Embedded System & Firmware
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
 | **[MCU Register Control](./MCU_Control)** | 라이브러리 없는 Bare-metal 펌웨어 개발 | `Embedded C`, `AVR/ARM` |
-| **[AGV Parking System](./AGV_Parking_System)** 🏆 | 다개체 AGV 경로 탐색 및 충돌 회피 알고리즘 구현, **형남과학상 동상** | `C`, `Algorithm` |
+| **[AGV Parking System](./AGV_Parking_System)** 🏆 | C++ 엔진·Electron UI로 개선한 다개체 AGV 시뮬레이터, **형남과학상 동상** | `C++20`, `Electron`, `Algorithm` |
 | **[Elevator PCB Design](./Elevator_Circuit_PCB)** | 엘리베이터 제어 회로 설계 및 PCB 제작 | `OrCAD`, `PCB` |
-| **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 아두이노 터치 센서 연동 리듬 게임 제작 | `Arduino`, `Python` |
+| **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 원본 Python 코드 복구 및 자체 데모 자산을 포함한 4-key 실행본 | `Python`, `Pygame` |
 
 ### 🧪 Process & Others
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
 | **[Semiconductor Process](./Semiconductor_Display_Process)** | CMOS LDO 공정 흐름(Process Flow) 설계 | `Process Integration` |
+| **[FPGAClaw](./FPGA_Automation)** | Manifest 기반 FPGA 시뮬레이션·빌드·보고서 자동화 | `BAT`, `Python`, `Tcl` |
+| **[ChipBook](./ChipBook)** | 반도체 설계 개념·도식·문제 풀이 웹 가이드북 | `HTML`, `CSS`, `JavaScript` |
+| **[UVM / AXI4 Seminars](./Primemas_Internship)** | 인턴십 기술 세미나 요약과 직접 구성한 대표 도식 | `UVM`, `AXI4`, `Documentation` |
 
 ---
 
-## 📧 Contact
-- **Email**: [이메일 주소 입력]
-- **Blog**: [블로그 주소 입력]
+각 프로젝트의 README에서 현재 코드, 실행 방법과 검증 결과를 확인할 수 있습니다. 과거 보고서·발표자료는 원문을 보존하고, 새 검증과 범위를 구분해 안내합니다.
+
+[2026-10-15 코드 이관·검증·자료 보존 기록](./docs/portfolio_expansion_2026-10-15)

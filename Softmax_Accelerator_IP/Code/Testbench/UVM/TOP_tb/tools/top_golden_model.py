@@ -196,8 +196,8 @@ def main() -> int:
     output_path = Path(args.output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    project_root = Path(__file__).resolve().parents[3]
-    model = RtlModel(project_root / "src")
+    project_root = Path(__file__).resolve().parents[4]
+    model = RtlModel(project_root / "Source")
 
     frames = []
     if input_path.exists():

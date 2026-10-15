@@ -100,11 +100,9 @@ class TopBaseTest;
         string cmd;
         integer fd;
     begin
-        cmd = {
-            "cmd /c if exist \"", m_cfg.m_case_runtime_dir,
-            "\" rmdir /s /q \"", m_cfg.m_case_runtime_dir,
-            "\" & mkdir \"", m_cfg.m_case_runtime_dir, "\""
-        };
+        // Each runner invocation has a fresh build directory. Never delete user files.
+        cmd = {"cmd /c if not exist \"", m_cfg.m_case_runtime_dir,
+               "\" mkdir \"", m_cfg.m_case_runtime_dir, "\""};
         if ($system(cmd) != 0)
             $fatal(1, "[TB] Failed to prepare runtime dir: %s", m_cfg.m_case_runtime_dir);
 

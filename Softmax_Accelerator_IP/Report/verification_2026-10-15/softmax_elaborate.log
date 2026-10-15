@@ -1,0 +1,33 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe TbTop -s softmax -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.TOP_tb_pkg
+Compiling package std.std
+Compiling module work.TOP_if_default
+Compiling module work.Fp32ToQ78_default
+Compiling module work.DownscaleFsm_default
+Compiling module work.MaxTrack
+Compiling module work.Q78Ram
+Compiling module work.Q78SubSat_default
+Compiling module work.Downscale
+Compiling module work.ExpSum_default
+Compiling module work.Sum_default
+Compiling module work.PriEnc16
+Compiling module work.LnExp
+Compiling module work.LnMant
+Compiling module work.Ln_default
+Compiling module work.FrameBuf(P_ADDR_W=10)
+Compiling module work.Sub_default
+Compiling module work.ExpOut_default
+Compiling module work.U16ToFp32_default
+Compiling module work.TOP
+Compiling module work.TbTop
+Built simulation snapshot softmax

@@ -666,9 +666,10 @@ class TopScoreboard;
         int rc;
     begin
         cmd = {
-            m_cfg.m_python_launcher_path, " -E -I ", m_cfg.m_python_tool_path,
-            " --in ", m_cfg.m_input_jsonl_path,
-            " --out ", m_cfg.m_expected_jsonl_path,
+            "cmd /c call \"", m_cfg.m_python_launcher_path, "\" -E -I",
+            " \"", m_cfg.m_python_tool_path, "\"",
+            " --in \"", m_cfg.m_input_jsonl_path, "\"",
+            " --out \"", m_cfg.m_expected_jsonl_path, "\"",
             " --policy rtl_saturate"
         };
         rc = $system(cmd);

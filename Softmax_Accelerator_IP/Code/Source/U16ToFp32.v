@@ -7,25 +7,26 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module U16ToFp32(
     input  wire        iClk,
     input  wire        iRstn,
     input  wire        iSValid,
     output wire        oSReady,
-    input  wire [15:0] iSData,
+    input  wire [`DEF_SOFTMAX_EXP_W-1:0] iSData,
     input  wire        iSLast,
     output wire        oMValid,
     input  wire        iMReady,
-    output wire [31:0] oMData,
+    output wire [`DEF_SOFTMAX_AXIS_W-1:0] oMData,
     output wire        oMLast
 );
-    localparam integer LP_U16_W          = 16;
-    localparam integer LP_FP32_W         = 32;
+    localparam integer LP_U16_W          = `DEF_SOFTMAX_EXP_W;
+    localparam integer LP_FP32_W         = `DEF_SOFTMAX_AXIS_W;
     localparam integer LP_FP32_EXP_W     = 8;
     localparam integer LP_FP32_FRAC_W    = 23;
     localparam integer LP_INPUT_MSB      = LP_U16_W - 1;
     localparam [LP_FP32_EXP_W-1:0] LP_FP32_EXP_BIAS = 8'd127;
-    localparam integer LP_U16_FRAC_W     = 16;
+    localparam integer LP_U16_FRAC_W     = `DEF_SOFTMAX_EXP_FRAC_W;
     localparam [LP_FP32_EXP_W-1:0] LP_EXP_OFFSET    = LP_FP32_EXP_BIAS - LP_U16_FRAC_W;
     localparam integer LP_FRAC_ZERO_W    = LP_FP32_FRAC_W - (LP_U16_W - 1);
     localparam [LP_FP32_W-1:0] LP_FP32_ZERO = {LP_FP32_W{1'b0}};

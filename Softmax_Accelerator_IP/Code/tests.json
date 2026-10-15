@@ -1,0 +1,38 @@
+{
+  "filesets": {
+    "softmax": {
+      "top": "TbTop",
+      "sources": [
+        "Source/*.v",
+        "Testbench/UVM/TOP_tb/interface.sv",
+        "Testbench/UVM/TOP_tb/tb_pkg.sv",
+        "Testbench/UVM/TOP_tb/tb_top.sv"
+      ],
+      "include": [
+        "include",
+        "Testbench/UVM/TOP_tb"
+      ],
+      "audit": [
+        "Testbench/UVM/TOP_tb/tools/*"
+      ],
+      "artifacts": [
+        "tb_runtime/*/report_summary.json",
+        "tb_runtime/suite_summary_all.json",
+        "tb_runtime/suite_cov*.txt"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "softmax_all",
+      "fileset": "softmax",
+      "plusargs": [
+        "TESTNAME=all"
+      ],
+      "require": [
+        "SUITE report: test=all cases=10 failed_cases=0 checked=[1-9][0-9]* errors=0"
+      ],
+      "timeout": 1200
+    }
+  ]
+}

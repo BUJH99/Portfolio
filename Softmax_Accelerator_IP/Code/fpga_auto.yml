@@ -1,0 +1,15 @@
+version: "1"
+project:
+  name: "Softmax_Accelerator_IP"
+hdl:
+  top: "TOP"
+  src_globs: ["Source/**/*.v"]
+  tb_globs: ["Testbench/UVM/TOP_tb/interface.sv", "Testbench/UVM/TOP_tb/tb_pkg.sv", "Testbench/UVM/TOP_tb/tb_top.sv"]
+  inc_globs: ["include/**/*.vh", "Testbench/UVM/TOP_tb/**/*.svh"]
+  xdc_globs: ["Constraints/*.xdc"]
+sim:
+  tool: "xsim"
+  timescale: "1ns/1ps"
+vivado:
+  part: "xczu3eg-sbva484-1-i"
+  strategy: "Default"

@@ -44,7 +44,7 @@ class TopConfig;
         m_tb_dir = fnTopTbDir();
         m_python_tool_path = fnTopPythonToolPath();
         m_report_tool_path = fnTopReportToolPath();
-        m_python_launcher_path = fnTopJoinPath(fnTopUserHome(), "AppData/Local/Programs/Python/Python313/python.exe");
+        m_python_launcher_path = fnTopPythonLauncherPath();
         m_runtime_root = fnTopRuntimeRoot();
         m_default_in_stall_mode = TOP_STALL_NONE;
         m_default_out_stall_mode = TOP_STALL_NONE;

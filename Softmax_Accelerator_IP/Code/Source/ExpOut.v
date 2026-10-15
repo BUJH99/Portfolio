@@ -8,19 +8,20 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module ExpOut(
     input  wire         iClk,
     input  wire         iRstn,
     input  wire         iValid,
     output wire         oReady,
     input  wire         iLast,
-    input  wire signed [15:0] iData,
+    input  wire signed [`DEF_SOFTMAX_Q78_W-1:0] iData,
     output wire         oValid,
     input  wire         iReady,
     output wire         oLast,
-    output wire [15:0]  oData
+    output wire [`DEF_SOFTMAX_EXP_W-1:0]  oData
 );
-    localparam integer LP_DATA_W = 16;
+    localparam integer LP_DATA_W = `DEF_SOFTMAX_EXP_W;
     localparam integer LP_ABS_W  = LP_DATA_W + 1;
     localparam integer LP_MUL_W  = 32;
     localparam [LP_DATA_W-1:0] LP_Q78_MAX_MAG = 16'h7FFF;

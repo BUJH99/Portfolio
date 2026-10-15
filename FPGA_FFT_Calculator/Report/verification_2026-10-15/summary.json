@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-10-15T16:36:48.251381+09:00",
+  "tool": "Vivado Simulator v2025.2",
+  "matrix_sha256": "f4492635d354c94f875e7e14f7b40990ad49974093985ff80cca49a12ba81357",
+  "runner_sha256": "1670615736cbf0f40ec2c4eee9760244f1029f3cc829a5458c21115d9f602e3e",
+  "source_files": {
+    "Sourcecode/BinToBcd7.sv": "8262d7dd96b5b34903e5df42e6dd4201889d4e62d140785305c65f36d2ee44f8",
+    "Sourcecode/ClkPulse.sv": "e399fcd02a5c7a77d8505d8bc8e9949ab770f33465cc32b0b93311d833a61cb8",
+    "Sourcecode/FFT8Core.sv": "4a4bdfa03c7de6ff98e0abf35bef669e44d763af05cfddf5e209b8d941fbb02e",
+    "Sourcecode/FFT8CoreCtrl.sv": "24634dd59e04260c9676a9a1470c3460d8844b2efdbe183ab16dc75ba22c86fb",
+    "Sourcecode/FFT8DifDatapath.sv": "81513169ef13e4cb443b1785327cfcdf5308232a331155d4104746215d876d4b",
+    "Sourcecode/FFT8InputLatch.sv": "3bc547f5348f3689fec5df8d955092882fcc21f3fbf19a2003d4fed03a7dd603",
+    "Sourcecode/FFT8OutputLatch.sv": "cee306d05e71803b0a00a697ccdf26d29c4f73b7be844ea926083e601a876735",
+    "Sourcecode/FFTConsole.sv": "0e5caa1d0ecce2bf41016666af2b49613cf3b0695825fb614e6b528844d802ce",
+    "Sourcecode/FFTConsoleCtrl.sv": "8b59b35c4e9a771ab2a6afbe6ec67aca426ee738ffcfede9e20bf97483889ba3",
+    "Sourcecode/FFTResultDisplay.sv": "e116436fb13b680f30df06b43a0a7f0cad44e44a45706ed1b81578cae7e784ee",
+    "Sourcecode/FFTSampleEntry.sv": "bd1f3adcfed93c42d99ad2f369409434c4d2f6a8ab215907aea79ac170689a8c",
+    "Sourcecode/InputController.sv": "fa217292d2cae4ca2519bf6cfc1f5adfffa504af0cf575eec13e37c0ee8b64f1",
+    "Sourcecode/KeycodeDecoder.sv": "820c7fd85c7fc1717bdb5397786a7478fd8067996bc9754a31c93aa6e64c5863",
+    "Sourcecode/KeyScan.sv": "10416dbad64cfd115254040bd3c1306cb68250a1109eed3d296fa7ea834220b4",
+    "Sourcecode/Seg8Digit.sv": "bdf6b3836b71f921c643c535c60936dd9a52c6d72702bc8f3c15160f59c74096",
+    "Sourcecode/TOP.sv": "0054d2100d1454c79705219596818e30612ce35f968fb87028ec0ac121c9b464",
+    "Testbench/TbTop.sv": "4200906184d7c32b1b1d59d646653a784ecb431dd68c290f44f21d56eb03e060"
+  },
+  "commands": [
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xvlog.bat",
+      "--sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\BinToBcd7.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\ClkPulse.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFT8Core.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFT8CoreCtrl.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFT8DifDatapath.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFT8InputLatch.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFT8OutputLatch.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFTConsole.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFTConsoleCtrl.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFTResultDisplay.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\FFTSampleEntry.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\InputController.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\KeycodeDecoder.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\KeyScan.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\Seg8Digit.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Sourcecode\\TOP.sv",
+      "<PORTFOLIO>\\FPGA_FFT_Calculator\\Code\\Testbench\\TbTop.sv"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xelab.bat",
+      "TbTop",
+      "-s",
+      "fft",
+      "-debug",
+      "typical",
+      "-timescale",
+      "1ns/1ps"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "fft",
+      "-runall",
+      "-sv_seed",
+      "1"
+    ]
+  ],
+  "runs": [
+    {
+      "name": "fft_directed",
+      "fileset": "fft",
+      "require": [
+        "^TB_PASS$"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 2.919,
+      "missing": [],
+      "log": "fft_directed.log"
+    }
+  ],
+  "total": 1,
+  "passed": 1,
+  "source_sha256": "d7838ef2c0a4a46c41f475767f5d28fcc6b2831e7ee45566933e27f67c6f9310"
+}

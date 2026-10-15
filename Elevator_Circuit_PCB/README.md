@@ -1,45 +1,22 @@
-# 📟 엘리베이터 회로 설계 및 PCB 제작
+# 📟 엘리베이터 제어 회로·PCB 제작
 
 ## 📅 프로젝트 정보
-- **진행 기간**: 2025.07.14 ~ 2025.07.26
-- **주관 및 수강**: 나인ES캠퍼스
-- **기술 스택**: `OrCAD Capture`, `PCB Editor`, `Discrete Logic (CD4000/74HC Series)`
 
----
+- **수행**: 2025.07 · 나인ES캠퍼스 실습
+- **작업**: 회로 분석·시뮬레이션, PCB Artwork, 배선·실장과 측정 확인
+- **도구**: `OrCAD Capture` · `PCB Editor` · `Discrete Logic`
 
-## 📝 프로젝트 개요
-MCU 없이 **Discrete Logic Gate**만을 조합하여 1층부터 9층까지 동작하는 엘리베이터 제어 회로를 설계하고, **OrCAD**를 이용해 실제 PCB로 제작한 프로젝트입니다.
+## 🔑 주요 구현
 
-## 🔑 주요 구현 내용
-### 1. 제어 회로 설계 (Discrete Logic)
-- **Input & Encoding**: 9개의 층 버튼 입력을 **Priority Encoder (`CD4532B`)** 를 통해 BCD 데이터로 변환.
-- **State Storage**: **D-Latch (`CD4042A`)** 를 사용하여 목표 층 데이터를 저장하고, **Group Select (GS)** 신호로 래치 타이밍 제어.
-- **Up/Down Logic**: **Magnitude Comparator (`74HC85`)** 가 현재 층과 목표 층을 비교하여 Up/Down 신호 생성.
-- **Position Counting**: **Up/Down Counter (`CD4516B`)** 가 클럭에 맞춰 층수를 카운팅하고 7-Segment로 디스플레이.
+- 버튼 입력의 Encoder → Latch → Comparator → Up/Down Counter → 7-Segment 흐름
+- Multivibrator와 1/100 분주를 이용한 구동 클럭 구성
+- 출력·다이오드·테스트 포인트 회로와 PCB 배치·배선
+- 실제 배선을 위한 Bottom 도면 좌우 반전과 완성 기판 확인
 
-### 2. 클럭 생성 및 PCB 제작
-- **Clock Generator**: 트랜지스터(`2N3904/3906`) 기반의 비안정 멀티바이브레이터로 약 **100Hz**의 구동 클럭 생성.
-- **PCB Artwork**: Bottom Layer 배선을 위해 **Mirror(좌우 반전)** 설계를 적용하고, Through-hole 부품 실장.
+## 📂 보고서에서 바로 찾기
 
----
+- [실습 보고서](<./Report/PCB Artwork 실습_한정호.pdf>)
+- **3쪽** Block Diagram · **5~12쪽** 제어 회로·시뮬레이션
+- **17~18쪽** PCB Layout·제작 · **19쪽** 전체 기판 앞·뒷면 · **20쪽** Test Point 측정
 
-## 🚀 문제 해결 (Troubleshooting)
-### 1. 래치 타이밍 불안정 (Latch Stability)
-- **문제**: 버튼을 누르는 순간의 채터링(Chattering)이나 신호 지연으로 인해 엉뚱한 층 값이 저장되는 현상.
-- **해결**: 인코더의 **GS(Group Select)** 신호를 래치의 클럭 입력으로 활용하여, 유효한 버튼 입력이 들어온 순간에만 데이터가 래치되도록 동기화.
-
-### 2. 발진 주파수 오차 보정
-- **문제**: 시뮬레이션상의 클럭 주파수와 실제 제작된 회로의 주파수 차이로 엘리베이터 이동 속도가 부자연스러움.
-- **해결**: 발진 회로에 **가변저항(VR1)** 을 배치하여 오실로스코프로 파형을 관측하며 최적의 주파수(약 100Hz)로 튜닝.
-
----
-
-## 📚 배운점 및 Tool 활용 역량
-- **OrCAD Capture 숙련도**: 기본 라이브러리에 없는 소자를 위한 **Part Library 생성**, **Footprint 매칭**, **Netlist 오류 디버깅** 등 툴의 고급 기능을 활용하여 회로 설계의 완성도 향상.
-- **PCB Editor 전문성**: 부품 간 간섭을 최소화하는 **Placement(배치)** 전략 수립 및 신호 무결성을 고려한 **Manual Routing(수동 배선)**, **Copper Pouring** 기법 체득.
-- **Digital Logic Flow**: 인코딩 ➡ 저장 ➡ 비교 ➡ 카운팅으로 이어지는 순차 논리 회로의 전체적인 데이터 흐름을 하드웨어 레벨에서 이해.
-
----
-
-## 📂 포트폴리오 목차
-- **[📂 Report](./Report)** : 실습 결과 보고서 및 회로도(Schematic)
+PDF 3쪽의 블록도는 1/100 분주 후 2 Hz를 표시하므로, 기존 소개의 약 100 Hz 동작 수치를 대표 사양으로 사용하지 않습니다. 원본 회로도와 보고서는 그대로 보존했습니다.

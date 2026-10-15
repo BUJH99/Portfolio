@@ -1,0 +1,3 @@
+# Only the UART download/GUI and SoC artifact generator need these packages.
+pyserial>=3.5,<4
+PyYAML>=6,<7

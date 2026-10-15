@@ -1,0 +1,83 @@
+<svg width="800" height="630" viewBox="0 0 800 630" xmlns="http://www.w3.org/2000/svg" font-family="'Times New Roman', Times, serif">
+  <rect width="800" height="630" fill="#fff"/>
+  <style>
+    .boundary-env { fill:none; stroke:#000; stroke-width:2px; }
+    .boundary-agent { fill:none; stroke:#000; stroke-width:2px; stroke-dasharray:8,6; }
+    .box-component, .box-dut { fill:#fff; stroke:#000; stroke-width:2px; }
+    .line-solid { fill:none; stroke:#000; stroke-width:1.5px; }
+    .tlm-port { fill:#fff; stroke:#000; stroke-width:1.5px; }
+    .title-text { font-size:16px; font-weight:bold; fill:#000; }
+    .comp-text { font-size:15px; fill:#000; }
+    .label-text { font-size:13px; font-style:italic; fill:#000; }
+    .muted-text { font-size:13px; fill:#000; }
+    .mono-text { font-family:'D2Coding','Courier New',monospace; font-size:12px; font-weight:bold; fill:#000; }
+    .focus-text { fill:#000; font-weight:bold; }
+  </style>
+
+  <defs>
+    <marker id="arr-gray-agent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <line x1="205" y1="106" x2="205" y2="223" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line x1="205" y1="284" x2="205" y2="303" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line id="driver-to-interface" x1="205" y1="362" x2="205" y2="494" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line id="interface-to-monitor" x1="395" y1="494" x2="395" y2="362" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line id="interface-to-dut" x1="205" y1="530" x2="205" y2="566" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line id="dut-to-interface" x1="395" y1="566" x2="395" y2="530" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <line x1="478" y1="339" x2="526" y2="339" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+  <polyline points="480,339 480,253 526,253" class="line-solid" marker-end="url(#arr-gray-agent)"/>
+
+  <rect x="40" y="30" width="720" height="426" class="boundary-env"/>
+  <text x="55" y="55" class="title-text">uvm_test</text>
+
+  <rect x="70" y="136" width="660" height="290" class="boundary-env"/>
+  <text x="85" y="162" class="title-text">uvm_env</text>
+
+  <rect x="100" y="186" width="400" height="210" class="boundary-agent"/>
+  <text x="115" y="212" class="title-text focus-text">uvm_agent</text>
+
+  <rect x="130" y="60" width="150" height="46" class="box-component"/>
+  <text x="205" y="89" class="comp-text" text-anchor="middle">uvm_sequence</text>
+
+  <rect x="130" y="230" width="150" height="46" class="box-component"/>
+  <text x="205" y="259" class="comp-text" text-anchor="middle">uvm_sequencer</text>
+
+  <rect x="130" y="316" width="150" height="46" class="box-component"/>
+  <text x="205" y="345" class="comp-text" text-anchor="middle">uvm_driver</text>
+
+  <rect x="320" y="316" width="150" height="46" class="box-component"/>
+  <text x="395" y="345" class="comp-text" text-anchor="middle">uvm_monitor</text>
+
+  <rect x="540" y="230" width="150" height="46" class="box-component"/>
+  <text x="615" y="259" class="comp-text" text-anchor="middle">uvm_coverage</text>
+
+  <rect x="540" y="316" width="150" height="46" class="box-component"/>
+  <text x="615" y="345" class="comp-text" text-anchor="middle">uvm_scoreboard</text>
+
+  <g id="virtual-interface">
+    <rect x="100" y="494" width="600" height="36" class="box-component"/>
+    <text x="400" y="517" class="title-text" text-anchor="middle">Virtual Interface</text>
+  </g>
+
+  <rect x="100" y="566" width="600" height="34" class="box-dut"/>
+  <text x="400" y="589" class="title-text" text-anchor="middle">DUT (FIFO)</text>
+
+  <text x="215" y="170" class="label-text">uvm_sequence_item()</text>
+
+  <rect x="201" y="276" width="8" height="8" class="tlm-port"/>
+  <rect x="201" y="308" width="8" height="8" class="tlm-port"/>
+  <text x="215" y="300" class="mono-text">get_next_item()</text>
+
+  <text x="215" y="480" class="label-text">Drive Signals</text>
+
+  <text x="405" y="480" class="label-text">Sample Signals</text>
+
+  <rect x="470" y="335" width="8" height="8" class="tlm-port"/>
+  <rect x="532" y="249" width="8" height="8" class="tlm-port"/>
+  <rect x="532" y="335" width="8" height="8" class="tlm-port"/>
+  <text x="510" y="330" class="mono-text" text-anchor="middle">write()</text>
+  <text x="510" y="232" class="mono-text" text-anchor="middle">write()</text>
+  <text x="500" y="358" class="muted-text" style="font-size:11px" text-anchor="middle">Analysis Port</text>
+</svg>

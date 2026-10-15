@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/BinToBcd7.sv" into library work
+INFO: [VRFC 10-311] analyzing module BinToBcd7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/ClkPulse.sv" into library work
+INFO: [VRFC 10-311] analyzing module ClkPulse
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFT8Core.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFT8Core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFT8CoreCtrl.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFT8CoreCtrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFT8DifDatapath.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFT8DifDatapath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFT8InputLatch.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFT8InputLatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFT8OutputLatch.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFT8OutputLatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFTConsole.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFTConsole
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFTConsoleCtrl.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFTConsoleCtrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFTResultDisplay.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFTResultDisplay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/FFTSampleEntry.sv" into library work
+INFO: [VRFC 10-311] analyzing module FFTSampleEntry
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/InputController.sv" into library work
+INFO: [VRFC 10-311] analyzing module InputController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/KeycodeDecoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module KeycodeDecoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/KeyScan.sv" into library work
+INFO: [VRFC 10-311] analyzing module KeyScan
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/Seg8Digit.sv" into library work
+INFO: [VRFC 10-311] analyzing module Seg8Digit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Sourcecode/TOP.sv" into library work
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_FFT_Calculator/Code/Testbench/TbTop.sv" into library work
+INFO: [VRFC 10-311] analyzing module TbTop

@@ -1,0 +1,323 @@
+{
+  "created_at": "2026-10-15T16:31:35.678590+09:00",
+  "tool": "Vivado Simulator v2025.2",
+  "matrix_sha256": "e67734caa6c13e9d84a24ada30c915dc072360eb63c051fabff657ab7cced0bf",
+  "runner_sha256": "03d271b45b37623efbb122990624e2565f917f5f5524db64570e97c2da5f3d14",
+  "source_files": {
+    "Source/RasterAddrGen.sv": "dd4d422241a61463e1aa18b43ad7a5dfec80973e6359e6909e45ab579b58d502",
+    "TestBench/reference/Window3x3Case9.sv": "95a26a46d21c788334bac1339c530755b5e3e33599fb4171654b7c9ea23c83f6",
+    "Source/Window3x3LineBuffer.sv": "93c61aa27400b41af405e1ebff5ea8cc6990df45cecc37c16f045eba37c922a1",
+    "Source/Conv3x3ReluParam.sv": "049ce48e2cd4453c04f0525c2a28c52c9ca1e758c93e3b05b59ce9a066ee55b9",
+    "TestBench/TbTop_module_perf.sv": "96f88363c2fdefcda6a457a4ff5c4b8858e57a5cc78d2aee7a3d8eab266f00b6",
+    "Source/CameraToRam.sv": "5bcedad1f68b0d94a95d3f1027bbc06cb1c5c0598f771cdab33b0fb5e823f6dc",
+    "Source/CamI2c.sv": "9cf6a07f166f68fa7d8c98e1a05885446d498c015099bcf954d68cb3f314ffea",
+    "Source/CamI2cCommand.sv": "97fab2b476e5e28a6becb63f841f9a410afdd71e6ca910758ca26b0b8b5cef50",
+    "Source/CamI2cRom.sv": "1ee1e824160bf40b5eff3baaadc1039d6a2652faaff728d0a1eccaebc3caac60",
+    "Source/ClkDivider.sv": "3f243d3f6856c4d8e16d5ab12f91740d6f193425b76b5cf85e3ce61d4289085f",
+    "Source/ClockEnableGenerator.sv": "12a65eda3c970a217b48537f6fca67e572dca86736eb799f4abdf61bfa5cd96b",
+    "Source/MemToTftLcd.sv": "b267079a8b5d93233825bbd8c50c3f7bc02233b5cbe50b65e4b3599306cc7af0",
+    "Source/Rgb565ToRgb888.sv": "12a02fe5f25c7c2f728b551369d44aa0f7112e80834dff29602f152ed373615c",
+    "Source/Rgb888ToRgb565.sv": "89e968a63ae79a2f4c6b144d480c4a6f3e49a478586334413ccf080a1369f066",
+    "Source/TOP.sv": "b2545eb53644199f8dd83f89da2d10d3d1db6cd6fd50e93bd1167a20c2d3b5fe",
+    "TestBench/tb_memory_models.v": "b111c1dfbb0aec43c16d89e55887bf09ce912e69df28b7a9c99609cd8eb86f2b",
+    "TestBench/tb_top.v": "f252bcc92f2ca58e7f18c192251e50a9a0e2f1b554aca4fd0b23688db50e7c8b"
+  },
+  "commands": [
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xvlog.bat",
+      "--sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\RasterAddrGen.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\TestBench\\reference\\Window3x3Case9.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Window3x3LineBuffer.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Conv3x3ReluParam.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\TestBench\\TbTop_module_perf.sv"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xelab.bat",
+      "TbTop",
+      "-s",
+      "modules",
+      "-debug",
+      "typical",
+      "-timescale",
+      "1ns/1ps"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "modules",
+      "-runall",
+      "-sv_seed",
+      "1"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xvlog.bat",
+      "--sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\CameraToRam.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\CamI2c.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\CamI2cCommand.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\CamI2cRom.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\ClkDivider.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\ClockEnableGenerator.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Conv3x3ReluParam.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\MemToTftLcd.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\RasterAddrGen.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Rgb565ToRgb888.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Rgb888ToRgb565.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\TOP.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\Source\\Window3x3LineBuffer.sv",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\TestBench\\tb_memory_models.v",
+      "<PORTFOLIO>\\FPGA_Image_Filtering\\Code\\TestBench\\tb_top.v"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xelab.bat",
+      "tb_TOP",
+      "-s",
+      "integrated",
+      "-debug",
+      "typical",
+      "-timescale",
+      "1ns/1ps"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE0",
+      "-testplusarg",
+      "PRELOAD_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE1",
+      "-testplusarg",
+      "PRELOAD_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE2",
+      "-testplusarg",
+      "PRELOAD_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE3",
+      "-testplusarg",
+      "PRELOAD_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE0",
+      "-testplusarg",
+      "STREAM_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE1",
+      "-testplusarg",
+      "STREAM_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE2",
+      "-testplusarg",
+      "STREAM_INPUT"
+    ],
+    [
+      "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xsim.bat",
+      "integrated",
+      "-runall",
+      "-sv_seed",
+      "1",
+      "-testplusarg",
+      "MODE3",
+      "-testplusarg",
+      "STREAM_INPUT"
+    ]
+  ],
+  "runs": [
+    {
+      "name": "module_perf",
+      "fileset": "modules",
+      "require": [
+        "MODULE_PERF_PASS"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 5.199,
+      "missing": [],
+      "log": "module_perf.log"
+    },
+    {
+      "name": "integrated_mode0_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE0",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.686,
+      "missing": [],
+      "log": "integrated_mode0_preload.log"
+    },
+    {
+      "name": "integrated_mode1_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE1",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.535,
+      "missing": [],
+      "log": "integrated_mode1_preload.log"
+    },
+    {
+      "name": "integrated_mode2_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE2",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 18.122,
+      "missing": [],
+      "log": "integrated_mode2_preload.log"
+    },
+    {
+      "name": "integrated_mode3_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE3",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.43,
+      "missing": [],
+      "log": "integrated_mode3_preload.log"
+    },
+    {
+      "name": "integrated_mode0_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE0",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.264,
+      "missing": [],
+      "log": "integrated_mode0_stream.log"
+    },
+    {
+      "name": "integrated_mode1_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE1",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.292,
+      "missing": [],
+      "log": "integrated_mode1_stream.log"
+    },
+    {
+      "name": "integrated_mode2_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE2",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.223,
+      "missing": [],
+      "log": "integrated_mode2_stream.log"
+    },
+    {
+      "name": "integrated_mode3_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE3",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ],
+      "passed": true,
+      "returncode": 0,
+      "seconds": 16.322,
+      "missing": [],
+      "log": "integrated_mode3_stream.log"
+    }
+  ],
+  "total": 9,
+  "passed": 9,
+  "source_sha256": "6da06e187c35405d585727270d7dc1b6bfdd1a5546c491870349c100d60c7825"
+}

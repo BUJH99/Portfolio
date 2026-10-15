@@ -1,0 +1,141 @@
+{
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/BinToBcd7.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/BinToBcd7.sv",
+      "original_sha256": "8262d7dd96b5b34903e5df42e6dd4201889d4e62d140785305c65f36d2ee44f8",
+      "published_sha256": "8262d7dd96b5b34903e5df42e6dd4201889d4e62d140785305c65f36d2ee44f8",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/ClkPulse.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/ClkPulse.sv",
+      "original_sha256": "e399fcd02a5c7a77d8505d8bc8e9949ab770f33465cc32b0b93311d833a61cb8",
+      "published_sha256": "e399fcd02a5c7a77d8505d8bc8e9949ab770f33465cc32b0b93311d833a61cb8",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFT8Core.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFT8Core.sv",
+      "original_sha256": "4a4bdfa03c7de6ff98e0abf35bef669e44d763af05cfddf5e209b8d941fbb02e",
+      "published_sha256": "4a4bdfa03c7de6ff98e0abf35bef669e44d763af05cfddf5e209b8d941fbb02e",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFT8CoreCtrl.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFT8CoreCtrl.sv",
+      "original_sha256": "24634dd59e04260c9676a9a1470c3460d8844b2efdbe183ab16dc75ba22c86fb",
+      "published_sha256": "24634dd59e04260c9676a9a1470c3460d8844b2efdbe183ab16dc75ba22c86fb",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFT8DifDatapath.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFT8DifDatapath.sv",
+      "original_sha256": "81513169ef13e4cb443b1785327cfcdf5308232a331155d4104746215d876d4b",
+      "published_sha256": "81513169ef13e4cb443b1785327cfcdf5308232a331155d4104746215d876d4b",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFT8InputLatch.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFT8InputLatch.sv",
+      "original_sha256": "3bc547f5348f3689fec5df8d955092882fcc21f3fbf19a2003d4fed03a7dd603",
+      "published_sha256": "3bc547f5348f3689fec5df8d955092882fcc21f3fbf19a2003d4fed03a7dd603",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFT8OutputLatch.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFT8OutputLatch.sv",
+      "original_sha256": "cee306d05e71803b0a00a697ccdf26d29c4f73b7be844ea926083e601a876735",
+      "published_sha256": "cee306d05e71803b0a00a697ccdf26d29c4f73b7be844ea926083e601a876735",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFTConsole.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFTConsole.sv",
+      "original_sha256": "0e5caa1d0ecce2bf41016666af2b49613cf3b0695825fb614e6b528844d802ce",
+      "published_sha256": "0e5caa1d0ecce2bf41016666af2b49613cf3b0695825fb614e6b528844d802ce",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFTConsoleCtrl.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFTConsoleCtrl.sv",
+      "original_sha256": "8b59b35c4e9a771ab2a6afbe6ec67aca426ee738ffcfede9e20bf97483889ba3",
+      "published_sha256": "8b59b35c4e9a771ab2a6afbe6ec67aca426ee738ffcfede9e20bf97483889ba3",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFTResultDisplay.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFTResultDisplay.sv",
+      "original_sha256": "e116436fb13b680f30df06b43a0a7f0cad44e44a45706ed1b81578cae7e784ee",
+      "published_sha256": "e116436fb13b680f30df06b43a0a7f0cad44e44a45706ed1b81578cae7e784ee",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/FFTSampleEntry.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/FFTSampleEntry.sv",
+      "original_sha256": "bd1f3adcfed93c42d99ad2f369409434c4d2f6a8ab215907aea79ac170689a8c",
+      "published_sha256": "bd1f3adcfed93c42d99ad2f369409434c4d2f6a8ab215907aea79ac170689a8c",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/InputController.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/InputController.sv",
+      "original_sha256": "fa217292d2cae4ca2519bf6cfc1f5adfffa504af0cf575eec13e37c0ee8b64f1",
+      "published_sha256": "fa217292d2cae4ca2519bf6cfc1f5adfffa504af0cf575eec13e37c0ee8b64f1",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/KeyScan.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/KeyScan.sv",
+      "original_sha256": "10416dbad64cfd115254040bd3c1306cb68250a1109eed3d296fa7ea834220b4",
+      "published_sha256": "10416dbad64cfd115254040bd3c1306cb68250a1109eed3d296fa7ea834220b4",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/KeycodeDecoder.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/KeycodeDecoder.sv",
+      "original_sha256": "820c7fd85c7fc1717bdb5397786a7478fd8067996bc9754a31c93aa6e64c5863",
+      "published_sha256": "820c7fd85c7fc1717bdb5397786a7478fd8067996bc9754a31c93aa6e64c5863",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/Seg8Digit.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/Seg8Digit.sv",
+      "original_sha256": "bdf6b3836b71f921c643c535c60936dd9a52c6d72702bc8f3c15160f59c74096",
+      "published_sha256": "bdf6b3836b71f921c643c535c60936dd9a52c6d72702bc8f3c15160f59c74096",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/src/TOP.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Sourcecode/TOP.sv",
+      "original_sha256": "0054d2100d1454c79705219596818e30612ce35f968fb87028ec0ac121c9b464",
+      "published_sha256": "0054d2100d1454c79705219596818e30612ce35f968fb87028ec0ac121c9b464",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "git/Project/FPGA_FFT_Calculator/tb/TbTop.sv",
+      "destination": "FPGA_FFT_Calculator/Code/Testbench/TbTop.sv",
+      "original_sha256": "4200906184d7c32b1b1d59d646653a784ecb431dd68c290f44f21d56eb03e060",
+      "published_sha256": "4200906184d7c32b1b1d59d646653a784ecb431dd68c290f44f21d56eb03e060",
+      "commit": null,
+      "status": "packaged"
+    }
+  ]
+}
