@@ -30,24 +30,9 @@ SPI·I2C Master/Slave RTL의 데이터 정합성과 프로토콜 동작을 검�
 
 ## 📐 검증 구조
 
-```mermaid
-flowchart TB
-    Test[UVM Test] --> VSeq[SerialVirtualSeq]
-    VSeq --> VSeqr[SerialVirtualSequencer]
-    VSeqr --> Ctrl[SerialCtrlAgent]
-    VSeqr -->|Active| SPI[SpiAgent]
-    VSeqr -->|Active| I2C[I2cAgent]
-    Ctrl --> DUT[SerialDutHarness / RTL]
-    SPI <--> DUT
-    I2C <--> DUT
-    Ctrl --> Predictor[SerialPredictor]
-    Predictor --> SB[SerialScoreboard]
-    SPI -->|관측 프레임| SB
-    I2C -->|관측 프레임| SB
-    DUT --> Status[상태 Monitor]
-    Status --> SB
-    SB -->|검증 완료 전송| Coverage[SPI / I2C / 통합 Coverage]
-```
+![SPI·I2C 멀티에이전트 UVM 검증 구조](./docs/images/uvm-multi-agent-architecture.svg)
+
+SPI·I2C Agent를 중심으로 직접 작성한 구조도입니다. 이 프로젝트에서는 `SerialCtrlAgent`와 `SerialPredictor`로 제어·상태 검증을 구성하고, Coverage에는 Scoreboard 검증을 통과한 전송을 전달합니다.
 
 - **전송 식별**: 프로토콜별 요청 큐와 endpoint·리셋 세대·설정 정보를 기준으로 관측 프레임을 비교합니다.
 - **완료 판정**: 복원된 버스 프레임과 데이터 검증을 거친 뒤 레지스터·LED 반영 상태를 검사합니다.

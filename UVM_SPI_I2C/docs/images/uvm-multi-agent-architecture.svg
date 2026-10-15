@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-labelledby="diagram-title diagram-desc" font-family="'Times New Roman', Times, serif">
+  <title id="diagram-title">SPI and I2C Multi-Agent UVM Testbench Architecture</title>
+  <desc id="diagram-desc">A Virtual Sequence runs on a Virtual Sequencer and launches separate SPI Sequence and I2C Sequence objects, both derived from uvm_sequence, on their respective agent sequencers. These sequence objects are shown outside the Agent boundaries. The Virtual Sequencer holds handles to the two agent sequencers. The SPI Agent on the left and the mirrored I2C Agent on the right flank the central Scoreboard and Coverage. Each sequencer supplies its driver; each monitor independently sends observed transactions to both checking components. Separate SPI and I2C Virtual Interfaces connect the drivers and monitors to the DUT.</desc>
+  <rect width="1080" height="640" fill="#fff"/>
+  <style>
+    .boundary { fill:none; stroke:#000; stroke-width:2; }
+    .agent-boundary { fill:none; stroke:#000; stroke-width:2; stroke-dasharray:8 6; }
+    .component { fill:#fff; stroke:#000; stroke-width:2; }
+    .wire { fill:none; stroke:#000; stroke-width:1.6; stroke-linejoin:round; }
+    .control { fill:none; stroke:#000; stroke-width:1.6; stroke-dasharray:7 5; }
+    .port { fill:#fff; stroke:#000; stroke-width:1.5; }
+    .junction { fill:#000; }
+    .hierarchy { font-size:22px; font-weight:bold; fill:#000; }
+    .heading { font-size:20px; font-weight:bold; fill:#000; }
+    .label { font-size:20px; fill:#000; }
+    .annotation { font-size:17px; font-style:italic; fill:#000; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <g id="test-and-env">
+    <rect x="20" y="18" width="1040" height="470" class="boundary"/>
+    <text x="36" y="47" class="hierarchy">uvm_test</text>
+    <rect x="40" y="136" width="1000" height="324" class="boundary"/>
+    <text x="56" y="164" class="hierarchy">uvm_env</text>
+  </g>
+
+  <g id="virtual-sequence">
+    <rect x="390" y="61" width="300" height="60" class="component"/>
+    <text x="540" y="98" class="heading" text-anchor="middle" data-max-width="280">Virtual Sequence</text>
+    <path id="virtual-to-spi-sequence" d="M390 91 H344" class="wire" marker-end="url(#arrow)"/>
+    <path id="virtual-to-i2c-sequence" d="M690 91 H736" class="wire" marker-end="url(#arrow)"/>
+    <path id="sequence-start" d="M540 121 V162" class="wire" marker-end="url(#arrow)"/>
+    <text x="553" y="152" class="annotation">start()</text>
+  </g>
+  <g id="spi-sequence">
+    <rect x="84" y="61" width="260" height="60" class="component sequence-object"/>
+    <text x="214" y="86" class="heading" text-anchor="middle" data-max-width="240">SPI Sequence</text>
+    <text x="214" y="109" class="annotation" text-anchor="middle" data-max-width="240">(uvm_sequence)</text>
+    <path id="spi-sequence-start" d="M214 121 V310" class="wire" marker-end="url(#arrow)"/>
+    <text x="227" y="188" class="annotation">start()</text>
+  </g>
+  <g id="i2c-sequence">
+    <rect x="736" y="61" width="260" height="60" class="component sequence-object"/>
+    <text x="866" y="86" class="heading" text-anchor="middle" data-max-width="240">I2C Sequence</text>
+    <text x="866" y="109" class="annotation" text-anchor="middle" data-max-width="240">(uvm_sequence)</text>
+    <path id="i2c-sequence-start" d="M866 121 V310" class="wire" marker-end="url(#arrow)"/>
+    <text x="853" y="188" class="annotation" text-anchor="end">start()</text>
+  </g>
+  <g id="virtual-sequencer">
+    <rect x="390" y="162" width="300" height="46" class="component"/>
+    <text x="540" y="192" class="heading" text-anchor="middle" data-max-width="280">Virtual Sequencer</text>
+    <path d="M540 208 V252" class="control"/>
+    <path id="spi-sequencer-handle" d="M540 252 H316 V330 H294" class="control" marker-end="url(#arrow)"/>
+    <path id="i2c-sequencer-handle" d="M540 252 H764 V330 H786" class="control" marker-end="url(#arrow)"/>
+    <text x="428" y="243" class="annotation" text-anchor="middle">spi_seqr_h</text>
+    <text x="652" y="243" class="annotation" text-anchor="middle">i2c_seqr_h</text>
+  </g>
+
+  <g id="spi-agent">
+    <rect x="64" y="270" width="302" height="164" class="agent-boundary"/>
+    <text x="80" y="295" class="heading">SPI Agent</text>
+    <rect x="134" y="310" width="160" height="40" class="component"/>
+    <text x="214" y="337" class="label" text-anchor="middle" data-max-width="144">Sequencer</text>
+    <path id="spi-sequencer-to-driver" d="M214 350 V365 H144.5 V380" class="wire" marker-end="url(#arrow)"/>
+    <rect x="82" y="380" width="125" height="40" class="component"/>
+    <text x="144.5" y="407" class="label" text-anchor="middle" data-max-width="109">Driver</text>
+    <rect x="224" y="380" width="125" height="40" class="component"/>
+    <text x="286.5" y="407" class="label" text-anchor="middle" data-max-width="109">Monitor</text>
+  </g>
+  <g id="i2c-agent">
+    <rect x="714" y="270" width="302" height="164" class="agent-boundary"/>
+    <text x="1000" y="295" class="heading" text-anchor="end">I2C Agent</text>
+    <rect x="786" y="310" width="160" height="40" class="component"/>
+    <text x="866" y="337" class="label" text-anchor="middle" data-max-width="144">Sequencer</text>
+    <path id="i2c-sequencer-to-driver" d="M866 350 V365 H935.5 V380" class="wire" marker-end="url(#arrow)"/>
+    <rect x="873" y="380" width="125" height="40" class="component"/>
+    <text x="935.5" y="407" class="label" text-anchor="middle" data-max-width="109">Driver</text>
+    <rect x="731" y="380" width="125" height="40" class="component"/>
+    <text x="793.5" y="407" class="label" text-anchor="middle" data-max-width="109">Monitor</text>
+  </g>
+
+  <g id="analysis-connections">
+    <path id="spi-observed-to-scoreboard" d="M357 400 H394 V334 H422" class="wire" marker-end="url(#arrow)"/>
+    <path id="spi-observed-to-coverage" d="M394 400 V414 H422" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-observed-to-scoreboard" d="M723 400 H686 V334 H658" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-observed-to-coverage" d="M686 400 V414 H658" class="wire" marker-end="url(#arrow)"/>
+    <circle cx="394" cy="400" r="2.8" class="junction"/>
+    <circle cx="686" cy="400" r="2.8" class="junction"/>
+    <text x="540" y="294" class="annotation" text-anchor="middle">Analysis write()</text>
+    <rect x="349" y="396" width="8" height="8" class="port"/>
+    <rect x="723" y="396" width="8" height="8" class="port"/>
+  </g>
+  <g id="scoreboard">
+    <rect x="430" y="310" width="220" height="48" class="component"/>
+    <text x="540" y="341" class="label" text-anchor="middle" data-max-width="204">uvm_scoreboard</text>
+    <rect x="422" y="330" width="8" height="8" class="port"/>
+    <rect x="650" y="330" width="8" height="8" class="port"/>
+  </g>
+  <g id="coverage">
+    <rect x="430" y="390" width="220" height="48" class="component"/>
+    <text x="540" y="421" class="label" text-anchor="middle" data-max-width="204">uvm_coverage</text>
+    <rect x="422" y="410" width="8" height="8" class="port"/>
+    <rect x="650" y="410" width="8" height="8" class="port"/>
+  </g>
+
+  <g id="virtual-interfaces">
+    <path id="spi-driver-to-interface" d="M144.5 420 V520" class="wire" marker-end="url(#arrow)"/>
+    <path id="spi-interface-to-monitor" d="M286.5 520 V420" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-driver-to-interface" d="M935.5 420 V520" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-interface-to-monitor" d="M793.5 520 V420" class="wire" marker-end="url(#arrow)"/>
+    <text x="152" y="510" class="annotation">Drive</text>
+    <text x="294" y="510" class="annotation">Sample</text>
+    <text x="928" y="510" class="annotation" text-anchor="end">Drive</text>
+    <text x="786" y="510" class="annotation" text-anchor="end">Sample</text>
+    <rect x="64" y="520" width="302" height="36" class="component"/>
+    <text x="215" y="545" class="heading" text-anchor="middle" data-max-width="282">SPI Virtual Interface</text>
+    <rect x="714" y="520" width="302" height="36" class="component"/>
+    <text x="865" y="545" class="heading" text-anchor="middle" data-max-width="282">I2C Virtual Interface</text>
+  </g>
+  <g id="dut">
+    <path id="spi-interface-to-dut" d="M144.5 556 V594" class="wire" marker-end="url(#arrow)"/>
+    <path id="spi-dut-to-interface" d="M286.5 594 V556" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-interface-to-dut" d="M935.5 556 V594" class="wire" marker-end="url(#arrow)"/>
+    <path id="i2c-dut-to-interface" d="M793.5 594 V556" class="wire" marker-end="url(#arrow)"/>
+    <rect x="64" y="594" width="952" height="32" class="component"/>
+    <text x="540" y="617" class="heading" text-anchor="middle" data-max-width="932">DUT (SPI / I2C)</text>
+  </g>
+</svg>
