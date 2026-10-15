@@ -1,82 +1,98 @@
 # 🕹️ MCU 기반 임베디드 제어 시스템 (MCU Control System)
 
 ## 📅 프로젝트 정보
-- **진행 기간**: 2024.09.23 ~ 2024.11.23 (2학년 2학기)
-- **대 회 명**: 숭실대학교 MCU 제어 공모전 (자율주행 아님, 임베디드 제어 주제)
-- **하드웨어**: `ATmega128 / Arduino`, `Stepper Motor`, `Sensors (ADC)`, `MAX7219`, `WS2812`
-- **기술 스택**: `Embedded C`, `AVR-GCC`, `UART/SPI/I2C Communication`, `FSM Control`
 
----
+- **진행 기간**: 2024.09.23 ~ 2024.11.23 (2학년 2학기)
+- **대회명**: 숭실대학교 MCU 응용경진대회
+- **MCU**: `ATmega328P` 기반 Arduino Uno R3 · 16 MHz
+- **주요 부품**: `28BYJ-48 / ULN2003`, 압력·수위·온도 센서, `74HC595`, `MAX7219`, `WS2812`
+- **기술**: `Embedded C` · `AVR-GCC` · `GPIO / ADC / Timer` · `UART / SPI / MIDI`
 
 ## 📝 프로젝트 개요
-MCU(Micro Controller Unit)의 다양한 주변장치(Peripheral) 제어 능력을 겨루는 공모전으로, **예선(비데 시스템 구현)** 과 **본선(단계별 미션 수행)** 으로 나누어 진행되었습니다.
 
----
+AVR MCU의 레지스터를 직접 제어해 센서 입력, 모터 구동, LED 표시와 통신 기능을 구현한 공모전 프로젝트입니다. **예선에서는 스마트 비데 제어 시스템**, **본선에서는 키 매트릭스·LED 매트릭스·MIDI·WS2812 연동 미션**을 수행했습니다.
+
+입력값을 읽는 센서·버튼 처리, 동작 상태에 따른 구동기 제어, 사용자에게 상태를 전달하는 표시·통신 경로를 C 코드로 구성했습니다.
+
+## 👤 역할 목록
+
+| 번호 | 구분 | 역할 |
+|---:|---|---|
+| 1 | 공통 | 과제 요구사항 분석, 기능 정의, 시스템 블록 구성 |
+| 2 | 공통 | MCU·센서·구동기 부품 선정, 핀 배치, 회로 구성과 배선 |
+| 3 | 예선 | 착좌 조건과 비데·세정·온풍·정지 모드를 처리하는 메인 제어 루프 구현 |
+| 4 | 예선 | ADC 설정, 압력·수위 임계값 판정, 서미스터 저항·온도 변환 구현 |
+| 5 | 예선 | 저항 분압을 이용한 9개 버튼 입력 구분과 채터링 처리 |
+| 6 | 예선 | 노즐 위치·수압 조절용 스텝 모터의 회전 시퀀스, 위치 제한, 초기화 구현 |
+| 7 | 예선 | 시트 히터의 목표 온도 제어, 온풍 팬의 모드별 ON/OFF 제어 |
+| 8 | 예선 | 74HC595 시프트 레지스터와 비트 마스킹을 이용한 상태 LED 제어 |
+| 9 | 공통 | Timer0 기반 지연 함수와 인터럽트 기반 LED 점멸 구현 |
+| 10 | 본선 | 5×8 키 매트릭스 스캔, 키 입력·해제 상태와 음계 매핑 처리 |
+| 11 | 본선 | SPI 기반 MAX7219 초기화, 대상 모듈 선택, 음계 패턴 출력 |
+| 12 | 본선 | UART 보율 설정, MIDI Note ON/OFF 메시지 생성과 송수신 처리 |
+| 13 | 본선 | WS2812의 GRB 데이터 인코딩, LED 색상 배열과 키 입력 연동 |
+| 14 | 공통 | 모듈별·통합 동작 테스트, 모터 지연·버튼 분압·통신 디버깅 |
+| 15 | 공통 | 회로도·시스템 구성도 작성과 발표 자료 정리 |
 
 ## 🏆 예선: 지능형 스마트 비데 시스템 (Advanced Bidet Control)
+
 ### 🔑 주요 구현 내용
-- **System Architecture**: 사람이 앉았음을 감지(압력 센서)해야만 동작하는 **안전 루프(Safety Loop)** 구조 설계.
-- **Actuator Control**:
-    - **Nozzle Moving**: 스텝 모터(Step Motor)의 정밀 제어를 통해 노즐의 전/후진 및 세정/비데 모드 위치 보정 기능 구현 (`motor.h`).
-    - **Water Pressure**: 모터 스텝 수에 따라 3단계 수압 조절 로직 구현.
-- **Sensor & Output**:
-    - **ADC Filtering**: 서미스터(Thermistor)와 압력 센서의 아날로그 값을 안정적으로 수신하기 위한 ADC 필터링.
-    - **User Interface**: Shift Register(`74HC595`)를 활용하여 적은 수의 핀으로 다수의 상태 표시 LED 제어.
 
-### 📜 Source Code Checklist
-- `main.c`: 착좌 감지 루프 및 버튼 인터럽트 처리.
-- `motor.h`: 노즐/수압 모터의 가감속 및 위치 제어 알고리즘.
-- `led.h`: Shift Register를 이용한 비트마스킹 LED 제어.
+- **착좌 감지**: 압력 센서의 ADC 값을 기준으로 사용자 입력을 처리하고, 사용자가 일어서면 노즐·수압 모터와 팬·시트 히터를 초기화합니다.
+- **노즐·수압 제어**: 스텝 모터 2개로 노즐 전후진과 수압 조절부를 구동합니다. 비데·세정 모드별 노즐 위치와 3단계 수압에 대응하는 스텝 수를 설정했습니다.
+- **센서·온도 제어**: 압력·수위는 임계값으로 판정하고, 서미스터는 ADC 값에서 저항과 온도를 계산해 시트 히터를 제어합니다.
+- **버튼·상태 표시**: 저항 분압으로 9개 버튼을 구분하고, 74HC595를 통해 수압·시트·온수 설정 단계의 LED를 제어합니다.
 
----
+### 📜 코드 구성
+
+| 파일 | 역할 |
+|---|---|
+| `main.c` | 포트 초기화, 착좌 감지, 모드별 버튼 처리와 구동기 제어 |
+| `ADC.h` | ADC 읽기, 압력·수위 판정, 서미스터 온도 계산, 히터·팬 제어 |
+| `button.h` | 버튼 전압 구간 판별, 채터링 처리, 모드·설정 단계 변경 |
+| `motor.h` | 스텝 시퀀스, 노즐 전후진·위치 제한, 수압 단계 제어 |
+| `delay.h` | Timer0 비교 플래그를 이용한 밀리초 지연 |
+| `led.h` | 16-bit 상태 데이터 시프트와 출력 래치 제어 |
 
 ## 🏁 본선: 실시간 제어 미션 (Main Tournament)
 
 ### 🥇 Round 1: Key Matrix & LED Matrix 제어
-- **Mission**: 4x4 키 매트릭스 입력에 따라 8x8 LED 매트릭스(MAX7219)에 패턴 출력.
-- **Tech Spec**:
-    - **Key Matrix**: 풀업 저항을 활용한 Row/Column 스캐닝 알고리즘 및 디바운싱(Debouncing) 처리.
-    - **SPI Telemetry**: MCU와 MAX7219 드라이버 간 **SPI 통신**으로 고속 데이터 전송.
+
+- **키 입력**: 시프트 레지스터로 열을 선택하고, **5×8 키 매트릭스**의 행 입력을 순차적으로 읽습니다.
+- **패턴 표시**: 키 위치를 음계 패턴으로 변환해 MAX7219 LED 매트릭스에 출력합니다.
+- **SPI 제어**: MAX7219의 밝기·스캔 범위·동작 모드를 설정하고, 직렬 연결된 모듈 중 출력 대상을 선택합니다.
 
 ### 🥈 Round 2: MIDI Controller (UART)
-- **Mission**: UART 통신을 이용하여 PC의 가상 악기(VST)를 연주하는 MIDI 컨트롤러 제작.
-- **Tech Spec**:
-    - **MIDI Protocol**: 표준 MIDI 통신 속도인 **31,250 bps**로 UART 보율(Baud Rate) 설정.
-    - **Message Format**: Note ON(`0x90`) / Note OFF(`0x80`) 패킷 구조에 맞춰 3-Byte 데이터(Status, Note, Velocity) 송신.
-    - **Logic**: 수신된 데이터를 파싱하여 즉각적으로 MIDI 신호로 변환하여 악기 소리 출력.
+
+- **UART 설정**: 16 MHz 클럭에서 `UBRR0 = 31`을 사용해 **31,250 bps**로 통신합니다.
+- **메시지 구성**: 상태·음계·세기의 3바이트로 MIDI 메시지를 만들고, Note ON(`0x90`)과 Note OFF(`0x80`)를 전송합니다.
+- **입출력 연결**: UART 수신값을 음계 데이터로 사용해 MIDI 출력에 연결합니다.
 
 ### 🥉 Round 3: WS2812 & System Integration
-- **Mission**: 키 입력과 UART 통신을 결합하여 Addressable LED(WS2812, Neopixel) 색상 및 패턴 제어.
-- **Tech Spec**:
-    - **Timing Critical**: WS2812의 엄격한 타이밍 프로토콜(800kHz)을 준수하기 위해 인라인 어셈블리 또는 최적화된 C코드로 신호 생성.
-    - **Color Mixing**: RGB 24-bit 데이터를 조작하여 다양한 컬러 패턴 디스플레이.
 
----
+- **입력 이벤트**: 현재 키 상태와 이전 상태를 비교해 눌림·해제를 구분하고 MIDI Note ON/OFF로 변환합니다.
+- **LED 연동**: 키 상태에 맞춰 LED 색상 배열을 갱신하고 WS2812 출력에 전달합니다.
+- **SPI 인코딩**: 24-bit 색상 데이터를 **GRB 순서**로 전송하며, 각 비트를 SPI 바이트 패턴으로 변환한 뒤 데이터 종료 지연을 적용합니다.
 
 ## 🚀 문제 해결 (Troubleshooting)
-### 1. Shift Register 타이밍 동기화
-- **문제**: LED 제어 시 데이터 래치(Latch) 타이밍이 맞지 않아 오작동 발생.
-- **해결**: 데이터 시프트(Shift)와 스토리지 래치(Storage Latch) 클럭 사이의 미세한 딜레이를 오실로스코프로 분석하여 최적의 타이밍 코드 구현 (`led.h`).
 
-### 2. 가변적인 입력 신호 처리 (ADC)
-- **문제**: 압력 센서 값이 흔들려(Fluctuation) 착좌 상태가 불안정하게 감지됨.
-- **해결**: 이동 평균 필터(Moving Average Filter)를 소프트웨어적으로 구현하여 노이즈를 제거하고 안정적인 판단 로직 확보.
-
-### 3. MIDI 통신 속도 불일치
-- **문제**: 일반적인 9600/115200 bps가 아닌 31250 bps 설정 시 오차 발생.
-- **해결**: AVR의 `UBRR` 레지스터 값을 데이터시트 공식에 맞춰 정밀 계산하고, 16MHz 외부 클럭 기준으로 오차율 0% 달성.
-
----
+- **모터 구동 간격**: 회전 시퀀스의 스텝 사이에 3 ms 지연을 두어 모터 구동을 안정화했습니다.
+- **버튼 입력 구분**: 분압 회로의 저항값과 ADC 판정 구간을 조정하고, 50 ms 대기 후 입력을 다시 읽는 채터링 처리를 적용했습니다.
+- **통신 디버깅**: UART로 상태값을 보내 PC 시리얼 터미널에서 확인하는 방식으로 모듈 동작을 점검했습니다.
 
 ## 📚 배운점
-- **Low-Level Control**: 라이브러리에 의존하지 않고 레지스터(Register)를 직접 조작(DDR, PORT, UBRR, SPDR 등)하며 하드웨어 제어의 본질 이해.
-- **Wait-Free Logic**: `delay()` 함수 사용을 지양하고 타이머 인터럽트를 활용한 비차단(Non-blocking) 구조의 중요성 체득.
-- **Protocol Mastering**: UART, SPI, I2C 등 다양한 통신 규격을 직접 구현하며 데이터시트 분석 능력 향상.
 
----
+- **레지스터 기반 제어**: `DDR`, `PORT`, `ADMUX`, `ADCSRA`, `TCCR0`, `UBRR0`, `SPDR` 설정을 통해 주변장치의 동작을 구성했습니다.
+- **입력·구동기 연결**: 센서 임계값, 버튼 상태, 모터 위치와 출력 상태를 함께 관리하는 제어 흐름을 설계했습니다.
+- **하드웨어 디버깅**: 코드의 타이밍뿐 아니라 분압 저항과 배선 등 회로 조건을 함께 조정하는 경험을 쌓았습니다.
 
 ## 📂 포트폴리오 목차
-- **[📂 Source Code](./Preliminaries/Source_Code)** : C언어 펌웨어 소스
-- **[📂 Presentation](./Preliminaries/Presentation)** : 발표 자료
 
-- **본선 코드**: [Round 1](<./Main Tournament/Round1/Source_Code>) · [Round 2](<./Main Tournament/Round2/Source_Code>) · [Round 3](<./Main Tournament/Round3/Source_Code>)
+| 구분 | 코드 | 발표·회로 자료 |
+|---|---|---|
+| 예선 · 스마트 비데 | [📂 Source Code](./Preliminaries/Source_Code) | [📄 최종 발표 자료](./Preliminaries/Presentation/MCU공모전_최종본_숭상화.pdf) |
+| 본선 Round 1 | [💻 Source Code](./Main%20Tournament/Round1/Source_Code) | [회로도 1](./Main%20Tournament/Round1/Schematic/숭상화_ROUND1_회로.jpg) · [회로도 2](./Main%20Tournament/Round1/Schematic/숭상화_ROUND1_회로2.jpg) |
+| 본선 Round 2 | [💻 Source Code](./Main%20Tournament/Round2/Source_Code) | [회로도](./Main%20Tournament/Round2/Schematic/숭상화_ROUND2_회로도.pdf) |
+| 본선 Round 3 | [💻 Source Code](./Main%20Tournament/Round3/Source_Code) | [회로도](./Main%20Tournament/Round3/Schematic/숭상화_ROUND3_회로.jpg) |
+
+발표 자료에는 **11쪽** 시스템 블록도, **12쪽** 부품 구성, **15~21쪽** 제어 로직, **23~28쪽** 동작 실험과 문제 해결, **32쪽** 전체 회로도가 수록되어 있습니다.

@@ -1,0 +1,8 @@
+# Generated AVR build outputs.
+*.o
+*.d
+*.elf
+*.hex
+*.eep
+*.lss
+*.map
