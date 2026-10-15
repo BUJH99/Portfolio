@@ -10,7 +10,6 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
-import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,9 +64,8 @@ def main() -> int:
     if not jobs: parser.error('No jobs selected')
     output = args.output or ROOT/'results'/dt.datetime.now().strftime('%Y-%m-%d_%H%M%S')
     output = output.resolve()
-    # Historical artifacts are immutable inputs; never use their folder for new execution output.
-    if any(part.startswith('historical_') for part in output.parts):
-        parser.error('The historical artifact directory cannot be used as an output directory')
+    if output.exists() and (not output.is_dir() or any(output.iterdir())):
+        parser.error('Use a new empty output directory for regression results')
     output.mkdir(parents=True, exist_ok=True)
     build = ROOT/'sim/.build/xsim'
     build.mkdir(parents=True, exist_ok=True)

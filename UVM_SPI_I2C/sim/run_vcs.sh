@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optional VCS adapter. The checked-in regression evidence was produced with XSim.
+# Build and run one UVM test with the selected topology and seed.
 set -euo pipefail
 project_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 topology="${1:-0}"

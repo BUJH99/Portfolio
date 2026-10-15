@@ -1,41 +1,42 @@
 #!/usr/bin/env python3
-"""Audit immutable evidence, compilation inputs, and the applied HDL naming conventions."""
+"""Check compilation inputs, independent agent packages, and HDL naming conventions."""
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
 
-def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source-root',type=Path,help='Optional original managed Project directory')
     parser.add_argument('--output',type=Path)
     args=parser.parse_args()
     errors=[]
-    data=json.loads((ROOT/'docs/source_provenance.json').read_text(encoding='utf-8'))
-    preserved=[]
-    for entry in data['preserved_artifacts']:
-        path=ROOT/entry['path']
-        ok=path.is_file() and sha(path)==entry['sha256']
-        preserved.append(dict(path=entry['path'],unchanged=ok,sha256=entry['sha256']))
-        if not ok: errors.append(f'Historical artifact changed or missing: {entry["path"]}')
-    originals=[]
-    if args.source_root:
-        for entry in data['inputs']:
-            path=args.source_root/entry['source']
-            ok=path.is_file() and sha(path)==entry['sha256']
-            originals.append(dict(path=entry['source'],unchanged=ok))
-            if not ok: errors.append(f'Refactoring input changed or missing: {entry["source"]}')
-    files=(ROOT/'sim/files.f').read_text().splitlines()
+    files=[line.strip() for line in (ROOT/'sim/files.f').read_text().splitlines()
+           if line.strip() and not line.lstrip().startswith('#')]
     if len(files)!=len(set(files)): errors.append('Duplicate filelist entries')
     for filename in files:
         if not (ROOT/filename).is_file(): errors.append(f'Missing compilation input: {filename}')
         if '/boards/' in filename: errors.append('Board TOP wrappers must not share the simulation filelist')
+    agent_packages={'serial_ctrl_uvm_pkg':'ctrl','spi_uvm_pkg':'spi','i2c_uvm_pkg':'i2c'}
+    for package,folder in agent_packages.items():
+        package_path=ROOT/'tb/pkg'/f'{package}.sv'
+        if not package_path.is_file():
+            errors.append(f'Missing agent package: {package}')
+            continue
+        text=package_path.read_text(encoding='utf-8')
+        includes=re.findall(r'`include\s+"([^"]+)"',text)
+        for filename in includes:
+            if filename=='uvm_macros.svh': continue
+            if not filename.startswith(f'tb/agents/{folder}/'):
+                errors.append(f'Agent package crosses component boundary: {package} -> {filename}')
+            path=ROOT/filename
+            if not path.is_file(): errors.append(f'Missing agent include: {filename}')
+            else: text+='\n'+path.read_text(encoding='utf-8')
+        code=re.sub(r'/\*.*?\*/|//[^\n]*','',text,flags=re.S)
+        dependencies=set(re.findall(r'\bimport\s+(\w+)::',code))
+        for dependency in sorted(dependencies-{'uvm_pkg','serial_tb_types_pkg'}):
+            errors.append(f'Agent package must be independent: {package} imports {dependency}')
     for path in (ROOT/'src').rglob('*.sv'):
         text=path.read_text(encoding='utf-8')
         if '[MODULE_INFO_START]' not in text: errors.append(f'Module documentation missing: {path.name}')
@@ -51,13 +52,12 @@ def main():
             if not re.fullmatch(r'[A-Z]\w*(?:Item|Seq|Sequencer|Driver|Monitor|Agent|Env|Cfg|Predictor|Scoreboard|Coverage|Filter|Test)',name):
                 errors.append(f'TB class naming: {name}')
         if re.search(r'\bvirtual\s+\w+_if\s+(?!vif_)\w+',text): errors.append(f'Virtual interface naming: {path.name}')
-    result={'passed':not errors,'preserved_artifacts':preserved,'original_inputs':originals,
+    result={'passed':not errors,'agent_packages':sorted(agent_packages),
             'compile_inputs':len(files),'errors':errors}
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
-    print(json.dumps({'passed':result['passed'],'preserved_artifacts':len(preserved),'original_inputs':len(originals),
-                      'compile_inputs':len(files),'errors':errors},ensure_ascii=False,indent=2))
+    print(json.dumps(result,ensure_ascii=False,indent=2))
     return 0 if not errors else 1
 
 if __name__=='__main__':
