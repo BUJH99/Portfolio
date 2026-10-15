@@ -2,17 +2,16 @@
 
 ## 📅 프로젝트 정보
 
-- **수행**: 2025.10 ~ 2025.12 · 2026년 RTL 개선
+- **수행**: 2025.10 ~ 2025.12
 - **하드웨어**: Ultra96-V2 · Zynq UltraScale+ ZU3EG · OV5640 카메라 · 4.3인치 TFT-LCD
 - **본인 담당**: TOP 통합, 픽셀 포맷 변환, 클럭 생성, 테스트벤치, 카메라 I2C 통합
-- **팀 역할**: Window·주소 제어·LCD 구동은 노영찬, Convolution·SoC·SW 제어·카메라 입력은 전민서 담당
 - **기술**: `SystemVerilog` · `C` · `BRAM` · `Vivado / XSim 2025.2`
 
 ## 📝 프로젝트 개요
 
 OV5640 카메라의 480×272 영상을 FPGA에서 필터링해 TFT-LCD로 출력하는 팀 프로젝트입니다. 카메라의 RGB565 데이터를 RGB888로 변환하고, 3×3 윈도우와 Convolution·ReLU 연산을 거쳐 RGB565 출력 프레임을 구성합니다.
 
-2026년 개선 버전은 두 줄의 Line Buffer와 가로 방향 픽셀 재사용을 적용한 영상 처리 코어입니다. 입력 프레임을 순차적으로 한 번 읽으면서 3×3 윈도우를 생성하고, 단일 프레임의 윈도우 정확도와 필터 파이프라인 처리량을 측정합니다.
+두 줄의 Line Buffer와 가로 방향 픽셀 재사용 구조를 적용해 입력 프레임을 한 번씩 순차적으로 읽도록 설계했습니다. 3×3 윈도우를 생성하는 데 필요한 BRAM 접근을 줄이고, 윈도우 정확도와 필터 파이프라인의 처리량을 시뮬레이션으로 검증했습니다.
 
 ## 🧩 처리 구조
 
@@ -89,11 +88,11 @@ python ..\tools\run_xsim.py .\Code\tests.json
 
 - **[💻 RTL](./Code/Source)** · **[🧪 테스트벤치·실행 스크립트](./Code/TestBench)**
 - **[⚙️ 테스트 구성](./Code/tests.json)** · **[📍 보드 제약](./Code/Constraints/test.xdc)** · **[🎛️ Vitis 제어 예제](./Code/SW)**
-- **[📄 팀 프로젝트 보고서](./Report/고급프로젝트_HW.pdf)** — 역할 분담·개발 환경 4쪽, 시스템 구조 5쪽, 보드 결과 24쪽
-- **[🗺️ 2025년 시스템 구성도](./Report/images/Overall%20Architecture.png)** · **[📊 기존 설계 성능표](./Report/images/Performance.png)**
+- **[📄 팀 프로젝트 보고서](./Report/고급프로젝트_HW.pdf)** — 개발 환경 4쪽, 시스템 구조 5쪽, 보드 결과 24쪽
+- **[🗺️ 시스템 구성도](./Report/images/Overall%20Architecture.png)** · **[📊 기존 설계 성능표](./Report/images/Performance.png)**
 
 ## 📷 보드 동작 결과
 
-2025년 팀 프로젝트의 **Sharpen · Edge Enhance · Bypass** 출력입니다.
+**Sharpen · Edge Enhance · Bypass** 필터를 적용한 TFT-LCD 출력입니다.
 
 ![Sharpen, Edge Enhance, Bypass 보드 출력](./Report/images/ResultVideoImage.png)
