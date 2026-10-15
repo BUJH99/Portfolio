@@ -1,0 +1,73 @@
+
+ Options Set are : 
+
+   Command Line               : xcrg -cov_db_dir results/2026-10-15_multi_agent/coverage_inputs -merge_dir results/2026-10-15_multi_agent/coverage_inputs -merge_db_name verified_normal_runs -report_dir results/2026-10-15_multi_agent/coverage -report_format all -log results/2026-10-15_multi_agent/coverage_export.log -cov_db_name SerialSmokeTest__LOOPBACK__seed1 -cov_db_name SerialSpiSmokeTest__LOOPBACK__seed1 -cov_db_name SerialI2cSmokeTest__LOOPBACK__seed1 -cov_db_name SerialProtocolSwitchTest__LOOPBACK__seed1 -cov_db_name SerialRandTest__LOOPBACK__seed1 -cov_db_name SerialRandTest__LOOPBACK__seed17 -cov_db_name SerialRandTest__LOOPBACK__seed2026 -cov_db_name SerialCoverageClosureTest__LOOPBACK__seed1 -cov_db_name SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1 -cov_db_name I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__LOOPBACK__seed1 -cov_db_name SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__LOOPBACK__seed1 -cov_db_name SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1
+   Report Format              : all
+   Log File                   : results/2026-10-15_multi_agent/coverage_export.log
+   Functional Coverage Dir[s] : results/2026-10-15_multi_agent/coverage_inputs
+   Functional Coverage DB[s]  : I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1
+                                SerialCoverageClosureTest__LOOPBACK__seed1
+                                SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1
+                                SerialI2cSmokeTest__LOOPBACK__seed1
+                                SerialProtocolSwitchTest__LOOPBACK__seed1
+                                SerialRandTest__LOOPBACK__seed1
+                                SerialRandTest__LOOPBACK__seed17
+                                SerialRandTest__LOOPBACK__seed2026
+                                SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1
+                                SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1
+                                SerialRepeatedPayloadTest__LOOPBACK__seed1
+                                SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1
+                                SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1
+                                SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1
+                                SerialResetRecoveryTest__LOOPBACK__seed1
+                                SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1
+                                SerialSmokeTest__LOOPBACK__seed1
+                                SerialSpiSmokeTest__LOOPBACK__seed1
+                                SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1
+
+
+
+********************************************************
+                  Functional Coverage Report 
+********************************************************
+
+ Restoring Functional Coverage DB[s] from : 
+  1	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1/xsim.covinfo
+  2	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialCoverageClosureTest__LOOPBACK__seed1/xsim.covinfo
+  3	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1/xsim.covinfo
+  4	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialI2cSmokeTest__LOOPBACK__seed1/xsim.covinfo
+  5	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialProtocolSwitchTest__LOOPBACK__seed1/xsim.covinfo
+  6	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRandTest__LOOPBACK__seed1/xsim.covinfo
+  7	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRandTest__LOOPBACK__seed17/xsim.covinfo
+  8	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRandTest__LOOPBACK__seed2026/xsim.covinfo
+  9	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1/xsim.covinfo
+  10	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1/xsim.covinfo
+  11	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRepeatedPayloadTest__LOOPBACK__seed1/xsim.covinfo
+  12	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1/xsim.covinfo
+  13	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1/xsim.covinfo
+  14	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1/xsim.covinfo
+  15	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialResetRecoveryTest__LOOPBACK__seed1/xsim.covinfo
+  16	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1/xsim.covinfo
+  17	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialSmokeTest__LOOPBACK__seed1/xsim.covinfo
+  18	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SerialSpiSmokeTest__LOOPBACK__seed1/xsim.covinfo
+  19	results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1/xsim.covinfo
+
+ Functional Coverage Merge Directory              : results/2026-10-15_multi_agent/coverage_inputs
+ Functional Coverage Merge DB                     : verified_normal_runs
+ Saving the Merged Functional Coverage Info at    : results/2026-10-15_multi_agent/coverage_inputs/xsim.covdb/verified_normal_runs/xsim.covinfo
+ Created Coverage Report Directory    : results/2026-10-15_multi_agent/coverage/functionalCoverageReport
+
+ Creating CSV+Text Report at          : results/2026-10-15_multi_agent/coverage/functionalCoverageReport/xcrg_func_cov_report.txt
+
+ Functional Coverage HTML Report directory        : results/2026-10-15_multi_agent/coverage/functionalCoverageReport
+
+ Creating dashboard.html 
+
+ Creating groups.html 
+
+ Creating grp0.html 
+
+ Creating grp1.html 
+
+ Creating grp2.html 
+

@@ -1,0 +1,14 @@
+sim/.build/
+*.jou
+*.pb
+*.wdb
+*.vcd
+__pycache__/
+results/**/native_coverage/**/.reportStyles/
+results/**/coverage/**/.reportStyles/
+# Superseded intermediate report exports; raw files remain available locally.
+results/2026-10-15_multi_agent/native_coverage/
+results/2026-10-15_multi_agent/native_coverage_inputs/
+results/2026-10-15_multi_agent/native_coverage_inputs.json
+results/2026-10-15_multi_agent/native_coverage.log
+results/2026-10-15_multi_agent/xcrg.log

@@ -1,0 +1,9 @@
+{
+  "all_linked_resources_exist": true,
+  "utf8_normalized_files": [
+    "coverage\\functionalCoverageReport\\dashboard.html",
+    "coverage\\functionalCoverageReport\\xcrg_func_cov_report.txt"
+  ],
+  "portable_source_links": true,
+  "note": "Newly generated report encoding and source links were normalized; unused .reportStyles templates were excluded from link validation. Historical reports/images remain byte-identical."
+}

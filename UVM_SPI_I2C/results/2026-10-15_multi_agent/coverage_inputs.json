@@ -1,0 +1,153 @@
+{
+  "command": [
+    "C:\\AMDDesignTools\\2025.2\\Vivado\\bin\\xcrg.bat",
+    "-cov_db_dir",
+    "results/2026-10-15_multi_agent/coverage_inputs",
+    "-merge_dir",
+    "results/2026-10-15_multi_agent/coverage_inputs",
+    "-merge_db_name",
+    "verified_normal_runs",
+    "-report_dir",
+    "results/2026-10-15_multi_agent/coverage",
+    "-report_format",
+    "all",
+    "-log",
+    "results/2026-10-15_multi_agent/coverage_export.log",
+    "-cov_db_name",
+    "SerialSmokeTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialSpiSmokeTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialI2cSmokeTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialProtocolSwitchTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialRandTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialRandTest__LOOPBACK__seed17",
+    "-cov_db_name",
+    "SerialRandTest__LOOPBACK__seed2026",
+    "-cov_db_name",
+    "SerialCoverageClosureTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialRepeatedPayloadTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialResetRecoveryTest__LOOPBACK__seed1",
+    "-cov_db_name",
+    "SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1",
+    "-cov_db_name",
+    "SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1"
+  ],
+  "returncode": 0,
+  "inputs": [
+    {
+      "run": "SerialSmokeTest__LOOPBACK__seed1",
+      "sha256": "871d4e1dac1b777f1ddcdd6a5e4fa27af5f0b168d7bdea662c37d24b834e7bab",
+      "source_modified": "2026-10-15T15:12:32.703091+09:00"
+    },
+    {
+      "run": "SerialSpiSmokeTest__LOOPBACK__seed1",
+      "sha256": "1b597b517961a18237407f88e3daa9eb9760ccddfbea5ecf0cc409a572d9b62c",
+      "source_modified": "2026-10-15T15:12:35.400835+09:00"
+    },
+    {
+      "run": "SerialI2cSmokeTest__LOOPBACK__seed1",
+      "sha256": "ff884085763957b4ebbc6e55aa15f930614fbf3519c079ae6e812d7bf4dddf83",
+      "source_modified": "2026-10-15T15:12:38.105042+09:00"
+    },
+    {
+      "run": "SerialProtocolSwitchTest__LOOPBACK__seed1",
+      "sha256": "871d4e1dac1b777f1ddcdd6a5e4fa27af5f0b168d7bdea662c37d24b834e7bab",
+      "source_modified": "2026-10-15T15:12:40.892301+09:00"
+    },
+    {
+      "run": "SerialRandTest__LOOPBACK__seed1",
+      "sha256": "c48d3986de76e75c8961eef06951a9ec95d3b3ed94a3d1c2d353bc8e002cc04c",
+      "source_modified": "2026-10-15T15:12:43.834580+09:00"
+    },
+    {
+      "run": "SerialRandTest__LOOPBACK__seed17",
+      "sha256": "fffd65c2dada8d29f78fa922fde61bfd9a8a1fc9a8ac714498a06a8bed3e9a64",
+      "source_modified": "2026-10-15T15:12:46.745402+09:00"
+    },
+    {
+      "run": "SerialRandTest__LOOPBACK__seed2026",
+      "sha256": "fb87651602532b9d7aa0e8a349ae7edf26b92fec4b1600e657727d0dc18d7418",
+      "source_modified": "2026-10-15T15:12:49.684123+09:00"
+    },
+    {
+      "run": "SerialCoverageClosureTest__LOOPBACK__seed1",
+      "sha256": "a5f255d26b11518ef5db5642b0dc2769a5631eb4f3c53bfffae6f247341cf81e",
+      "source_modified": "2026-10-15T15:12:52.491834+09:00"
+    },
+    {
+      "run": "SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1",
+      "sha256": "66f6453689871522a3745ea8ca4dfdc6e010358a2121368cfb58149aff521961",
+      "source_modified": "2026-10-15T15:12:55.360600+09:00"
+    },
+    {
+      "run": "I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1",
+      "sha256": "3a727fa7ff4d0101ce8fcafef00f270e88e1908624a99c6cc9317343705d2de1",
+      "source_modified": "2026-10-15T15:12:58.374708+09:00"
+    },
+    {
+      "run": "SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1",
+      "sha256": "7b6e7d72644bb6e4edcc3428b778696b0b5a4bdd284039f6f1d9fab291bb3a7b",
+      "source_modified": "2026-10-15T15:13:01.316536+09:00"
+    },
+    {
+      "run": "SerialRepeatedPayloadTest__LOOPBACK__seed1",
+      "sha256": "dd652ae0b8dc07b4befef5d8cb4d18d7cc3ba3f987d555ac404ca4ff3d84e342",
+      "source_modified": "2026-10-15T15:13:04.066905+09:00"
+    },
+    {
+      "run": "SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1",
+      "sha256": "1b597b517961a18237407f88e3daa9eb9760ccddfbea5ecf0cc409a572d9b62c",
+      "source_modified": "2026-10-15T15:13:06.743907+09:00"
+    },
+    {
+      "run": "SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1",
+      "sha256": "984e9977c71afa131fb0fbc0aa24ba0e566a452f8dc8038df69977c2b43b42b8",
+      "source_modified": "2026-10-15T15:13:09.493989+09:00"
+    },
+    {
+      "run": "SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1",
+      "sha256": "7b6e7d72644bb6e4edcc3428b778696b0b5a4bdd284039f6f1d9fab291bb3a7b",
+      "source_modified": "2026-10-15T15:13:12.243227+09:00"
+    },
+    {
+      "run": "SerialResetRecoveryTest__LOOPBACK__seed1",
+      "sha256": "1a227dd22a04fc42a19230c131198639bc7e0c4b21faef682bb42bb641bc0597",
+      "source_modified": "2026-10-15T15:13:14.977618+09:00"
+    },
+    {
+      "run": "SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1",
+      "sha256": "1f705096a8260398ae36029c6528824d0afdb2010f4f4fa254b82e7b3e8edd09",
+      "source_modified": "2026-10-15T15:13:17.678218+09:00"
+    },
+    {
+      "run": "SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1",
+      "sha256": "b6411a6f5adeae8b2f4bf3a1b64e04989573528542748b0c6b58d1c3deb8010a",
+      "source_modified": "2026-10-15T15:13:20.399215+09:00"
+    },
+    {
+      "run": "SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1",
+      "sha256": "84569f08c9901461351347a32a12b9f36da370931c1a89c236285d13520e9ea7",
+      "source_modified": "2026-10-15T15:13:23.168990+09:00"
+    }
+  ]
+}

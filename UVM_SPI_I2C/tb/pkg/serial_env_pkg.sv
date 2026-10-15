@@ -1,0 +1,35 @@
+`timescale 1ns/1ps
+package serial_env_pkg;
+  import uvm_pkg::*;
+  import serial_tb_types_pkg::*;
+  import serial_ctrl_uvm_pkg::*;
+  import spi_uvm_pkg::*;
+  import i2c_uvm_pkg::*;
+  `include "uvm_macros.svh"
+  `include "tb/env/SerialEnvCfg.svh"
+  `include "tb/scoreboard/SerialPredictor.svh"
+  `include "tb/coverage/SpiCoverage.svh"
+  `include "tb/coverage/I2cCoverage.svh"
+  `include "tb/coverage/SerialCoverage.svh"
+  `include "tb/scoreboard/SerialObservationFilter.svh"
+  `include "tb/scoreboard/SerialScoreboard.svh"
+  `include "tb/env/SerialVirtualSequencer.svh"
+  `include "tb/env/SerialEnv.svh"
+  `include "tb/sequences/ctrl/SerialCtrlTransferSeq.svh"
+  `include "tb/sequences/spi/SpiTransferSeq.svh"
+  `include "tb/sequences/i2c/I2cTransferSeq.svh"
+  `include "tb/sequences/virtual/SerialVirtualSeq.svh"
+  `include "tb/tests/SerialBaseTest.svh"
+  `include "tb/tests/SerialSmokeTest.svh"
+  `include "tb/tests/SerialSpiSmokeTest.svh"
+  `include "tb/tests/SerialI2cSmokeTest.svh"
+  `include "tb/tests/SerialProtocolSwitchTest.svh"
+  `include "tb/tests/SerialRandTest.svh"
+  `include "tb/tests/SerialCoverageClosureTest.svh"
+  `include "tb/tests/SpiSlaveUnitTest.svh"
+  `include "tb/tests/I2cSlaveUnitTest.svh"
+  `include "tb/tests/SerialDualBusParallelTest.svh"
+  `include "tb/tests/SerialRepeatedPayloadTest.svh"
+  `include "tb/tests/SerialResetRecoveryTest.svh"
+  `include "tb/tests/SerialScoreboardNegativeTest.svh"
+endpackage

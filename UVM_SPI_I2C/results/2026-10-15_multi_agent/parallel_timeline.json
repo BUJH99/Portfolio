@@ -1,0 +1,95 @@
+{
+  "frames": [
+    {
+      "endpoint": 0,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 0,
+      "start_ns": 155,
+      "end_ns": 6755
+    },
+    {
+      "endpoint": 0,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 1,
+      "start_ns": 6975,
+      "end_ns": 13575
+    },
+    {
+      "endpoint": 1,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 0,
+      "start_ns": 565,
+      "end_ns": 17845
+    },
+    {
+      "endpoint": 0,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 0,
+      "start_ns": 13795,
+      "end_ns": 20395
+    },
+    {
+      "endpoint": 0,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 1,
+      "start_ns": 20615,
+      "end_ns": 27215
+    },
+    {
+      "endpoint": 1,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 1,
+      "start_ns": 18475,
+      "end_ns": 42055
+    },
+    {
+      "endpoint": 1,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 0,
+      "start_ns": 42685,
+      "end_ns": 59965
+    },
+    {
+      "endpoint": 1,
+      "epoch": 1,
+      "config_id": 1,
+      "read": 1,
+      "start_ns": 60595,
+      "end_ns": 84175
+    }
+  ],
+  "overlapping_pairs": [
+    {
+      "spi_start_ns": 155,
+      "i2c_start_ns": 565,
+      "overlap_ns": 6190
+    },
+    {
+      "spi_start_ns": 6975,
+      "i2c_start_ns": 565,
+      "overlap_ns": 6600
+    },
+    {
+      "spi_start_ns": 13795,
+      "i2c_start_ns": 565,
+      "overlap_ns": 4050
+    },
+    {
+      "spi_start_ns": 13795,
+      "i2c_start_ns": 18475,
+      "overlap_ns": 1920
+    },
+    {
+      "spi_start_ns": 20615,
+      "i2c_start_ns": 18475,
+      "overlap_ns": 6600
+    }
+  ]
+}

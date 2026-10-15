@@ -1,0 +1,354 @@
+
+ Xcrg Functional Coverage Report 
+
+ // To generate a more detailed report in html format, please run xcrg -dir <database> -report_format html -report_dir <dir>
+ // This is a text report also in CSV format. By exporting to Excel and using , as the delimiter, the data can be split into individual rows and columns
+ // This report contains 3 sections, Total Summary, CoverGroups Summary and CoverPoint Tables sections 
+ // In order to navigate to a CoverPoint's Table, the TableTag printed for the respective covergroup/instance can be grepped in this report
+ // For example, if covergroup name is g1 and coverpoint is cp1, the TableTag to go to the Group's CoverPoint Table summary is g1_cp1 
+ // For example, if covergroup name is g1, instance name is i1, coverpoint is cp1, the TableTag to go to the Instance's CoverPoint Table summary is g1_i1_cp1 
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+   Date             :, 10/15/26 15:16:13 대한민국 표준시
+   User             :, tbdk5771
+   Version          :, Vivado Simulator Coverage Report 2025.2
+   Command Line     :, C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir results/2026-10-15_multi_agent/coverage_inputs -merge_dir results/2026-10-15_multi_agent/coverage_inputs -merge_db_name verified_normal_runs -report_dir results/2026-10-15_multi_agent/coverage -report_format all -log results/2026-10-15_multi_agent/coverage_export.log -cov_db_name SerialSmokeTest__LOOPBACK__seed1 -cov_db_name SerialSpiSmokeTest__LOOPBACK__seed1 -cov_db_name SerialI2cSmokeTest__LOOPBACK__seed1 -cov_db_name SerialProtocolSwitchTest__LOOPBACK__seed1 -cov_db_name SerialRandTest__LOOPBACK__seed1 -cov_db_name SerialRandTest__LOOPBACK__seed17 -cov_db_name SerialRandTest__LOOPBACK__seed2026 -cov_db_name SerialCoverageClosureTest__LOOPBACK__seed1 -cov_db_name SpiSlaveUnitTest__SPI_SLAVE_UNIT__seed1 -cov_db_name I2cSlaveUnitTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialDualBusParallelTest__DUAL_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__LOOPBACK__seed1 -cov_db_name SerialRepeatedPayloadTest__SPI_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialRepeatedPayloadTest__DUAL_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__LOOPBACK__seed1 -cov_db_name SerialResetRecoveryTest__SPI_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__I2C_SLAVE_UNIT__seed1 -cov_db_name SerialResetRecoveryTest__DUAL_SLAVE_UNIT__seed1 
+   Number of Tests  :, 1
+
+   Coverage Score            :, 100
+   Total Insts Score         :, 100
+   Total no of Cover Groups  :, 3
+   Total no of Instances     :, 3
+
+
+     CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+       serial_env_pkg::SpiCoverage::cg_spi_transaction   ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       serial_env_pkg::I2cCoverage::cg_i2c_transaction   ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       serial_env_pkg::SerialCoverage::cg_serial_scenario,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverGroups Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Cover Group Details : serial_env_pkg::SpiCoverage::cg_spi_transaction
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+serial_env_pkg::SpiCoverage::cg_spi_transaction   ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - serial_env_pkg::SpiCoverage::cg_spi_transaction
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_spi_transaction                          ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_spi_transaction Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_read                                           ,cg_spi_transaction_	his .cg_spi_transaction_cp_read,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_payload                                        ,cg_spi_transaction_	his .cg_spi_transaction_cp_payload,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance 	his .cg_spi_transaction Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             cx_rw_payload                                     ,cg_spi_transaction_	his .cg_spi_transaction_cx_rw_payload,9           ,0           ,9           ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : serial_env_pkg::I2cCoverage::cg_i2c_transaction
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+serial_env_pkg::I2cCoverage::cg_i2c_transaction   ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - serial_env_pkg::I2cCoverage::cg_i2c_transaction
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_i2c_transaction                          ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_i2c_transaction Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_read                                           ,cg_i2c_transaction_	his .cg_i2c_transaction_cp_read,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_payload                                        ,cg_i2c_transaction_	his .cg_i2c_transaction_cp_payload,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance 	his .cg_i2c_transaction Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             cx_rw_payload                                     ,cg_i2c_transaction_	his .cg_i2c_transaction_cx_rw_payload,9           ,0           ,9           ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : serial_env_pkg::SerialCoverage::cg_serial_scenario
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+serial_env_pkg::SerialCoverage::cg_serial_scenario,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - serial_env_pkg::SerialCoverage::cg_serial_scenario
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             	his .cg_serial_scenario                          ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance 	his .cg_serial_scenario Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_protocol                                       ,cg_serial_scenario_	his .cg_serial_scenario_cp_protocol,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_read                                           ,cg_serial_scenario_	his .cg_serial_scenario_cp_read,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_overlap                                        ,cg_serial_scenario_	his .cg_serial_scenario_cp_overlap,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance 	his .cg_serial_scenario Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             cx_protocol_rw                                    ,cg_serial_scenario_	his .cg_serial_scenario_cx_protocol_rw,4           ,0           ,4           ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverPoint Tables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+ Cover Point Table for Inst : 	his .cg_spi_transaction, Variable :, cp_read
+ Table tag :, cg_spi_transaction_	his .cg_spi_transaction_cp_read
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_write     ,52          ,1           ,
+      b_read      ,52          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_spi_transaction, Variable :, cp_payload
+ Table tag :, cg_spi_transaction_	his .cg_spi_transaction_cp_payload
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_zero      ,4           ,1           ,
+      b_one       ,5           ,1           ,
+      b_mid       ,89          ,1           ,
+      b_max       ,5           ,1           ,
+      b_upper     ,1           ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_spi_transaction, Variable :, cx_rw_payload
+ Table tag :, cg_spi_transaction_	his .cg_spi_transaction_cx_rw_payload
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          9           ,0           ,9           ,100         ,
+ Automatic,      9           ,0           ,9           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_read         ,cp_payload      ,Hit Count,  AtLeast,    
+      b_write         ,b_zero          ,2           ,1           ,
+      b_write         ,b_one           ,2           ,1           ,
+      b_write         ,b_mid           ,45          ,1           ,
+      b_write         ,b_max           ,2           ,1           ,
+      b_write         ,b_upper         ,1           ,1           ,
+      b_read          ,b_zero          ,2           ,1           ,
+      b_read          ,b_one           ,3           ,1           ,
+      b_read          ,b_mid           ,44          ,1           ,
+      b_read          ,b_max           ,3           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_i2c_transaction, Variable :, cp_read
+ Table tag :, cg_i2c_transaction_	his .cg_i2c_transaction_cp_read
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_write     ,48          ,1           ,
+      b_read      ,48          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_i2c_transaction, Variable :, cp_payload
+ Table tag :, cg_i2c_transaction_	his .cg_i2c_transaction_cp_payload
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_zero      ,5           ,1           ,
+      b_one       ,7           ,1           ,
+      b_mid       ,74          ,1           ,
+      b_max       ,9           ,1           ,
+      b_upper     ,1           ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_i2c_transaction, Variable :, cx_rw_payload
+ Table tag :, cg_i2c_transaction_	his .cg_i2c_transaction_cx_rw_payload
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          9           ,0           ,9           ,100         ,
+ Automatic,      9           ,0           ,9           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_read         ,cp_payload      ,Hit Count,  AtLeast,    
+      b_write         ,b_zero          ,3           ,1           ,
+      b_write         ,b_one           ,2           ,1           ,
+      b_write         ,b_mid           ,36          ,1           ,
+      b_write         ,b_max           ,6           ,1           ,
+      b_write         ,b_upper         ,1           ,1           ,
+      b_read          ,b_zero          ,2           ,1           ,
+      b_read          ,b_one           ,5           ,1           ,
+      b_read          ,b_mid           ,38          ,1           ,
+      b_read          ,b_max           ,3           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_serial_scenario, Variable :, cp_protocol
+ Table tag :, cg_serial_scenario_	his .cg_serial_scenario_cp_protocol
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_spi       ,106         ,1           ,
+      b_i2c       ,99          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_serial_scenario, Variable :, cp_read
+ Table tag :, cg_serial_scenario_	his .cg_serial_scenario_cp_read
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_write     ,103         ,1           ,
+      b_read      ,102         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : 	his .cg_serial_scenario, Variable :, cp_overlap
+ Table tag :, cg_serial_scenario_	his .cg_serial_scenario_cp_overlap
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      b_serial    ,198         ,1           ,
+      b_parallel  ,7           ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : 	his .cg_serial_scenario, Variable :, cx_protocol_rw
+ Table tag :, cg_serial_scenario_	his .cg_serial_scenario_cx_protocol_rw
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          4           ,0           ,4           ,100         ,
+ Automatic,      4           ,0           ,4           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_protocol     ,cp_read         ,Hit Count,  AtLeast,    
+      b_spi           ,b_write         ,53          ,1           ,
+      b_spi           ,b_read          ,53          ,1           ,
+      b_i2c           ,b_write         ,50          ,1           ,
+      b_i2c           ,b_read          ,49          ,1           ,
+
+
+
+
+
+

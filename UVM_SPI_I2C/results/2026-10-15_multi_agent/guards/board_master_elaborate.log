@@ -1,0 +1,30 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe TOP -s board_master -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.serial_protocol_pkg
+Compiling module work.Timer10ms_default
+Compiling module work.CommandLatch
+Compiling module work.MasterSequencer
+Compiling module work.SpiMasterClockDivider_default
+Compiling module work.SpiMasterInputSync
+Compiling module work.SpiMasterDatapath
+Compiling module work.SpiMasterCtrl
+Compiling module work.SpiMasterIo
+Compiling module work.SpiMasterSubsystem
+Compiling module work.I2cMasterClockDivider(P_DIV=32'b...
+Compiling module work.I2cMasterInputSync
+Compiling module work.I2cMasterDatapath
+Compiling module work.I2cMasterCtrl
+Compiling module work.I2cMasterIo
+Compiling module work.I2cMasterSubsystem(P_DIV=32'b011...
+Compiling module work.SerialMasterCore
+Compiling module work.TOP
+Built simulation snapshot board_master
