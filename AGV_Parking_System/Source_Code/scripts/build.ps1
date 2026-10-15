@@ -2,7 +2,7 @@ param(
     [ValidateSet("configure", "build", "test", "console")]
     [string]$Task = "test",
     [ValidateSet("Debug", "Release", "RelWithDebInfo")]
-    [string]$BuildType = "Debug",
+    [string]$BuildType = "Release",
     [switch]$Clean,
     [ValidateSet("Auto", "FetchContent", "Prefetch", "Offline")]
     [string]$DependencyMode = $(if ($env:AGV_DEPENDENCY_MODE) { $env:AGV_DEPENDENCY_MODE } else { "Auto" }),
@@ -14,6 +14,10 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+if ($Task -eq "test" -and $BuildTesting -eq "Off") {
+    throw "The test task requires BuildTesting=On or Auto."
+}
 
 function Find-CMake {
     $candidates = @(
@@ -457,12 +461,13 @@ function Invoke-ConfigureStep {
 }
 
 $repoRoot = Split-Path -Path $PSScriptRoot -Parent
-$buildDir = Join-Path $repoRoot "build-codex"
+$buildDir = Join-Path $repoRoot "build"
 $cmakeListsPath = Join-Path $repoRoot "CMakeLists.txt"
 $cmakePath = Find-CMake
 $compilerPath = Find-CppCompiler
 $makePath = Find-MakeProgram -CompilerPath $compilerPath
 $compilerDirectory = Split-Path -Path $compilerPath -Parent
+$env:Path = "$compilerDirectory;$env:Path"
 $buildTestingEnabled = Resolve-BuildTesting -Mode $BuildTesting -TaskName $Task
 $dependencyCacheRoot = Resolve-DependencyCacheRoot `
     -RequestedPath $DependencyCacheDir `
@@ -474,79 +479,28 @@ if ($Clean -and (Test-Path $buildDir)) {
     Remove-Item -Path $buildDir -Recurse -Force
 }
 
-if ($Task -eq "configure" -or $Task -eq "build" -or $Task -eq "test" -or $Task -eq "console") {
-    New-Item -ItemType Directory -Path $buildDir -Force | Out-Null
-
-    switch ($DependencyMode) {
-        "FetchContent" {
-            Invoke-ConfigureStep `
-                -Mode "FetchContent" `
-                -RepositoryRoot $repoRoot `
-                -BuildDirectory $buildDir `
-                -BuildType $BuildType `
-                -BuildTestingEnabled $buildTestingEnabled `
-                -CompilerPath $compilerPath `
-                -MakePath $makePath `
-                -CMakePath $cmakePath `
-                -FetchContentUrls $fetchContentUrls `
-                -CacheRoot $dependencyCacheRoot
-        }
-        "Prefetch" {
-            Invoke-ConfigureStep `
-                -Mode "Prefetch" `
-                -RepositoryRoot $repoRoot `
-                -BuildDirectory $buildDir `
-                -BuildType $BuildType `
-                -BuildTestingEnabled $buildTestingEnabled `
-                -CompilerPath $compilerPath `
-                -MakePath $makePath `
-                -CMakePath $cmakePath `
-                -FetchContentUrls $fetchContentUrls `
-                -CacheRoot $dependencyCacheRoot
-        }
-        "Offline" {
-            Invoke-ConfigureStep `
-                -Mode "Offline" `
-                -RepositoryRoot $repoRoot `
-                -BuildDirectory $buildDir `
-                -BuildType $BuildType `
-                -BuildTestingEnabled $buildTestingEnabled `
-                -CompilerPath $compilerPath `
-                -MakePath $makePath `
-                -CMakePath $cmakePath `
-                -FetchContentUrls $fetchContentUrls `
-                -CacheRoot $dependencyCacheRoot
-        }
-        default {
-            try {
-                Invoke-ConfigureStep `
-                    -Mode "FetchContent" `
-                    -RepositoryRoot $repoRoot `
-                    -BuildDirectory $buildDir `
-                    -BuildType $BuildType `
-                    -BuildTestingEnabled $buildTestingEnabled `
-                    -CompilerPath $compilerPath `
-                    -MakePath $makePath `
-                    -CMakePath $cmakePath `
-                    -FetchContentUrls $fetchContentUrls `
-                    -CacheRoot $dependencyCacheRoot
-            } catch {
-                Write-Warning "FetchContent configure failed. Retrying with local prefetch cache."
-                Reset-ConfigureState -BuildDirectory $buildDir
-                Invoke-ConfigureStep `
-                    -Mode "Prefetch" `
-                    -RepositoryRoot $repoRoot `
-                    -BuildDirectory $buildDir `
-                    -BuildType $BuildType `
-                    -BuildTestingEnabled $buildTestingEnabled `
-                    -CompilerPath $compilerPath `
-                    -MakePath $makePath `
-                    -CMakePath $cmakePath `
-                    -FetchContentUrls $fetchContentUrls `
-                    -CacheRoot $dependencyCacheRoot
-            }
-        }
+New-Item -ItemType Directory -Path $buildDir -Force | Out-Null
+$configureArguments = @{
+    RepositoryRoot = $repoRoot
+    BuildDirectory = $buildDir
+    BuildType = $BuildType
+    BuildTestingEnabled = $buildTestingEnabled
+    CompilerPath = $compilerPath
+    MakePath = $makePath
+    CMakePath = $cmakePath
+    FetchContentUrls = $fetchContentUrls
+    CacheRoot = $dependencyCacheRoot
+}
+$configureMode = if ($DependencyMode -eq "Auto") { "FetchContent" } else { $DependencyMode }
+try {
+    Invoke-ConfigureStep -Mode $configureMode @configureArguments
+} catch {
+    if ($DependencyMode -ne "Auto") {
+        throw
     }
+    Write-Warning "FetchContent configure failed. Retrying with local prefetch cache."
+    Reset-ConfigureState -BuildDirectory $buildDir
+    Invoke-ConfigureStep -Mode "Prefetch" @configureArguments
 }
 
 if ($Task -eq "build" -or $Task -eq "test" -or $Task -eq "console") {
@@ -558,15 +512,11 @@ if ($Task -eq "build" -or $Task -eq "test" -or $Task -eq "console") {
 }
 
 if ($Task -eq "test") {
-    $testsExe = Join-Path $buildDir "agv_core_tests.exe"
-    if (-not (Test-Path $testsExe)) {
-        throw "agv_core_tests.exe를 찾지 못했습니다."
-    }
-
-    Invoke-External -FilePath $testsExe -Arguments @("--gtest_color=no")
-    Invoke-External -FilePath $cmakePath -Arguments @(
-        "-DAGV_ROOT=$repoRoot",
-        "-P", (Join-Path $repoRoot "tests/no_c_smells.cmake")
+    $ctestPath = Join-Path (Split-Path -Path $cmakePath -Parent) "ctest.exe"
+    Invoke-External -FilePath $ctestPath -Arguments @(
+        "--test-dir", $buildDir,
+        "--output-on-failure",
+        "--no-tests=error"
     )
 }
 
@@ -576,12 +526,9 @@ if ($Task -eq "console") {
         throw "agv_console.exe를 찾지 못했습니다."
     }
 
-    if ($ConsoleArgs.Count -gt 0) {
-        $env:Path = "$compilerDirectory;$env:Path"
-        & $consolePath @ConsoleArgs
-        if ($LASTEXITCODE -ne 0) {
-            throw "agv_console.exe 실행 실패"
-        }
+    & $consolePath @ConsoleArgs
+    if ($LASTEXITCODE -ne 0) {
+        throw "agv_console.exe 실행 실패"
     }
 }
 

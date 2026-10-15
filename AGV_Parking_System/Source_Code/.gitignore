@@ -1,3 +1,8 @@
-/build-codex/
-/build-run/
 /build/
+/.sim_build/
+/electron/node_modules/
+*.exe
+*.dll
+*.o
+*.obj
+*.log

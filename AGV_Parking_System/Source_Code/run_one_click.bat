@@ -3,7 +3,7 @@ setlocal
 
 set "ROOT=%~dp0"
 set "ELECTRON_DIR=%ROOT%electron"
-set "BACKEND_EXE=%ROOT%build-codex\agv_render_ipc.exe"
+set "BACKEND_EXE=%ROOT%build\agv_render_ipc.exe"
 
 where npm.cmd >nul 2>nul
 if errorlevel 1 (
@@ -16,13 +16,10 @@ if not exist "%ELECTRON_DIR%\package.json" (
     exit /b 1
 )
 
-if not exist "%BACKEND_EXE%" (
-    echo Backend executable not found. Building first...
-    call "%ROOT%build_one_click.bat"
-    if errorlevel 1 (
-        echo Backend build failed.
-        exit /b 1
-    )
+call "%ROOT%build_one_click.bat"
+if errorlevel 1 (
+    echo Backend build failed.
+    exit /b 1
 )
 
 if not exist "%BACKEND_EXE%" (
@@ -34,12 +31,12 @@ if not exist "%ELECTRON_DIR%\node_modules\electron" (
     echo Installing Electron dependencies...
     pushd "%ELECTRON_DIR%"
     call npm.cmd ci
-    set "EXIT_CODE=%ERRORLEVEL%"
-    popd
-    if not "%EXIT_CODE%"=="0" (
-        echo npm install failed with exit code %EXIT_CODE%.
-        exit /b %EXIT_CODE%
+    if errorlevel 1 (
+        popd
+        echo npm ci failed.
+        exit /b 1
     )
+    popd
 )
 
 pushd "%ELECTRON_DIR%"

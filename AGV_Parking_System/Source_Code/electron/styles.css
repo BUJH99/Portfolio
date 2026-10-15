@@ -1362,14 +1362,6 @@ textarea {
   border-color: rgba(100, 116, 139, 0.26);
 }
 
-.priority-row.layout-moving {
-  box-shadow: 0 22px 38px rgba(37, 99, 235, 0.12);
-}
-
-.priority-row.layout-entering {
-  box-shadow: 0 20px 36px rgba(15, 23, 42, 0.1);
-}
-
 .priority-row.selected {
   background: rgba(37, 99, 235, 0.1);
   border-color: rgba(37, 99, 235, 0.22);

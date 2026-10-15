@@ -29,11 +29,7 @@ function resolveBackendPath() {
   const requested = process.env.AGV_RENDER_IPC_PATH;
   const candidates = requested
     ? [requested]
-    : [
-        path.join(repoRoot, "build-codex", "agv_render_ipc.exe"),
-        path.join(repoRoot, "build-run", "agv_render_ipc.exe"),
-        path.join(repoRoot, "build", "agv_render_ipc.exe"),
-      ];
+    : [path.join(repoRoot, "build", "agv_render_ipc.exe")];
 
   for (const candidate of candidates) {
     if (candidate && fs.existsSync(candidate)) {

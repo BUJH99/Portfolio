@@ -101,18 +101,6 @@ const kPriorityMovingTask = 1;
 const kPriorityDeadlockThreshold = 5;
 const kPriorityStuckBoostMult = 10;
 const kPriorityStuckBoostHard = 1000;
-const kPriorityLayoutSpring = Object.freeze({
-  type: "spring",
-  stiffness: 520,
-  damping: 34,
-  mass: 0.78,
-});
-const kPriorityEntrySpring = Object.freeze({
-  type: "spring",
-  stiffness: 460,
-  damping: 30,
-  mass: 0.82,
-});
 const kImportantLogCategories = new Set(["Control", "Scenario", "Deadlock", "Charge"]);
 const kAgentPalette = [
   "#2563eb",
@@ -510,14 +498,6 @@ const kLayerButtonSpecs = [
   { key: "conflictCounts", element: "conflictCountLayerButton", tone: "warning", requiresDebug: true },
   { key: "swapWaits", element: "swapLayerButton", tone: "danger", requiresDebug: true },
 ];
-const kFocusableSelector = [
-  "button",
-  "input",
-  "select",
-  "textarea",
-  "a[href]",
-  "[tabindex]:not([tabindex='-1'])",
-].join(", ");
 const kShortcutEditableSelector = [
   "input",
   "select",
@@ -566,124 +546,6 @@ function formatMemory(value) {
     return `${(numeric / 1024).toFixed(1)} MB`;
   }
   return `${numeric.toFixed(0)} KB`;
-}
-
-function reducedMotionPreferred() {
-  return Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches);
-}
-
-function motionRuntime() {
-  return window.motionRuntime?.animate ? window.motionRuntime : null;
-}
-
-function stopAnimations(target) {
-  if (target?.getAnimations) {
-    target.getAnimations().forEach((animation) => {
-      try {
-        animation.commitStyles?.();
-      } catch (_error) {
-        // Some animation implementations don't support commitStyles().
-      }
-      animation.cancel();
-    });
-  }
-}
-
-function animateElement(target, keyframes, options = {}) {
-  const runtime = motionRuntime();
-  if (!runtime || reducedMotionPreferred() || !target) {
-    return null;
-  }
-  stopAnimations(target);
-  return runtime.animate(target, keyframes, {
-    duration: 0.24,
-    easing: [0.22, 1, 0.36, 1],
-    ...options,
-  });
-}
-
-function captureChildPositions(container, selector) {
-  const positions = new Map();
-  if (!container) {
-    return positions;
-  }
-
-  container.querySelectorAll(selector).forEach((node) => {
-    const key = node.dataset.agentId || node.dataset.panelKey || node.id;
-    if (!key) {
-      return;
-    }
-    positions.set(key, node.getBoundingClientRect());
-  });
-  return positions;
-}
-
-function animateChildLayout(container, selector, previousPositions) {
-  if (!container || reducedMotionPreferred()) {
-    return;
-  }
-
-  const runtime = motionRuntime();
-  if (!runtime) {
-    return;
-  }
-
-  Array.from(container.querySelectorAll(selector)).forEach((node, index) => {
-    const clearMotionState = () => {
-      node.classList.remove("layout-moving", "layout-entering");
-    };
-    const key = node.dataset.agentId || node.dataset.panelKey || node.id;
-    const previous = key ? previousPositions.get(key) : null;
-    const next = node.getBoundingClientRect();
-    const previousRank = Number(node.dataset.previousRank ?? node.dataset.rank ?? index);
-    const nextRank = Number(node.dataset.rank ?? index);
-    const rankShift = Math.max(1, Math.abs(previousRank - nextRank));
-
-    if (previous) {
-      const deltaX = previous.left - next.left;
-      const deltaY = previous.top - next.top;
-      const travel = Math.hypot(deltaX, deltaY);
-      if (travel > 1) {
-        node.classList.remove("layout-entering");
-        node.classList.add("layout-moving");
-        animateElement(
-          node,
-          {
-            x: [deltaX, 0],
-            y: [deltaY, 0],
-            opacity: [0.94, 1],
-            scale: [1.018 + Math.min(rankShift, 3) * 0.012, 1],
-          },
-          {
-            ...kPriorityLayoutSpring,
-            stiffness: Math.max(360, kPriorityLayoutSpring.stiffness - Math.min(rankShift * 28, 120)),
-            damping: kPriorityLayoutSpring.damping + Math.min(rankShift * 2, 8),
-            delay: Math.min(index * 0.008, 0.04),
-            onComplete: clearMotionState,
-          },
-        );
-      } else {
-        clearMotionState();
-      }
-      return;
-    }
-
-    node.classList.remove("layout-moving");
-    node.classList.add("layout-entering");
-    animateElement(
-      node,
-      {
-        opacity: [0, 1],
-        y: [20, 0],
-        scale: [0.97, 1],
-      },
-      {
-        ...kPriorityEntrySpring,
-        delay: index * 0.014,
-        onComplete: clearMotionState,
-      },
-    );
-  });
 }
 
 function toneColor(tone = "neutral") {
@@ -2244,17 +2106,6 @@ function setUiVisibilityPanelOpen(open) {
   state.isUiVisibilityPanelOpen = Boolean(open);
   elements.uiVisibilityPanel.classList.toggle("hidden", !state.isUiVisibilityPanelOpen);
   renderUiVisibilityPanel();
-  if (state.isUiVisibilityPanelOpen) {
-    animateElement(
-      elements.uiVisibilityPanel,
-      {
-        opacity: [0, 1],
-        y: [18, 0],
-        scale: [0.985, 1],
-      },
-      { duration: 0.22 },
-    );
-  }
 }
 
 function setAllUiSections(visible) {
@@ -2284,7 +2135,7 @@ function setUiVisible(visible) {
   setAllUiSections(Boolean(visible));
 }
 
-function setFleetView(view, options = {}) {
+function setFleetView(view) {
   const nextView = view === "priority" ? "priority" : "roster";
   state.fleetView = nextView;
 
@@ -2295,37 +2146,9 @@ function setFleetView(view, options = {}) {
   elements.fleetPriorityTab.setAttribute("aria-selected", String(!rosterActive));
   elements.fleetRosterPane.classList.toggle("hidden", !rosterActive);
   elements.fleetPriorityPane.classList.toggle("hidden", rosterActive);
-
-  if (options.animate !== false) {
-    const activePane = rosterActive ? elements.fleetRosterPane : elements.fleetPriorityPane;
-    animateElement(
-      activePane,
-      {
-        opacity: [0, 1],
-        y: [16, 0],
-      },
-      { duration: 0.2 },
-    );
-
-    const rowSelector = rosterActive ? ".roster-row" : ".priority-row";
-    activePane.querySelectorAll(rowSelector).forEach((row, index) => {
-      animateElement(
-        row,
-        {
-          opacity: [0, 1],
-          y: [12, 0],
-          scale: [0.99, 1],
-        },
-        {
-          duration: 0.22,
-          delay: index * 0.015,
-        },
-      );
-    });
-  }
 }
 
-function setRightStackView(view, options = {}) {
+function setRightStackView(view) {
   const nextView = view === "planner" || view === "debug" ? view : "telemetry";
   state.rightStackView = nextView;
 
@@ -2334,19 +2157,16 @@ function setRightStackView(view, options = {}) {
       name: "telemetry",
       tab: elements.rightTelemetryTab,
       pane: elements.rightTelemetryPane,
-      rowSelector: ".telemetry-grid > *, .telemetry-empty",
     },
     {
       name: "planner",
       tab: elements.rightPlannerTab,
       pane: elements.rightPlannerPane,
-      rowSelector: ".planner-summary-grid > *, .planner-trend-strip > *",
     },
     {
       name: "debug",
       tab: elements.rightDebugTab,
       pane: elements.rightDebugPane,
-      rowSelector: ".debug-output, .header-actions > *",
     },
   ];
 
@@ -2355,38 +2175,6 @@ function setRightStackView(view, options = {}) {
     spec.tab.classList.toggle("active", active);
     spec.tab.setAttribute("aria-selected", String(active));
     spec.pane.classList.toggle("hidden", !active);
-  });
-
-  if (options.animate === false) {
-    return;
-  }
-
-  const activeSpec = specs.find((spec) => spec.name === nextView);
-  if (!activeSpec) {
-    return;
-  }
-
-  animateElement(
-    activeSpec.pane,
-    {
-      opacity: [0, 1],
-      y: [16, 0],
-    },
-    { duration: 0.2 },
-  );
-
-  activeSpec.pane.querySelectorAll(activeSpec.rowSelector).forEach((node, index) => {
-    animateElement(
-      node,
-      {
-        opacity: [0, 1],
-        y: [10, 0],
-      },
-      {
-        duration: 0.18,
-        delay: index * 0.012,
-      },
-    );
   });
 }
 
@@ -3009,7 +2797,6 @@ function updatePriorityRow(row, agent, priority, rank, scoreFloor, scoreRange) {
   const previousRank = Number(row.button.dataset.rank ?? rank);
   const rankShift = previousRank - rank;
   row.button.dataset.agentId = String(agent.id);
-  row.button.dataset.previousRank = String(previousRank);
   row.button.dataset.rank = String(rank);
   row.button.className = "priority-row";
   row.button.style.zIndex = String(Math.max(1, 200 - rank));
@@ -3125,7 +2912,6 @@ function renderPriorityBoard() {
     }
   });
 
-  const previous = captureChildPositions(elements.priorityBoard, ".priority-row");
   const activeIds = new Set();
   const scoreFloor = Math.min(
     0,
@@ -3164,10 +2950,6 @@ function renderPriorityBoard() {
   staleIds.forEach((agentId) => {
     priorityRows.delete(agentId);
   });
-
-  if (state.fleetView === "priority" && uiSectionVisible("leftStack")) {
-    animateChildLayout(elements.priorityBoard, ".priority-row", previous);
-  }
 }
 
 function createRosterRow(agentId) {
@@ -4392,11 +4174,6 @@ function applySync(sync) {
   }
 }
 
-function handleSync(sync) {
-  applySync(sync);
-  renderAll();
-}
-
 function clearSessionView() {
   clearPendingSteps();
   state.scene = null;
@@ -4417,8 +4194,8 @@ function renderAll() {
   syncViewportMode();
   syncUiSectionClasses();
   syncRightStackOffset();
-  setFleetView(state.fleetView, { animate: false });
-  setRightStackView(state.rightStackView, { animate: false });
+  setFleetView(state.fleetView);
+  setRightStackView(state.rightStackView);
   setPriorityBoardMode(state.priorityBoardMode);
   renderBottomPanels();
   layoutViewportEmpty();
@@ -5104,13 +4881,6 @@ window.agvShell.onEvent((event) => {
   if (event.type === "backend-exit") {
     appendStatus(`Backend exited with code ${event.code}.`);
   }
-});
-
-window.motionRuntimeReady?.then(() => {
-  syncUiSectionClasses();
-  renderUiVisibilityPanel();
-  renderBottomPanels();
-  renderPriorityBoard();
 });
 
 bootstrap().catch((error) => {

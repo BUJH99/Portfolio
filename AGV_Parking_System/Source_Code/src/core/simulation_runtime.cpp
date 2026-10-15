@@ -5,9 +5,6 @@
 
 #include <windows.h>
 #include <psapi.h>
-#ifdef _WIN32
-#pragma comment(lib, "psapi.lib")
-#endif
 
 #include "agv/internal/engine_internal.hpp"
 

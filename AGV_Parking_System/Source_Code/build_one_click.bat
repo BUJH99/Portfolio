@@ -23,9 +23,9 @@ if not exist "%PS_CMD%" (
 )
 
 if "%USE_DEFAULTS%"=="1" (
-    "%PS_CMD%" -NoProfile -ExecutionPolicy Bypass -File "%ROOT%scripts\codex_build.ps1" -Task build -BuildType Debug
+    "%PS_CMD%" -NoProfile -ExecutionPolicy Bypass -File "%ROOT%scripts\build.ps1" -Task build -BuildType Release
 ) else (
-    "%PS_CMD%" -NoProfile -ExecutionPolicy Bypass -File "%ROOT%scripts\codex_build.ps1" %*
+    "%PS_CMD%" -NoProfile -ExecutionPolicy Bypass -File "%ROOT%scripts\build.ps1" %*
 )
 
 set "EXIT_CODE=%ERRORLEVEL%"

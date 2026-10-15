@@ -47,19 +47,6 @@ const std::array<ModeOption, 2>& mode_options() {
     return options;
 }
 
-const std::array<WizardStepOption, 7>& wizard_steps() {
-    static const std::array<WizardStepOption, 7> options{{
-        {"map", "Map Setup", "Choose the parking layout and overall capacity envelope."},
-        {"algorithm", "Algorithm Setup", "Pick the planner behavior used during each simulation step."},
-        {"mode", "Mode Setup", "Choose between explicit phase replay and probabilistic live traffic."},
-        {"scenario", "Scenario Setup", "Edit the mode-specific traffic inputs for this run."},
-        {"speed", "Speed Setup", "Set deliberate slowdown; 0.0 keeps the simulation at full speed."},
-        {"seed", "Seed Setup", "Fix the random seed when you need a run to be reproducible."},
-        {"summary", "Summary", "Review the final normalized config before the session starts."},
-    }};
-    return options;
-}
-
 const MapOption& map_option(int map_id) {
     const auto& options = map_options();
     const auto it = std::find_if(options.begin(), options.end(), [map_id](const MapOption& option) {

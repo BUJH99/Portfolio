@@ -34,11 +34,6 @@ int dir_turn_steps(AgentDir from, AgentDir to) {
     return diff <= 2 ? diff : 4 - diff;
 }
 
-double manhattan_xy(int x1, int y1, int x2, int y2) {
-    return std::fabs(static_cast<double>(x1) - static_cast<double>(x2)) +
-        std::fabs(static_cast<double>(y1) - static_cast<double>(y2));
-}
-
 struct CandidateMove final {
     Node* node{nullptr};
     double cost{0.0};

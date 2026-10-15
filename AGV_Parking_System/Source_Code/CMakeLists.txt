@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(agv_refactor LANGUAGES CXX)
+project(agv_parking_system LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -44,8 +44,6 @@ add_library(agv_engine_core
     ${CORE_HEADERS}
     ${CORE_SOURCES}
 )
-
-set_source_files_properties(src/core/engine_orchestrator.cpp PROPERTIES COMPILE_DEFINITIONS AGV_NO_MAIN)
 
 target_include_directories(agv_engine_core
     PUBLIC
@@ -117,9 +115,6 @@ if(BUILD_TESTING)
             -DAGV_ROOT=${CMAKE_CURRENT_SOURCE_DIR}
             -P ${CMAKE_CURRENT_SOURCE_DIR}/tests/core_boundary.cmake
     )
-endif()
-
-if(BUILD_TESTING)
     FetchContent_Declare(
         googletest
         URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip

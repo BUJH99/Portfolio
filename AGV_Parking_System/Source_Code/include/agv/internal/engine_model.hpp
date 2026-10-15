@@ -729,10 +729,6 @@ struct PlanningContext final {
     int whcaHorizon() const {
         return runtime_tuning ? runtime_tuning->whca_horizon : MIN_WHCA_HORIZON;
     }
-
-    int conflictScore() const {
-        return runtime_tuning ? runtime_tuning->conflict_score : 0;
-    }
 };
 
 class PlannerStrategy {
