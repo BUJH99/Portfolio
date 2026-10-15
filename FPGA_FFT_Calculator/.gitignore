@@ -1,0 +1,4 @@
+# Local XSim build products and generated verification results.
+/Code/.sim_build/
+/Code/results/
+/Report/verification_*/
