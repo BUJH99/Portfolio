@@ -8,10 +8,11 @@
 - **분석 경로**: Monitor가 Analysis Port로 Scoreboard·Coverage에 관측값 배포
 - **라이브러리 서비스**: Factory·configuration·phase·objection의 목적
 
-## 📂 대표 도식
+## 📂 참고 도식·문헌
 
 - [OOP 개념](./images/uvm-oop-concepts-explained.svg) · [라이브러리 서비스](./images/uvm-library-services.svg)
 - [Sequence handshake](./images/uvm-handshake.png) · [Analysis Port](./images/uvm-analysis-port.png)
+- [Accellera UVM 1.2 User's Guide](https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf)
 - [실제 FIFO 적용](../../../UVM_FIFO) · [SPI·I2C 멀티에이전트 적용](../../../UVM_SPI_I2C)
 
-UVM 세미나의 학습 요약과 설명 자료입니다. 교재 원문과 회사 내부 발표 원본은 포함하지 않습니다.
+그림은 기존 PNG 또는 그 재구성본입니다. 원저작자는 확인되지 않았으며, 직접 제작물로 표기하지 않습니다. [이미지 출처와 참고 문헌](../../SOURCE_VERSION.md)을 함께 확인하세요.
