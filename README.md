@@ -27,7 +27,7 @@
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
 | **[RISC-V SoC](./RISC_V_SoC)** | Basys3 RV32I 5-stage, UART InstDMA, AXI4-Lite–APB 및 펌웨어 연동 검증 | `SystemVerilog`, `RISC-V`, `C` |
-| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** 🏆 | FP32 스트림 가속기, 포맷 계약·참조 모델 통합, **경진대회 우수상** | `Verilog`, `AXI-Stream`, `SV TB` |
+| **[Softmax Accelerator IP](./Softmax_Accelerator_IP)** 🏆 | 하드웨어 친화적 Softmax 알고리즘 구현, **경진대회 우수상** | `Verilog`, `AXI-Stream`, `SV TB` |
 | **[SPI / I2C Multi-Agent UVM](./UVM_SPI_I2C)** | 독립 SPI·I2C Agent, Virtual Sequence, wire-level Scoreboard 및 4개 topology·20회 회귀 검증 | `SystemVerilog`, `UVM 1.2`, `SVA`, `XSim` |
 | **[FIFO UVM](./UVM_FIFO)** | 경계 조건·랜덤 명령, 실제 수락 기반 Scoreboard와 3-seed 회귀 | `SystemVerilog`, `UVM 1.2`, `SVA` |
 | **[AMBA AHB-APB Bridge](./AMBA_Bus_Bridge)** | AHB-APB 버스 브리지 IP 설계 및 검증 | `Verilog`, `AMBA`, `FSM` |
