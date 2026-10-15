@@ -2,21 +2,52 @@
 
 ## 📅 프로젝트 정보
 
-- **수행**: 2025년 · 보고서 제출일 2025.06.19
-- **도구**: `Cadence Virtuoso` · `ADE` · `Transient Simulation`
+- **수행**: 2025년
+- **도구**: `Cadence Virtuoso Schematic Editor` · `ADE` · `Transient Simulation`
 - **구성**: 기본 CMOS 논리 게이트 → Full Adder·MUX → 1-bit ALU → 4-bit 확장
 
-## 🔑 확인 가능한 설계 내용
+## 📝 프로젝트 개요
 
-- PMOS/NMOS 사이징을 적용한 Inverter·AND·OR·XOR 회로
-- 2×1·4×1 MUX와 Full Adder를 이용한 산술·논리 경로 구성
-- 1-bit ALU 연산별 과도응답 파형과 진리표 비교
-- 1-bit ALU 4개를 연결한 4-bit 확장 회로
+CMOS 트랜지스터로 기본 논리 게이트를 설계하고, 이를 계층적으로 연결해 **산술·논리 연산을 수행하는 ALU**를 구성한 프로젝트입니다. 블록별 회로도와 Symbol을 작성한 뒤 ADE의 과도응답 시뮬레이션으로 입력·출력 파형을 분석했습니다.
 
-## 📂 원문 근거
+Full Adder와 Logic Module의 결과를 MUX로 선택하는 1-bit ALU를 설계하고, 1-bit 블록 4개의 Carry를 연결해 4-bit 구조로 확장했습니다.
 
-- [최종 보고서](./Report/아날로그레이아웃TermProject.pdf)
-- PDF **4쪽**: PMOS/NMOS 폭 비율과 **최소 L=50 nm** 설정
-- PDF **8~9쪽**: XOR 회로와 파형 · **14~20쪽**: Full Adder·Logic·ALU 검증 · **21쪽**: 4-bit 확장
+## 🔑 주요 설계 내용
 
-현재 공개 PDF는 회로도와 시뮬레이션 근거입니다. 정확한 PDK 버전, XOR 12T→6T 개선, DRC/LVS/PEX 결과는 이 PDF에서 확인되지 않아 성과 수치로 기재하지 않습니다. 기존 문서 원문은 보존했습니다.
+| 설계 블록 | 구성과 기능 |
+| :--- | :--- |
+| 기본 CMOS 게이트 | Inverter, NAND+Inverter 기반 AND, NOR+Inverter 기반 OR, XOR |
+| 2×1 MUX | 선택 신호에 따라 두 입력 중 하나를 출력 |
+| 4×1 MUX | 2×1 MUX 3개를 계층적으로 연결해 네 입력 중 하나를 선택 |
+| Full Adder | XOR·AND·OR 게이트로 Sum과 Carry 생성 |
+| Logic Module | AND·OR·XOR·XNOR 연산 결과 생성 |
+| 1-bit ALU | Full Adder·Logic Module·MUX로 산술·논리 결과 선택 |
+| 4-bit ALU | 1-bit ALU 4개와 Carry 연결, 공통 연산 선택 신호 구성 |
+
+- **트랜지스터 사이징**: 인버터의 PMOS 폭 240 nm, NMOS 폭 120 nm로 2:1 비율을 적용하고 채널 길이 50 nm로 설정
+- **산술 경로**: Full Adder와 입력 선택 MUX로 덧셈·뺄셈·증가·감소 연산 구성
+- **논리 경로**: Logic Module의 네 연산 결과를 4×1 MUX로 선택
+- **최종 출력**: `S2`와 2×1 MUX로 산술·논리 경로 중 하나를 선택하고 `OUT`·`Carry` 출력
+
+## ✅ 시뮬레이션과 결과 분석
+
+| 대상 | 분석 내용 |
+| :--- | :--- |
+| Inverter·AND·OR·XOR | 입력 조합에 따른 출력 파형과 논리 진리표 비교 |
+| 2×1·4×1 MUX | 선택 신호에 따른 입력 전달 동작 분석 |
+| Full Adder | `A`, `B`, `Cin` 조합에 따른 `Sum`·`Carry` 비교 |
+| Logic Module | AND·OR·XOR·XNOR 출력 파형 분석 |
+| 1-bit ALU | 320 μs 과도응답 분석으로 연산 선택 신호와 `OUT`·`Carry` 파형 비교 |
+
+## 📂 설계 보고서
+
+[회로도·시뮬레이션 설정·결과 파형이 포함된 최종 보고서](./Report/아날로그레이아웃TermProject.pdf)
+
+| 내용 | PDF 페이지 |
+| :--- | :---: |
+| 기본 CMOS 논리 게이트 | 4~9 |
+| 2×1·4×1 MUX | 10~13 |
+| Full Adder | 14~15 |
+| Logic Module | 16~17 |
+| 1-bit ALU 회로와 시뮬레이션 | 18~20 |
+| 4-bit ALU 확장 회로 | 21 |
