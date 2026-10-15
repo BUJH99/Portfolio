@@ -32,7 +32,7 @@
 | **[FIFO UVM](./UVM_FIFO)** | 경계 조건·랜덤 명령, 실제 수락 기반 Scoreboard와 3-seed 회귀 | `SystemVerilog`, `UVM 1.2`, `SVA` |
 | **[AMBA AHB-APB Bridge](./AMBA_Bus_Bridge)** | AHB-APB 버스 브리지 IP 설계 및 검증 | `Verilog`, `AMBA`, `FSM` |
 | **[FPGA FFT Calculator](./FPGA_FFT_Calculator)** | 21-bit 입력·32-bit 연산의 8-point FFT와 키패드·표시 제어 | `SystemVerilog`, `DSP` |
-| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | 두 줄 Line Buffer로 입력 BRAM 읽기 감소 및 코어 처리량 개선 | `SystemVerilog`, `Image Processing`, `BRAM` |
+| **[FPGA Image Filtering](./FPGA_Image_Filtering)** | 카메라 영상 입력·3×3 Convolution 필터링·LCD 출력 파이프라인 구현 | `SystemVerilog`, `Image Processing`, `BRAM` |
 | **[FPGA Sensor Hub](./FPGA_Sensor_Hub)** | HC-SR04·DHT11·UART·FND 통합 RTL과 센서 smoke 검증 | `Verilog`, `Sensors`, `XSim` |
 | **[Virtuoso 4-bit ALU](./Virtuoso_4bit_ALU)** | 트랜지스터 수준 게이트·1-bit ALU 설계와 4-bit 확장 | `Virtuoso`, `ADE` |
 
