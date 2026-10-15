@@ -3,7 +3,7 @@
 Name: TrapController
 Role: Trap-capture and halt-next-state controller for the RV32I 5-stage pipeline CPU
 Summary:
-  - Preserves the existing MEM > EX > ID trap capture priority used by PipelineControl
+  - Applies MEM > EX > ID priority when capturing synchronous traps
   - Produces the trap redirect event and retained halt-state next values without changing the wrapper interface
 [MODULE_INFO_END]
 */

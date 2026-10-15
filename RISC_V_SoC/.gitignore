@@ -1,1 +1,14 @@
 /output/
+/.sim_build/
+/.analysis/
+/results/
+/.pytest_cache/
+**/__pycache__/
+**/xsim.dir/
+**/.Xil/
+*.log
+*.jou
+*.pb
+*.wdb
+*.wcfg
+dfx_runtime.txt

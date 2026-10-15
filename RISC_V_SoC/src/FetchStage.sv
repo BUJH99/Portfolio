@@ -4,7 +4,7 @@ Name: FetchStage
 Role: Fetch-stage wrapper for the RV32I 5-stage pipeline CPU
 Summary:
   - Owns only the IF datapath: program-counter update, instruction-bus request, and IF/ID payload assembly
-  - Receives centralized pipeline control from the top-level PipelineControl block
+  - Receives PC advance and flush control from PipeFlowCtrl in Rv32iCore
 [MODULE_INFO_END]
 */
 

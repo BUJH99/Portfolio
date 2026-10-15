@@ -3,7 +3,7 @@
 Name: PipeFlowCtrl
 Role: Front-end flush, hold, and pipeline-empty control for the RV32I 5-stage pipeline CPU
 Summary:
-  - Preserves the existing PipelineControl qualification for PC advance, front flush, ID/EX bubble insertion, and EX/MEM trap scrubbing
+  - Qualifies PC advance, front flush, ID/EX bubble insertion, and EX/MEM trap scrubbing
   - Consumes stall, redirect, halt, trap, and pipeline-valid state without taking ownership of redirect selection
 [MODULE_INFO_END]
 */

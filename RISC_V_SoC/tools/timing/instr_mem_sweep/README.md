@@ -1,6 +1,6 @@
 # Instruction Memory Sweep
 
-Routed WNS remains the final whole-SoC performance KPI. The sweep now records the image/content policy next to each WNS row so pure instruction-memory capacity scaling is not mixed with workload-content expansion.
+Compare instruction-memory implementations and capacities using simulation, resource utilization, and routed WNS. Each case records its program image, build mode, and content policy alongside the measured results.
 
 ## Default Characterization
 
@@ -35,4 +35,4 @@ python .\tools\timing\instr_mem_sweep\run_instr_mem_sweep.py --mode full --vivad
 python .\tools\timing\instr_mem_sweep\run_instr_mem_sweep.py --mode full --vivado-level route --only-program ifetch_capacity_prbs --only-variant lutrom_direct --only-ifetch-build-mode programram_only
 ```
 
-Seed repeats can be requested with `--run-seed`, `--placer-seed`, and `--router-seed`. The summary groups matching cases and reports WNS min/mean/max/stddev without using seed repetition to hide content-changing `mixed_firmware` behavior.
+Seed repeats can be requested with `--run-seed`, `--placer-seed`, and `--router-seed`. The summary groups matching cases and reports WNS min/mean/max/stddev for each program and image policy.
