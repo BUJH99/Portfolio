@@ -1,0 +1,37 @@
+{
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "자소서/03_자료/04_프로젝트/FPGA_Claw/FPGAClaw_UI.png",
+      "destination": "FPGA_Automation/docs/images/FPGAClaw_UI.png",
+      "original_sha256": "a0fced1eb376f76f9245be2d0b4d39a7cf13b03f8d911209490ca19210d0f369",
+      "published_sha256": "a0fced1eb376f76f9245be2d0b4d39a7cf13b03f8d911209490ca19210d0f369",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/FPGA_Claw/FPGAClaw_Mobile.png",
+      "destination": "FPGA_Automation/docs/images/FPGAClaw_Mobile.png",
+      "original_sha256": "24694863878631d8215ea0ace0fd4da959461dd3602338d0a3a550ce1d1d0b9e",
+      "published_sha256": "24694863878631d8215ea0ace0fd4da959461dd3602338d0a3a550ce1d1d0b9e",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/FPGA_Claw/FPGAClaw_Home.png",
+      "destination": "FPGA_Automation/docs/images/FPGAClaw_Home.png",
+      "original_sha256": "abcda9b9ba7766e2b54b066a919b49346265a1bfdb419c13cf73c20ea5f7608e",
+      "published_sha256": "abcda9b9ba7766e2b54b066a919b49346265a1bfdb419c13cf73c20ea5f7608e",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/FPGA_Claw/FPGAClaw_Help.png",
+      "destination": "FPGA_Automation/docs/images/FPGAClaw_Help.png",
+      "original_sha256": "2d56f7ef5abe3caaff22433d28d12c4e9f423bcc100323c802e47e01b91b3f1c",
+      "published_sha256": "2d56f7ef5abe3caaff22433d28d12c4e9f423bcc100323c802e47e01b91b3f1c",
+      "commit": null,
+      "status": "packaged"
+    }
+  ]
+}

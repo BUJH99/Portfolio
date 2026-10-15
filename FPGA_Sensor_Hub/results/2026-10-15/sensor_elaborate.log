@@ -1,0 +1,61 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe TbTop -s sensor -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-10112] concatenation multiplier constant must be positive [<PORTFOLIO>/FPGA_Sensor_Hub/src/baud_rate_generator.v:28]
+WARNING: [VRFC 10-10112] concatenation multiplier constant must be positive [<PORTFOLIO>/FPGA_Sensor_Hub/src/baud_rate_generator.v:32]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.sync_2ff
+Compiling module work.Hcsr04Core(P_SYS_CLK_HZ=1000000,...
+Compiling module work.Dht11Core(P_SYS_CLK_HZ=1000000,P...
+Compiling module work.DoubleDabble
+Compiling module work.baud_rate_generator(P_CLK_HZ=100...
+Compiling module work.uart_rx
+Compiling module work.rx_fifo_default
+Compiling module work.tx_fifo_default
+Compiling module work.tx_arbiter
+Compiling module work.uart_tx
+Compiling module work.uart_interface(P_CLK_HZ=1000000,...
+Compiling module work.GlobalTickGen(P_SYS_CLK_HZ=10000...
+Compiling module work.CounterFilter_default
+Compiling module work.EdgePulse
+Compiling module work.Debounce
+Compiling module work.DebounceWrapper_default
+Compiling module work.SwitchInput_default
+Compiling module work.INPUTFPGA
+Compiling module work.ascii_decoder
+Compiling module work.InputPriority
+Compiling module work.InputDistributor
+Compiling module work.InputControl
+Compiling module work.WatchFsm
+Compiling module work.BcdCounter
+Compiling module work.BcdCounter(P_RST_TENS=1,P_RST_ON...
+Compiling module work.WatchCounter
+Compiling module work.WatchCore
+Compiling module work.StopwatchFsm
+Compiling module work.StopwatchCounter
+Compiling module work.StopwatchCore
+Compiling module work.SensorControlUnit_default
+Compiling module work.Hcsr04Core(P_SYS_CLK_HZ=1000000)
+Compiling module work.Dht11Core(P_SYS_CLK_HZ=1000000)
+Compiling module work.ControlUnit(P_SYS_CLK_HZ=1000000...
+Compiling module work.SensorBcdConverter
+Compiling module work.DisplayModeSelector
+Compiling module work.DisplayMux
+Compiling module work.FndScanCounter
+Compiling module work.FndDigitSelector
+Compiling module work.FndBlinkEffect
+Compiling module work.FndBcdDecoder
+Compiling module work.FndController
+Compiling module work.AsciiMux
+Compiling module work.AsciiSenderFsm
+Compiling module work.AsciiSender
+Compiling module work.TOP(P_SYS_CLK_HZ=1000000,P_UART_...
+Compiling module work.TbTop
+Built simulation snapshot sensor

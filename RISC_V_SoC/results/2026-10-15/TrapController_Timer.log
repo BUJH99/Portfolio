@@ -1,0 +1,17 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 17:14:08 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/TrapController_Timer/xsim_script.tcl
+# xsim {TrapController_Timer} -autoloadwcfg -runall -sv_seed 1
+Time resolution is 1 ps
+run -all
+[PASS] tb_TrapController_Timer completed
+$finish called at time : 12 ns : File "<PORTFOLIO>/RISC_V_SoC/tb/tb_TrapController_Timer.sv" Line 173
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 17:14:10 2026...

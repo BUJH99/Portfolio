@@ -778,7 +778,6 @@ def aggregate_suite_summary(case_data: list[dict[str, Any]], suite_summary: dict
         "case_names_csv": suite_summary.get("case_names_csv", ""),
         "suite_status": suite_status,
         "suite_coverage_pct": float(suite_summary.get("suite_coverage_pct", 0.0)),
-        "suite_vivado_builtin_coverage_pct": float(suite_summary.get("vivado_builtin_coverage_pct", 0.0)),
         "total_cases": len(case_data),
         "failed_case_count": int(suite_summary.get("failed_case_count", 0)),
         "failed_error_total": int(suite_summary.get("failed_error_total", 0)),

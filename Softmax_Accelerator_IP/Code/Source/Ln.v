@@ -8,25 +8,27 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module Ln(
     input  wire                iClk,
     input  wire                iRstn,
     input  wire                iValid,
     output wire                oReady,
-    input  wire [15:0]         iData,
+    input  wire [`DEF_SOFTMAX_EXP_W-1:0]         iData,
     output wire                oValid,
     input  wire                iReady,
-    output wire signed [15:0]  oData
+    output wire signed [`DEF_SOFTMAX_Q78_W-1:0]  oData
 );
-    localparam integer LP_DATA_W       = 16;
-    localparam integer LP_EXP_ADDR_W   = 5;
-    localparam integer LP_MANT_ADDR_W  = 10;
-    localparam integer LP_ACC_W        = 21;
+    localparam integer LP_DATA_W       = `DEF_SOFTMAX_EXP_W;
+    localparam integer LP_EXP_ADDR_W   = `DEF_SOFTMAX_LN_EXP_ADDR_W;
+    localparam integer LP_MANT_ADDR_W  = `DEF_SOFTMAX_LN_MANT_ADDR_W;
+    localparam integer LP_ACC_W        = `DEF_SOFTMAX_LN_ACC_W;
     localparam integer LP_ALIGN_SHIFT  = 5;
-    localparam integer LP_OUT_FRAC_W   = 8;
+    localparam integer LP_OUT_FRAC_W   = `DEF_SOFTMAX_Q78_FRAC_W;
     localparam integer LP_INPUT_MSB    = LP_DATA_W - 1;
     localparam integer LP_MANT_MSB     = 14;
     localparam integer LP_MANT_LSB     = 5;
+    localparam integer LP_MANT_LSB_DROP = `DEF_SOFTMAX_LN_MANT_LSB_DROP;
     localparam integer LP_SIGN_EXT_W   = LP_DATA_W - (LP_ACC_W - LP_OUT_FRAC_W);
     localparam [LP_EXP_ADDR_W-1:0]  LP_EXP_BIAS      = 5'd10;
     localparam [LP_EXP_ADDR_W-1:0]  LP_ZERO_EXP_ADDR = {LP_EXP_ADDR_W{1'b0}};
@@ -56,7 +58,9 @@ module Ln(
     wire                       isInputZero;
     wire [LP_EXP_ADDR_W-1:0]   expAddrCalc  = msbIdx + LP_EXP_BIAS;
     wire [LP_DATA_W-1:0]       normShiftData = iData << (LP_INPUT_MSB - msbIdx);
-    wire [LP_MANT_ADDR_W-1:0]  mantAddrCalc = normShiftData[LP_MANT_MSB:LP_MANT_LSB];
+    wire [LP_MANT_ADDR_W-1:0]  mantAddrRaw  = normShiftData[LP_MANT_MSB:LP_MANT_LSB];
+    wire [LP_MANT_ADDR_W-1:0]  mantAddrCalc =
+        (mantAddrRaw >> LP_MANT_LSB_DROP) << LP_MANT_LSB_DROP;
     wire [LP_MANT_ADDR_W-1:0]  lnMantAddr   = stage1MantAddr;
     wire signed [LP_DATA_W-1:0] lnExpTerm;
     wire        [LP_DATA_W-1:0] lnMantTerm;

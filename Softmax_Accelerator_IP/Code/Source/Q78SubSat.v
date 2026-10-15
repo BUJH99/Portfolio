@@ -7,12 +7,13 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module Q78SubSat(
-    input  wire signed [15:0] iDataA,
-    input  wire signed [15:0] iDataB,
-    output reg  signed [15:0] oData
+    input  wire signed [`DEF_SOFTMAX_Q78_W-1:0] iDataA,
+    input  wire signed [`DEF_SOFTMAX_Q78_W-1:0] iDataB,
+    output reg  signed [`DEF_SOFTMAX_Q78_W-1:0] oData
 );
-    localparam integer LP_Q78_W      = 16;
+    localparam integer LP_Q78_W      = `DEF_SOFTMAX_Q78_W;
     localparam integer LP_DIFF_W     = LP_Q78_W + 1;
     localparam signed [LP_Q78_W-1:0]  LP_Q78_MAX = 16'sd32767;
     localparam signed [LP_Q78_W-1:0]  LP_Q78_MIN = -16'sd32768;

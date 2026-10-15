@@ -7,8 +7,9 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module FrameBuf #(
-    parameter integer P_DATA_WIDTH = 16,
+    parameter integer P_DATA_WIDTH = `DEF_SOFTMAX_Q78_W,
     parameter integer P_ADDR_W     = 8
 )(
     input  wire                      iClk,

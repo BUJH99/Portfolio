@@ -1,0 +1,127 @@
+{
+  "filesets": {
+    "modules": {
+      "top": "TbTop",
+      "sources": [
+        "Source/RasterAddrGen.sv",
+        "TestBench/reference/Window3x3Case9.sv",
+        "Source/Window3x3LineBuffer.sv",
+        "Source/Conv3x3ReluParam.sv",
+        "TestBench/TbTop_module_perf.sv"
+      ]
+    },
+    "integrated": {
+      "top": "tb_TOP",
+      "sources": [
+        "Source/*.sv",
+        "TestBench/tb_memory_models.v",
+        "TestBench/tb_top.v"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "module_perf",
+      "fileset": "modules",
+      "require": [
+        "MODULE_PERF_PASS"
+      ]
+    },
+    {
+      "name": "integrated_mode0_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE0",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode1_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE1",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode2_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE2",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode3_preload",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE3",
+        "PRELOAD_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode0_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE0",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode1_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE1",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode2_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE2",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    },
+    {
+      "name": "integrated_mode3_stream",
+      "fileset": "integrated",
+      "plusargs": [
+        "MODE3",
+        "STREAM_INPUT"
+      ],
+      "require": [
+        "simulation finished\\.|Simulation finished\\.",
+        "Output pixels.*130560|130560.*pixel|outbuf_mem_commit.*130560"
+      ]
+    }
+  ]
+}

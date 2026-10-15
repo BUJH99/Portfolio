@@ -1,0 +1,711 @@
+{
+  "filesets": {
+    "DataBusAxiLiteMaster": {
+      "top": "tb_DataBusAxiLiteMaster",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_DataBusAxiLiteMaster.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "AxiLiteToApbBridge": {
+      "top": "tb_AxiLiteToApbBridge",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_AxiLiteToApbBridge.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "APB_Timer": {
+      "top": "tb_APB_Timer",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_APB_Timer.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "CsrFile_Timer": {
+      "top": "tb_CsrFile_Timer",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_CsrFile_Timer.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "TrapController_Timer": {
+      "top": "tb_TrapController_Timer",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_TrapController_Timer.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "InstDmaCtrl": {
+      "top": "tb_InstDmaCtrl",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_InstDmaCtrl.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "InstDmaData": {
+      "top": "tb_InstDmaData",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_InstDmaData.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "InstDmaRegs": {
+      "top": "tb_InstDmaRegs",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_InstDmaRegs.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "InstrBusMux": {
+      "top": "tb_InstrBusMux",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_InstrBusMux.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "ProgramRam": {
+      "top": "tb_ProgramRam",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_ProgramRam.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "UartRxRouter": {
+      "top": "tb_UartRxRouter",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_UartRxRouter.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "UartTxRouter": {
+      "top": "tb_UartTxRouter",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_UartTxRouter.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "uart_inst_dma": {
+      "top": "TbTop",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_TOP_UartInstDma.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "board_preflight": {
+      "top": "TbTop",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_MasterSlave_BoardPreflight.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    },
+    "bubble_sort_e2e": {
+      "top": "TbTop",
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/rv32i_pkg.sv",
+        "src/sort_demo_pkg.sv",
+        "src/soc_addr_pkg.sv",
+        "src/*.sv",
+        "companion/SLVAE_BUBBLE/src/*.sv",
+        "tb/tb_TOP_BubbleSortE2E.sv"
+      ],
+      "vendor_glbl": true,
+      "extra_tops": [
+        "glbl"
+      ],
+      "libraries": [
+        "unisims_ver"
+      ],
+      "inputs": [
+        {
+          "source": "src/timing_programs",
+          "destination": "src/timing_programs"
+        },
+        {
+          "source": "src/InstructionFORTIMING.mem",
+          "destination": "src/InstructionFORTIMING.mem"
+        },
+        {
+          "source": "sw/prebuilt/bubble_sort_demo.mem",
+          "destination": "firmware/bubble_sort_demo.mem"
+        }
+      ],
+      "audit": [
+        "src/**/*.mem",
+        "sw/prebuilt/*.mem"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "DataBusAxiLiteMaster",
+      "fileset": "DataBusAxiLiteMaster",
+      "require": [
+        "\\[PASS\\] tb_DataBusAxiLiteMaster"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "AxiLiteToApbBridge",
+      "fileset": "AxiLiteToApbBridge",
+      "require": [
+        "\\[PASS\\] tb_AxiLiteToApbBridge"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "APB_Timer",
+      "fileset": "APB_Timer",
+      "require": [
+        "\\[PASS\\] tb_APB_Timer"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "CsrFile_Timer",
+      "fileset": "CsrFile_Timer",
+      "require": [
+        "\\[PASS\\] tb_CsrFile_Timer"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "TrapController_Timer",
+      "fileset": "TrapController_Timer",
+      "require": [
+        "\\[PASS\\] tb_TrapController_Timer"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "InstDmaCtrl",
+      "fileset": "InstDmaCtrl",
+      "require": [
+        "\\[PASS\\] tb_InstDmaCtrl"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "InstDmaData",
+      "fileset": "InstDmaData",
+      "require": [
+        "\\[PASS\\] tb_InstDmaData"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "InstDmaRegs",
+      "fileset": "InstDmaRegs",
+      "require": [
+        "\\[PASS\\] tb_InstDmaRegs"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "InstrBusMux",
+      "fileset": "InstrBusMux",
+      "require": [
+        "\\[PASS\\] tb_InstrBusMux"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "ProgramRam",
+      "fileset": "ProgramRam",
+      "require": [
+        "\\[PASS\\] tb_ProgramRam"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "UartRxRouter",
+      "fileset": "UartRxRouter",
+      "require": [
+        "\\[PASS\\] tb_UartRxRouter"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "UartTxRouter",
+      "fileset": "UartTxRouter",
+      "require": [
+        "\\[PASS\\] tb_UartTxRouter"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "uart_inst_dma",
+      "fileset": "uart_inst_dma",
+      "require": [
+        "\\[PASS\\] TOP UART InstDma integration completed"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "board_preflight",
+      "fileset": "board_preflight",
+      "require": [
+        "\\[PASS\\] MASTER/SLAVE board preflight completed"
+      ],
+      "timeout": 600
+    },
+    {
+      "name": "bubble_sort_e2e",
+      "fileset": "bubble_sort_e2e",
+      "require": [
+        "\\[PASS\\] Bubble Sort final E2E XSIM completed"
+      ],
+      "timeout": 1800
+    }
+  ]
+}

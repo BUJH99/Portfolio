@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/UVM_FIFO/src/Top.sv" into library work
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/UVM_FIFO/tb/FifoIf.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/UVM_FIFO/tb/fifo_uvm_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/UVM_FIFO/tb/fifo_assertions.sv" into library work
+INFO: [VRFC 10-311] analyzing module FifoAssertions
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/UVM_FIFO/tb/tb_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module TbTop

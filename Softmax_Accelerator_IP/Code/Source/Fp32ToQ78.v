@@ -7,20 +7,22 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module Fp32ToQ78(
-    input  wire [31:0]        iFp32,
-    output reg  signed [15:0] oQ78
+    input  wire [`DEF_SOFTMAX_AXIS_W-1:0]        iFp32,
+    output reg  signed [`DEF_SOFTMAX_Q78_W-1:0]  oQ78
 );
     localparam integer LP_FP32_EXP_W    = 8;
     localparam integer LP_FP32_MANT_W   = 23;
-    localparam integer LP_Q78_FRAC_W    = 8;
+    localparam integer LP_Q78_W         = `DEF_SOFTMAX_Q78_W;
+    localparam integer LP_Q78_FRAC_W    = `DEF_SOFTMAX_Q78_FRAC_W;
     localparam integer LP_SHIFT_BIAS    = 127 + LP_FP32_MANT_W - LP_Q78_FRAC_W;
-    localparam integer LP_WIDE_W        = 32;
+    localparam integer LP_WIDE_W        = `DEF_SOFTMAX_AXIS_W;
     localparam integer LP_SHIFT_MAX     = LP_WIDE_W - 1;
     localparam [LP_FP32_EXP_W-1:0] LP_EXP_ZERO = 8'h00;
     localparam [LP_FP32_EXP_W-1:0] LP_EXP_INF  = 8'hFF;
-    localparam signed [15:0] LP_Q78_MAX = 16'sd32767;
-    localparam signed [15:0] LP_Q78_MIN = -16'sd32768;
+    localparam signed [LP_Q78_W-1:0] LP_Q78_MAX = 16'sd32767;
+    localparam signed [LP_Q78_W-1:0] LP_Q78_MIN = -16'sd32768;
     localparam signed [LP_WIDE_W-1:0] LP_Q78_MAX_WIDE = 32'sd32767;
     localparam signed [LP_WIDE_W-1:0] LP_Q78_MIN_WIDE = -32'sd32768;
     localparam signed [LP_WIDE_W-1:0] LP_SCALED_SAT   = 32'sh7FFF_FFFF;
@@ -42,7 +44,7 @@ module Fp32ToQ78(
         rightShift  = 0;
         scaledAbs   = {LP_WIDE_W{1'b0}};
         scaledValue = {LP_WIDE_W{1'b0}};
-        oQ78        = 16'sd0;
+        oQ78        = {LP_Q78_W{1'b0}};
 
         if (isSpecialExp) begin
             oQ78 = isNegative ? LP_Q78_MIN : LP_Q78_MAX;
@@ -77,7 +79,7 @@ module Fp32ToQ78(
             else if (scaledValue < LP_Q78_MIN_WIDE)
                 oQ78 = LP_Q78_MIN;
             else
-                oQ78 = scaledValue[15:0];
+                oQ78 = scaledValue[LP_Q78_W-1:0];
         end
     end
 endmodule

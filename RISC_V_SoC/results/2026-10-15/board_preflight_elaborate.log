@@ -1,0 +1,53 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe TbTop glbl -L unisims_ver -s board_preflight -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.sort_demo_pkg
+Compiling package work.rv32i_pkg
+Compiling module work.I2cRegs
+Compiling module work.I2cMasterInputSync
+Compiling module work.I2cMasterCommandLatch
+Compiling module work.I2cMasterCtrl
+Compiling module work.I2cMasterDatapath
+Compiling module work.I2cMasterDriver
+Compiling module work.I2cCore
+Compiling module work.APB_I2C
+Compiling module work.SpiRegs
+Compiling module work.SpiMasterInputSync
+Compiling module work.SpiMasterCommandLatch
+Compiling module work.SpiMasterCtrl
+Compiling module work.SpiMasterDatapath
+Compiling module work.SpiMasterDriver
+Compiling module work.SpiCore
+Compiling module work.APB_SPI
+Compiling module work.SpiSlaveInputSync
+Compiling module work.SpiSlaveByteCapture
+Compiling module work.SpiSlaveFrameTracker_default
+Compiling module work.SpiTraceSlave
+Compiling module work.SortTraceFrameDecoder
+Compiling module work.SortSlaveRegs
+Compiling module work.I2cSlaveInputSync
+Compiling module work.I2cSlaveByteShift
+Compiling module work.I2cSlaveRegPointer
+Compiling module work.I2cSlaveRegMap
+Compiling module work.I2cSlaveProtocolFsm
+Compiling module work.I2cSlaveOpenDrainDrive
+Compiling module work.I2cSlaveRegTarget
+Compiling module work.SortFndTickGen_default
+Compiling module work.SortFndScanCounter
+Compiling module work.SortFndDigitSelector
+Compiling module work.SortFndBlinkEffect
+Compiling module work.SortFndBcdDecoder
+Compiling module work.SortFndController
+Compiling module work.SlaveFndController
+Compiling module work.SortDisplaySlaveCore
+Compiling module work.TbTop
+Compiling module work.glbl
+Built simulation snapshot board_preflight

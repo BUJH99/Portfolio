@@ -8,24 +8,25 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module Sum(
     input  wire         iClk,
     input  wire         iRstn,
     input  wire         iValid,
     output wire         oReady,
     input  wire         iLast,
-    input  wire [15:0]  iData,
+    input  wire [`DEF_SOFTMAX_EXP_W-1:0]  iData,
     output wire         oValid,
     input  wire         iReady,
-    output wire [15:0]  oData
+    output wire [`DEF_SOFTMAX_EXP_W-1:0]  oData
 );
-    localparam integer LP_DATA_W     = 16;
-    localparam integer LP_ACC_W      = 27;
+    localparam integer LP_DATA_W     = `DEF_SOFTMAX_EXP_W;
+    localparam integer LP_ACC_W      = `DEF_SOFTMAX_SUM_ACC_W;
     localparam integer LP_EXT_W      = LP_ACC_W - LP_DATA_W;
-    localparam integer LP_SHIFT_BITS = 11;
+    localparam integer LP_SHIFT_BITS = `DEF_SOFTMAX_SUM_SHIFT_BITS;
     localparam [LP_DATA_W-1:0] LP_ZERO_DATA = {LP_DATA_W{1'b0}};
     localparam [LP_ACC_W-1:0]  LP_ZERO_ACC  = {LP_ACC_W{1'b0}};
-    localparam [LP_ACC_W-1:0]  LP_ROUND_BIAS = 27'd1024;
+    localparam [LP_ACC_W-1:0]  LP_ROUND_BIAS = {{(LP_ACC_W-1){1'b0}}, 1'b1} << (LP_SHIFT_BITS - 1);
 
     reg [LP_ACC_W-1:0]  sumAcc;
     reg [LP_DATA_W-1:0] outData;

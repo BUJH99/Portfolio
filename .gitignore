@@ -1,0 +1,7 @@
+# Local build products; checked-in historical artifacts remain tracked.
+**/.sim_build/
+**/__pycache__/
+**/node_modules/
+**/.venv/
+/.Xil/
+/dfx_runtime.txt

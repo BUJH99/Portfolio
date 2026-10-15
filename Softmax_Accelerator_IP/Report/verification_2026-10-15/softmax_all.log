@@ -1,0 +1,575 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 17:15:31 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/softmax/xsim_script.tcl
+# xsim {softmax} -testplusarg TESTNAME=all -autoloadwcfg -runall -sv_seed 1
+Time resolution is 1 ps
+run -all
+[TB][INFO] RUN CASE 1 / 10
+[TB][INFO] Selected TESTNAME=test_01_reset_matrix
+[TB][INFO] Generator queued 8 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=reset_matrix_0 len=8 in_stall=none out_stall=light result=reset_aborted
+[TB][INFO] GEN : frame_id=2 scenario=reset_matrix_1 len=8 in_stall=light out_stall=light result=normal
+[TB][INFO] GEN : frame_id=3 scenario=reset_matrix_2 len=8 in_stall=none out_stall=light result=reset_aborted
+[TB][INFO] GEN : frame_id=4 scenario=reset_matrix_3 len=8 in_stall=light out_stall=light result=normal
+[TB][INFO] GEN : frame_id=5 scenario=reset_matrix_4 len=8 in_stall=none out_stall=heavy result=reset_aborted
+[TB][INFO] GEN : frame_id=6 scenario=reset_matrix_5 len=8 in_stall=light out_stall=heavy result=normal
+[TB][INFO] GEN : frame_id=7 scenario=reset_matrix_6 len=8 in_stall=none out_stall=heavy result=reset_aborted
+[TB][INFO] GEN : frame_id=8 scenario=reset_matrix_7 len=8 in_stall=light out_stall=heavy result=normal
+[TB][WARN] Dropping partial input frame on reset, epoch=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=8
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=8
+[TB][INFO] SCB queued expected frame_id=5
+[TB][INFO] SCB PASS frame_id=4 checked_beats=8
+[TB][INFO] SCB queued expected frame_id=6
+[TB][INFO] SCB PASS frame_id=5 checked_beats=8
+[TB][INFO] SCB queued expected frame_id=7
+[TB][INFO] SCB PASS frame_id=6 checked_beats=8
+[TB][INFO] SCB queued expected frame_id=8
+[TB][WARN] Reset flush dropped 2 expected frame(s)
+[TB][INFO] ENV report: checked=40 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=40 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=40 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=reset_idle_event checked_beats=0 frame_samples=0 reset_samples=1 coverage=9.0%
+[TB][INFO] Scenario report: name=reset_capture_event checked_beats=0 frame_samples=0 reset_samples=1 coverage=9.0%
+[TB][INFO] Scenario report: name=reset_matrix_1 checked_beats=8 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=reset_matrix_2 checked_beats=8 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=reset_matrix_3 checked_beats=8 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=reset_matrix_4 checked_beats=8 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=reset_matrix_5 checked_beats=8 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=reset_replay_event checked_beats=0 frame_samples=0 reset_samples=1 coverage=9.0%
+[TB][INFO] Scenario report: name=reset_output_valid_event checked_beats=0 frame_samples=0 reset_samples=1 coverage=9.0%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=reset_matrix_1 checked_beats=8 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=8 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=reset_matrix_2 checked_beats=8 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=8 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=reset_matrix_3 checked_beats=8 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=8 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=reset_matrix_4 checked_beats=8 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=8 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=reset_matrix_5 checked_beats=8 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=8 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_01_reset_matrix
+[TB][INFO] RUN CASE 2 / 10
+[TB][INFO] Selected TESTNAME=test_02_singleton_frame
+[TB][INFO] Generator queued 1 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=singleton_frame len=1 in_stall=none out_stall=none result=normal
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB PASS frame_id=1 checked_beats=1
+[TB][INFO] ENV report: checked=1 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=singleton_frame checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=singleton_frame checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_02_singleton_frame
+[TB][INFO] RUN CASE 3 / 10
+[TB][INFO] Selected TESTNAME=test_03_uniform_frame
+[TB][INFO] Generator queued 7 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=uniform_len_2 len=2 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=2 scenario=uniform_len_3 len=3 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=3 scenario=uniform_len_5 len=5 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=4 scenario=uniform_len_7 len=7 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=5 scenario=uniform_len_16 len=16 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=6 scenario=uniform_len_63 len=63 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=7 scenario=uniform_len_64 len=64 in_stall=none out_stall=light result=normal
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=5
+[TB][INFO] SCB PASS frame_id=4 checked_beats=7
+[TB][INFO] SCB PASS frame_id=5 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=6
+[TB][INFO] SCB queued expected frame_id=7
+[TB][INFO] SCB PASS frame_id=6 checked_beats=63
+[TB][INFO] SCB PASS frame_id=7 checked_beats=64
+[TB][INFO] ENV report: checked=160 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=160 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=160 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=uniform_len_2 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_3 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_5 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_7 checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_16 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_63 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=uniform_len_64 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=uniform_len_2 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_3 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_5 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_7 checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_16 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_63 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=uniform_len_64 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_03_uniform_frame
+[TB][INFO] RUN CASE 4 / 10
+[TB][INFO] Selected TESTNAME=test_04_mixed_vector_directed
+[TB][INFO] Generator queued 5 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=mixed_max_first len=4 in_stall=light out_stall=none result=normal
+[TB][INFO] GEN : frame_id=2 scenario=mixed_max_middle len=4 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=3 scenario=mixed_max_last len=4 in_stall=light out_stall=light result=normal
+[TB][INFO] GEN : frame_id=4 scenario=near_equal_middle len=3 in_stall=none out_stall=none result=normal
+[TB][INFO] GEN : frame_id=5 scenario=near_equal_tie len=3 in_stall=none out_stall=none result=normal
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=5
+[TB][INFO] SCB PASS frame_id=4 checked_beats=3
+[TB][INFO] SCB PASS frame_id=5 checked_beats=3
+[TB][INFO] ENV report: checked=18 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=18 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=18 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=mixed_max_first checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=mixed_max_middle checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=mixed_max_last checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=near_equal_middle checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=near_equal_tie checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=mixed_max_first checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=mixed_max_middle checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=mixed_max_last checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=near_equal_middle checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=near_equal_tie checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_04_mixed_vector_directed
+[TB][INFO] RUN CASE 5 / 10
+[TB][INFO] Selected TESTNAME=test_05_backpressure_protocol
+[TB][INFO] Generator queued 3 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=bp_light_alt len=4 in_stall=light out_stall=alternate result=protocol
+[TB][INFO] GEN : frame_id=2 scenario=bp_heavy_heavy len=5 in_stall=heavy out_stall=heavy result=protocol
+[TB][INFO] GEN : frame_id=3 scenario=bp_scripted len=4 in_stall=scripted out_stall=scripted result=protocol
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=5
+[TB][INFO] SCB PASS frame_id=3 checked_beats=4
+[TB][INFO] ENV report: checked=13 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=13 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=13 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=bp_light_alt checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=bp_heavy_heavy checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=bp_scripted checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=bp_light_alt checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=bp_heavy_heavy checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=bp_scripted checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_05_backpressure_protocol
+[TB][INFO] RUN CASE 6 / 10
+[TB][INFO] Selected TESTNAME=test_06_frame_boundary_cmax
+[TB][INFO] Generator queued 3 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=boundary_len2 len=2 in_stall=none out_stall=none result=normal
+[TB][INFO] GEN : frame_id=2 scenario=boundary_len_cmax_minus_1 len=1023 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=3 scenario=boundary_cmax_only len=1024 in_stall=none out_stall=none result=normal
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB PASS frame_id=1 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=1023
+[TB][INFO] SCB PASS frame_id=3 checked_beats=1024
+[TB][INFO] ENV report: checked=2049 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=2049 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2049 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=boundary_len2 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=boundary_len_cmax_minus_1 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=boundary_cmax_only checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=boundary_len2 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=boundary_len_cmax_minus_1 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=boundary_cmax_only checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_06_frame_boundary_cmax
+[TB][INFO] RUN CASE 7 / 10
+[TB][INFO] Selected TESTNAME=test_07_boundary_collision_rearm
+[TB][INFO] Generator queued 3 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=collision_len_cmax len=1024 in_stall=none out_stall=light result=normal
+[TB][INFO] GEN : frame_id=2 scenario=rearm_back_to_back len=3 in_stall=none out_stall=none result=normal
+[TB][INFO] GEN : frame_id=3 scenario=rearm_delayed len=3 in_stall=light out_stall=none result=normal
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=1024
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=3
+[TB][INFO] SCB PASS frame_id=3 checked_beats=3
+[TB][INFO] ENV report: checked=1030 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=1030 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1030 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=collision_len_cmax checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=rearm_back_to_back checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=rearm_delayed checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=collision_len_cmax checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=rearm_back_to_back checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=rearm_delayed checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_07_boundary_collision_rearm
+[TB][INFO] RUN CASE 8 / 10
+[TB][INFO] Selected TESTNAME=test_08_keep_ignore
+[TB][INFO] Generator queued 4 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=keep_mode_0 len=4 in_stall=none out_stall=light result=keep_ignore
+[TB][INFO] GEN : frame_id=2 scenario=keep_mode_1 len=4 in_stall=none out_stall=light result=keep_ignore
+[TB][INFO] GEN : frame_id=3 scenario=keep_mode_2 len=4 in_stall=none out_stall=light result=keep_ignore
+[TB][INFO] GEN : frame_id=4 scenario=keep_mode_3 len=4 in_stall=none out_stall=light result=keep_ignore
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=4
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=4
+[TB][INFO] SCB PASS frame_id=4 checked_beats=4
+[TB][INFO] ENV report: checked=16 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=keep_mode_0 checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=keep_mode_1 checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=keep_mode_2 checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario report: name=keep_mode_3 checked_beats=4 frame_samples=1 reset_samples=0 coverage=7.8%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=keep_mode_0 checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=keep_mode_1 checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=keep_mode_2 checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=keep_mode_3 checked_beats=4 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=4 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_08_keep_ignore
+[TB][INFO] RUN CASE 9 / 10
+[TB][INFO] Selected TESTNAME=test_09_special_fp32_policy
+[TB][INFO] Generator queued 6 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=special_zero len=2 in_stall=none out_stall=none result=special
+[TB][INFO] GEN : frame_id=2 scenario=special_large_finite_pair len=2 in_stall=none out_stall=light result=special
+[TB][INFO] GEN : frame_id=3 scenario=special_pos_inf_pair len=2 in_stall=none out_stall=none result=special
+[TB][INFO] GEN : frame_id=4 scenario=special_neg_inf_pair len=2 in_stall=none out_stall=light result=special
+[TB][INFO] GEN : frame_id=5 scenario=special_qnan_pair len=2 in_stall=none out_stall=none result=special
+[TB][INFO] GEN : frame_id=6 scenario=special_snan_pair len=2 in_stall=none out_stall=light result=special
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=5
+[TB][INFO] SCB PASS frame_id=4 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=6
+[TB][INFO] SCB PASS frame_id=5 checked_beats=2
+[TB][INFO] SCB PASS frame_id=6 checked_beats=2
+[TB][INFO] ENV report: checked=12 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=12 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=12 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=special_zero checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=special_large_finite_pair checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=special_pos_inf_pair checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=special_neg_inf_pair checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=special_qnan_pair checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=special_snan_pair checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=special_zero checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=special_large_finite_pair checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=special_pos_inf_pair checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=special_neg_inf_pair checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=special_qnan_pair checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=special_snan_pair checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_09_special_fp32_policy
+[TB][INFO] RUN CASE 10 / 10
+[TB][INFO] Selected TESTNAME=test_10_random_cov
+[TB][INFO] Generator queued 49 frame(s)
+[TB][INFO] GEN : frame_id=1 scenario=random_cov_0 len=1 in_stall=none out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=2 scenario=random_cov_1 len=2 in_stall=none out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=3 scenario=random_cov_2 len=3 in_stall=none out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=4 scenario=random_cov_3 len=5 in_stall=none out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=5 scenario=random_cov_4_qnan len=7 in_stall=none out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=6 scenario=random_cov_5 len=16 in_stall=none out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=7 scenario=random_cov_6 len=63 in_stall=none out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=8 scenario=random_cov_7 len=64 in_stall=light out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=9 scenario=random_cov_8 len=1023 in_stall=light out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=10 scenario=random_cov_9_neg_inf len=1024 in_stall=light out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=11 scenario=random_cov_10 len=1 in_stall=light out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=12 scenario=random_cov_11 len=2 in_stall=light out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=13 scenario=random_cov_12 len=3 in_stall=light out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=14 scenario=random_cov_13 len=5 in_stall=light out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=15 scenario=random_cov_14_pos_inf len=7 in_stall=heavy out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=16 scenario=random_cov_15 len=16 in_stall=heavy out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=17 scenario=random_cov_16 len=63 in_stall=heavy out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=18 scenario=random_cov_17 len=64 in_stall=heavy out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=19 scenario=random_cov_18 len=1023 in_stall=heavy out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=20 scenario=random_cov_19_large_finite len=1024 in_stall=heavy out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=21 scenario=random_cov_20 len=1 in_stall=heavy out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=22 scenario=random_cov_21 len=2 in_stall=alternate out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=23 scenario=random_cov_22 len=3 in_stall=alternate out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=24 scenario=random_cov_23 len=5 in_stall=alternate out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=25 scenario=random_cov_24_zero len=7 in_stall=alternate out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=26 scenario=random_cov_25 len=16 in_stall=alternate out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=27 scenario=random_cov_26 len=63 in_stall=alternate out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=28 scenario=random_cov_27 len=64 in_stall=alternate out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=29 scenario=random_cov_28 len=1023 in_stall=burst out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=30 scenario=random_cov_29_snan len=1024 in_stall=burst out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=31 scenario=random_cov_30 len=1 in_stall=burst out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=32 scenario=random_cov_31 len=2 in_stall=burst out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=33 scenario=random_cov_32 len=3 in_stall=burst out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=34 scenario=random_cov_33 len=5 in_stall=burst out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=35 scenario=random_cov_34_qnan len=7 in_stall=burst out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=36 scenario=random_cov_35 len=16 in_stall=random out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=37 scenario=random_cov_36 len=63 in_stall=random out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=38 scenario=random_cov_37 len=64 in_stall=random out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=39 scenario=random_cov_38 len=1023 in_stall=random out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=40 scenario=random_cov_39_neg_inf len=1024 in_stall=random out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=41 scenario=random_cov_40 len=1 in_stall=random out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=42 scenario=random_cov_41 len=2 in_stall=random out_stall=scripted result=random_cov
+[TB][INFO] GEN : frame_id=43 scenario=random_cov_42 len=3 in_stall=scripted out_stall=none result=random_cov
+[TB][INFO] GEN : frame_id=44 scenario=random_cov_43 len=5 in_stall=scripted out_stall=light result=random_cov
+[TB][INFO] GEN : frame_id=45 scenario=random_cov_44_pos_inf len=7 in_stall=scripted out_stall=heavy result=random_cov
+[TB][INFO] GEN : frame_id=46 scenario=random_cov_45 len=16 in_stall=scripted out_stall=alternate result=random_cov
+[TB][INFO] GEN : frame_id=47 scenario=random_cov_46 len=63 in_stall=scripted out_stall=burst result=random_cov
+[TB][INFO] GEN : frame_id=48 scenario=random_cov_47 len=64 in_stall=scripted out_stall=random result=random_cov
+[TB][INFO] GEN : frame_id=49 scenario=random_cov_48 len=1023 in_stall=scripted out_stall=scripted result=random_cov
+[TB][INFO] SCB queued expected frame_id=1
+[TB][INFO] SCB queued expected frame_id=2
+[TB][INFO] SCB PASS frame_id=1 checked_beats=1
+[TB][INFO] SCB queued expected frame_id=3
+[TB][INFO] SCB PASS frame_id=2 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=4
+[TB][INFO] SCB PASS frame_id=3 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=5
+[TB][INFO] SCB PASS frame_id=4 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=6
+[TB][INFO] SCB PASS frame_id=5 checked_beats=7
+[TB][INFO] SCB PASS frame_id=6 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=7
+[TB][INFO] SCB queued expected frame_id=8
+[TB][INFO] SCB PASS frame_id=7 checked_beats=63
+[TB][INFO] SCB PASS frame_id=8 checked_beats=64
+[TB][INFO] SCB queued expected frame_id=9
+[TB][INFO] SCB queued expected frame_id=10
+[TB][INFO] SCB PASS frame_id=9 checked_beats=1023
+[TB][INFO] SCB queued expected frame_id=11
+[TB][INFO] SCB queued expected frame_id=12
+[TB][INFO] SCB PASS frame_id=10 checked_beats=1024
+[TB][INFO] SCB PASS frame_id=11 checked_beats=1
+[TB][INFO] SCB queued expected frame_id=13
+[TB][INFO] SCB PASS frame_id=12 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=14
+[TB][INFO] SCB PASS frame_id=13 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=15
+[TB][INFO] SCB PASS frame_id=14 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=16
+[TB][INFO] SCB PASS frame_id=15 checked_beats=7
+[TB][INFO] SCB PASS frame_id=16 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=17
+[TB][INFO] SCB queued expected frame_id=18
+[TB][INFO] SCB PASS frame_id=17 checked_beats=63
+[TB][INFO] SCB PASS frame_id=18 checked_beats=64
+[TB][INFO] SCB queued expected frame_id=19
+[TB][INFO] SCB queued expected frame_id=20
+[TB][INFO] SCB PASS frame_id=19 checked_beats=1023
+[TB][INFO] SCB queued expected frame_id=21
+[TB][INFO] SCB queued expected frame_id=22
+[TB][INFO] SCB PASS frame_id=20 checked_beats=1024
+[TB][INFO] SCB PASS frame_id=21 checked_beats=1
+[TB][INFO] SCB queued expected frame_id=23
+[TB][INFO] SCB PASS frame_id=22 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=24
+[TB][INFO] SCB PASS frame_id=23 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=25
+[TB][INFO] SCB PASS frame_id=24 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=26
+[TB][INFO] SCB PASS frame_id=25 checked_beats=7
+[TB][INFO] SCB PASS frame_id=26 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=27
+[TB][INFO] SCB queued expected frame_id=28
+[TB][INFO] SCB PASS frame_id=27 checked_beats=63
+[TB][INFO] SCB PASS frame_id=28 checked_beats=64
+[TB][INFO] SCB queued expected frame_id=29
+[TB][INFO] SCB queued expected frame_id=30
+[TB][INFO] SCB PASS frame_id=29 checked_beats=1023
+[TB][INFO] SCB queued expected frame_id=31
+[TB][INFO] SCB queued expected frame_id=32
+[TB][INFO] SCB PASS frame_id=30 checked_beats=1024
+[TB][INFO] SCB PASS frame_id=31 checked_beats=1
+[TB][INFO] SCB queued expected frame_id=33
+[TB][INFO] SCB PASS frame_id=32 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=34
+[TB][INFO] SCB PASS frame_id=33 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=35
+[TB][INFO] SCB PASS frame_id=34 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=36
+[TB][INFO] SCB PASS frame_id=35 checked_beats=7
+[TB][INFO] SCB PASS frame_id=36 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=37
+[TB][INFO] SCB queued expected frame_id=38
+[TB][INFO] SCB PASS frame_id=37 checked_beats=63
+[TB][INFO] SCB PASS frame_id=38 checked_beats=64
+[TB][INFO] SCB queued expected frame_id=39
+[TB][INFO] SCB queued expected frame_id=40
+[TB][INFO] SCB PASS frame_id=39 checked_beats=1023
+[TB][INFO] SCB queued expected frame_id=41
+[TB][INFO] SCB queued expected frame_id=42
+[TB][INFO] SCB PASS frame_id=40 checked_beats=1024
+[TB][INFO] SCB PASS frame_id=41 checked_beats=1
+[TB][INFO] SCB queued expected frame_id=43
+[TB][INFO] SCB PASS frame_id=42 checked_beats=2
+[TB][INFO] SCB queued expected frame_id=44
+[TB][INFO] SCB PASS frame_id=43 checked_beats=3
+[TB][INFO] SCB queued expected frame_id=45
+[TB][INFO] SCB PASS frame_id=44 checked_beats=5
+[TB][INFO] SCB queued expected frame_id=46
+[TB][INFO] SCB PASS frame_id=45 checked_beats=7
+[TB][INFO] SCB PASS frame_id=46 checked_beats=16
+[TB][INFO] SCB queued expected frame_id=47
+[TB][INFO] SCB queued expected frame_id=48
+[TB][INFO] SCB PASS frame_id=47 checked_beats=63
+[TB][INFO] SCB PASS frame_id=48 checked_beats=64
+[TB][INFO] SCB queued expected frame_id=49
+[TB][INFO] SCB PASS frame_id=49 checked_beats=1023
+[TB][INFO] ENV report: checked=10016 errors=0
+[TB][INFO] Breakdown: scoreboard=0 dut_assert=0 shadow=0 env=0 warnings=0
+[TB][INFO] Golden report: checked_beats=10016 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=10016 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario breakdown start
+[TB][INFO] Scenario report: name=random_cov_0 checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=random_cov_1 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_2 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_3 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_4_qnan checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_5 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_6 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_7 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_8 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_9_neg_inf checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_10 checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=random_cov_11 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_12 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_13 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_14_pos_inf checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_15 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_16 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_17 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_18 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_19_large_finite checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_20 checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=random_cov_21 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_22 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_23 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_24_zero checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_25 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_26 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_27 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_28 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_29_snan checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_30 checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=random_cov_31 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_32 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_33 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_34_qnan checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_35 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_36 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_37 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_38 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_39_neg_inf checked_beats=1024 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_40 checked_beats=1 frame_samples=1 reset_samples=0 coverage=9.0%
+[TB][INFO] Scenario report: name=random_cov_41 checked_beats=2 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_42 checked_beats=3 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_43 checked_beats=5 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_44_pos_inf checked_beats=7 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_45 checked_beats=16 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_46 checked_beats=63 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_47 checked_beats=64 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario report: name=random_cov_48 checked_beats=1023 frame_samples=1 reset_samples=0 coverage=9.6%
+[TB][INFO] Scenario breakdown end
+[TB][INFO] Scenario quality start
+[TB][INFO] Scenario quality: name=random_cov_0 checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_1 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_2 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_3 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_4_qnan checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_5 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_6 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_7 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_8 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_9_neg_inf checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_10 checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_11 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_12 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_13 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_14_pos_inf checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_15 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_16 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_17 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_18 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_19_large_finite checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_20 checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_21 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_22 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_23 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_24_zero checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_25 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_26 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_27 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_28 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_29_snan checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_30 checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_31 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_32 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_33 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_34_qnan checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_35 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_36 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_37 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_38 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_39_neg_inf checked_beats=1024 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1024 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_40 checked_beats=1 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_41 checked_beats=2 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=2 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_42 checked_beats=3 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=3 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_43 checked_beats=5 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=5 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_44_pos_inf checked_beats=7 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=7 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_45 checked_beats=16 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=16 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_46 checked_beats=63 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=63 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_47 checked_beats=64 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=64 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality: name=random_cov_48 checked_beats=1023 mismatch_beats=0 mismatch_rate=0.0% numeric_beats=1023 avg_abs_err=0.000000e+00 max_abs_err=0.000000e+00 avg_rel_err=0.0% max_rel_err=0.0% failed_frames=0
+[TB][INFO] Scenario quality end
+[TB][INFO] Case artifacts generated: tb_runtime/test_10_random_cov
+[TB][INFO] SUITE report: test=all cases=10 failed_cases=0 checked=13355 errors=0 coverage=100.0%
+[TB][INFO] SUITE quality: mismatch_rate=0.0% avg_rel=0.0% max_rel=0.0% failed_frames=0
+[TB][INFO] Master HTML report generated: tb_runtime/report_all.html
+[TB][INFO] Suite coverage hit dump generated: tb_runtime/suite_cov_hits_all.txt
+[TB][INFO] Suite coverage union-id dump generated: tb_runtime/suite_cov_union_ids_all.txt
+[TB][INFO] Suite coverage breakdown generated: tb_runtime/suite_cov_breakdown_all.txt
+$finish called at time : 769935 ns : File "<PORTFOLIO>/Softmax_Accelerator_IP/Code/Testbench/UVM/TOP_tb/tb_top.sv" Line 280
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:50 . Memory (MB): peak = 226.836 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 159544 KB (Peak: 159544 KB), Simulation CPU Usage: 14203 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 17:17:23 2026...

@@ -1,0 +1,77 @@
+{
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-architecture.svg",
+      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-architecture.svg",
+      "original_sha256": "02519e5e6d22a601e51ea40ac6f54718fcae3eb9f2fb80df02cbfd0d9ffaa81d",
+      "published_sha256": "02519e5e6d22a601e51ea40ac6f54718fcae3eb9f2fb80df02cbfd0d9ffaa81d",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-oop-concepts-explained.svg",
+      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-oop-concepts-explained.svg",
+      "original_sha256": "0419afe1ed4334d4389076ea9eca7b88cacdf4853728e5a8ba89ee1319d2994b",
+      "published_sha256": "0419afe1ed4334d4389076ea9eca7b88cacdf4853728e5a8ba89ee1319d2994b",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-library-services.svg",
+      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-library-services.svg",
+      "original_sha256": "15aff1647990c3f5d2607f4992dff7b7ad7fc10a2410c425ae31b0ca37eda131",
+      "published_sha256": "15aff1647990c3f5d2607f4992dff7b7ad7fc10a2410c425ae31b0ca37eda131",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-handshake.png",
+      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-handshake.png",
+      "original_sha256": "f7f18b12fba0b27344241c5a4abd0ef0643095ed562d22e90dc1b106e35a45ff",
+      "published_sha256": "f7f18b12fba0b27344241c5a4abd0ef0643095ed562d22e90dc1b106e35a45ff",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-analysis-port.png",
+      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-analysis-port.png",
+      "original_sha256": "d5c8c69677af88e88f667e249d12b41b46ef98ab148228f7ca9b20c9460186a0",
+      "published_sha256": "d5c8c69677af88e88f667e249d12b41b46ef98ab148228f7ca9b20c9460186a0",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/04_AXI4_Protocol/axi-channel-interconnect.svg",
+      "destination": "Primemas_Internship/Seminars/AXI4/images/axi-channel-interconnect.svg",
+      "original_sha256": "4a87f3b8c9a241a167cf1c0b2f8571f1c72859b551d74530ec01570f6e360cb7",
+      "published_sha256": "4a87f3b8c9a241a167cf1c0b2f8571f1c72859b551d74530ec01570f6e360cb7",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/04_AXI4_Protocol/axi-handshake-dependencies.svg",
+      "destination": "Primemas_Internship/Seminars/AXI4/images/axi-handshake-dependencies.svg",
+      "original_sha256": "faa6b42cb846b0de3095c2e7fefc6560c7ab2cb3caacd62044264ee3a9971c30",
+      "published_sha256": "faa6b42cb846b0de3095c2e7fefc6560c7ab2cb3caacd62044264ee3a9971c30",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/04_AXI4_Protocol/axi-memory-attributes.svg",
+      "destination": "Primemas_Internship/Seminars/AXI4/images/axi-memory-attributes.svg",
+      "original_sha256": "8fa65b140c44f73303f0c9087c201a90f8ec2f6ccce65799cf6c64e15bdff79e",
+      "published_sha256": "8fa65b140c44f73303f0c9087c201a90f8ec2f6ccce65799cf6c64e15bdff79e",
+      "commit": null,
+      "status": "packaged"
+    },
+    {
+      "source": "자소서/03_자료/04_프로젝트/Primemas/04_AXI4_Protocol/axi-exclusive-access.png",
+      "destination": "Primemas_Internship/Seminars/AXI4/images/axi-exclusive-access.png",
+      "original_sha256": "8c63d87176e682767e00ea99aee261bb1963773ef159e0f00ff713dbfd6c27bc",
+      "published_sha256": "8c63d87176e682767e00ea99aee261bb1963773ef159e0f00ff713dbfd6c27bc",
+      "commit": null,
+      "status": "packaged"
+    }
+  ]
+}

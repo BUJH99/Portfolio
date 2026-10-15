@@ -1,0 +1,26 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe TbTop -L uvm -s fifo -debug typical -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3119] argument name 'item' for virtual method 'write' does not match the argument name 't' in superclass [<PORTFOLIO>\UVM_FIFO\tb/FifoCoverage.svh:62]
+WARNING: [VRFC 10-3120] argument name 'item' for virtual method 'write' in subclass 'FifoCoverage' does not match the argument name 't' in superclass [<PORTFOLIO>\UVM_FIFO\tb/FifoCoverage.svh:62]
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "<PORTFOLIO>/UVM_FIFO/tb/fifo_assertions.sv" Line 31 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "<PORTFOLIO>/UVM_FIFO/tb/fifo_assertions.sv" Line 32 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "<PORTFOLIO>/UVM_FIFO/tb/fifo_assertions.sv" Line 33 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "<PORTFOLIO>/UVM_FIFO/tb/fifo_assertions.sv" Line 34 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package work.fifo_uvm_pkg
+Compiling module work.drv_cb
+Compiling module work.FifoIf_default
+Compiling module work.Top_default
+Compiling module work.FifoAssertions_default
+Compiling module work.TbTop
+Built simulation snapshot fifo

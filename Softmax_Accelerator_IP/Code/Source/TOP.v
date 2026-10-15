@@ -8,6 +8,7 @@ Summary:
 [MODULE_INFO_END]
 */
 `timescale 1ns/1ps
+`include "SoftmaxFormat.vh"
 module TOP #(
     parameter integer P_C_MAX  = 1024,
     parameter integer P_ADDR_W = 10
@@ -16,19 +17,19 @@ module TOP #(
     input  wire         iRstn,
     input  wire         iSAxisValid,
     output wire         oSAxisReady,
-    input  wire [31:0]  iSAxisData,
+    input  wire [`DEF_SOFTMAX_AXIS_W-1:0]  iSAxisData,
     input  wire         iSAxisLast,
     input  wire [3:0]   iSAxisKeep,
     output wire         oMAxisValid,
     input  wire         iMAxisReady,
-    output wire [31:0]  oMAxisData,
+    output wire [`DEF_SOFTMAX_AXIS_W-1:0]  oMAxisData,
     output wire         oMAxisLast,
     output wire [3:0]   oMAxisKeep
 );
     // Downscale -> shared fanout channel for ExpSum and Sub.
     wire        wDownscale2Fanout_Valid;
     wire        wDownscale2Fanout_Ready;
-    wire [15:0] wDownscale2Fanout_Data;
+    wire [`DEF_SOFTMAX_Q78_W-1:0] wDownscale2Fanout_Data;
     wire        wDownscale2Fanout_Last;
 
     wire        wDownscale2ExpSum_Ready;
@@ -38,30 +39,30 @@ module TOP #(
     // ExpSum -> Sum.
     wire        wExpSum2Sum_Valid;
     wire        wExpSum2Sum_Ready;
-    wire [15:0] wExpSum2Sum_Data;
+    wire [`DEF_SOFTMAX_EXP_W-1:0] wExpSum2Sum_Data;
     wire        wExpSum2Sum_Last;
 
     // Sum -> Ln.
     wire        wSum2Ln_Valid;
     wire        wSum2Ln_Ready;
-    wire [15:0] wSum2Ln_Data;
+    wire [`DEF_SOFTMAX_EXP_W-1:0] wSum2Ln_Data;
 
     // Ln -> Sub.
     wire        wLn2Sub_Valid;
     wire        wLn2Sub_Ready;
     wire        wLn2Sub_Handshake;
-    wire [15:0] wLn2Sub_Data;
+    wire [`DEF_SOFTMAX_Q78_W-1:0] wLn2Sub_Data;
 
     // Sub -> ExpOut.
     wire        wSub2ExpOut_Valid;
     wire        wSub2ExpOut_Ready;
-    wire [15:0] wSub2ExpOut_Data;
+    wire [`DEF_SOFTMAX_Q78_W-1:0] wSub2ExpOut_Data;
     wire        wSub2ExpOut_Last;
 
     // ExpOut -> U16ToFp32.
     wire        wExpOut2U16ToFp32_Valid;
     wire        wExpOut2U16ToFp32_Ready;
-    wire [15:0] wExpOut2U16ToFp32_Data;
+    wire [`DEF_SOFTMAX_EXP_W-1:0] wExpOut2U16ToFp32_Data;
     wire        wExpOut2U16ToFp32_Last;
 
     // Input keep is ignored because the accelerator consumes full 32-bit words.

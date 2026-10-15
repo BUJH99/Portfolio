@@ -1,0 +1,44 @@
+{
+  "filesets": {
+    "fifo": {
+      "top": "TbTop",
+      "uvm": true,
+      "include": [
+        "tb"
+      ],
+      "sources": [
+        "src/Top.sv",
+        "tb/FifoIf.sv",
+        "tb/fifo_uvm_pkg.sv",
+        "tb/fifo_assertions.sv",
+        "tb/tb_top.sv"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "fifo_seed1",
+      "fileset": "fifo",
+      "seed": 1,
+      "require": [
+        "accepted writes=[1-9][0-9]*, accepted reads=[1-9][0-9]*, remaining model depth=0"
+      ]
+    },
+    {
+      "name": "fifo_seed17",
+      "fileset": "fifo",
+      "seed": 17,
+      "require": [
+        "accepted writes=[1-9][0-9]*, accepted reads=[1-9][0-9]*, remaining model depth=0"
+      ]
+    },
+    {
+      "name": "fifo_seed2026",
+      "fileset": "fifo",
+      "seed": 2026,
+      "require": [
+        "accepted writes=[1-9][0-9]*, accepted reads=[1-9][0-9]*, remaining model depth=0"
+      ]
+    }
+  ]
+}

@@ -116,13 +116,11 @@ module TbTop;
 
     task automatic report_suite_summary(input string iRequestedTest);
         int unsigned coverageTenths;
-        int unsigned builtinCoverageTenths;
         int unsigned mismatchRateTenths;
         int unsigned avgRelTenths;
         int unsigned maxRelTenths;
     begin
         coverageTenths = uSuiteCoverage.get_merged_coverage_tenths();
-        builtinCoverageTenths = coverageTenths;
         mismatchRateTenths = uSuiteGoldenStats.m_total_entry.get_mismatch_rate_tenths();
         avgRelTenths = uSuiteGoldenStats.m_total_entry.get_avg_rel_error_tenths();
         maxRelTenths = uSuiteGoldenStats.m_total_entry.get_max_rel_error_tenths();
@@ -159,7 +157,6 @@ module TbTop;
         string suiteCovBreakdownPath;
         string masterReportPath;
         int unsigned coverageTenths;
-        int unsigned builtinCoverageTenths;
         int unsigned mismatchRateTenths;
         int unsigned avgRelTenths;
         int unsigned maxRelTenths;
@@ -183,7 +180,6 @@ module TbTop;
         );
         masterReportPath = fnTopRuntimeMasterReportPath(iRequestedTest);
         coverageTenths = uSuiteCoverage.get_merged_coverage_tenths();
-        builtinCoverageTenths = coverageTenths;
         mismatchRateTenths = uSuiteGoldenStats.m_total_entry.get_mismatch_rate_tenths();
         avgRelTenths = uSuiteGoldenStats.m_total_entry.get_avg_rel_error_tenths();
         maxRelTenths = uSuiteGoldenStats.m_total_entry.get_max_rel_error_tenths();
@@ -205,7 +201,7 @@ module TbTop;
             $fatal(1, "[TB] Failed to create suite summary: %s", suiteSummaryPath);
         $fdisplay(
             fd,
-            "{\"requested_test\":\"%s\",\"case_names_csv\":\"%s\",\"failed_case_names_csv\":\"%s\",\"failed_case_count\":%0d,\"failed_error_total\":%0d,\"suite_coverage_pct\":%0d.%0d,\"merged_scenario_coverage_pct\":%0d.%0d,\"vivado_builtin_coverage_pct\":%0d.%0d,\"rtl_checked_beats\":%0d,\"rtl_mismatch_beats\":%0d,\"rtl_mismatch_rate_pct\":%0d.%0d,\"rtl_numeric_beats\":%0d,\"rtl_avg_abs_err\":%0.6e,\"rtl_max_abs_err\":%0.6e,\"rtl_avg_rel_err_pct\":%0d.%0d,\"rtl_max_rel_err_pct\":%0d.%0d,\"rtl_failed_frames\":%0d}",
+            "{\"requested_test\":\"%s\",\"case_names_csv\":\"%s\",\"failed_case_names_csv\":\"%s\",\"failed_case_count\":%0d,\"failed_error_total\":%0d,\"suite_coverage_pct\":%0d.%0d,\"merged_scenario_coverage_pct\":%0d.%0d,\"rtl_checked_beats\":%0d,\"rtl_mismatch_beats\":%0d,\"rtl_mismatch_rate_pct\":%0d.%0d,\"rtl_numeric_beats\":%0d,\"rtl_avg_abs_err\":%0.6e,\"rtl_max_abs_err\":%0.6e,\"rtl_avg_rel_err_pct\":%0d.%0d,\"rtl_max_rel_err_pct\":%0d.%0d,\"rtl_failed_frames\":%0d}",
             iRequestedTest,
             caseNamesCsv,
             failedCaseNamesCsv,
@@ -215,8 +211,6 @@ module TbTop;
             coverageTenths % 10,
             coverageTenths / 10,
             coverageTenths % 10,
-            builtinCoverageTenths / 10,
-            builtinCoverageTenths % 10,
             uSuiteGoldenStats.m_total_entry.m_checked_beats,
             uSuiteGoldenStats.m_total_entry.m_mismatch_beats,
             mismatchRateTenths / 10,
@@ -236,8 +230,9 @@ module TbTop;
         uSuiteCoverage.write_total_builtin_breakdown(suiteCovBreakdownPath);
 
         cmd = {
-            reportCfg.m_python_launcher_path, " -E -I ", reportCfg.m_report_tool_path,
-            " --runtime-root ", reportCfg.m_runtime_root,
+            "cmd /c call \"", reportCfg.m_python_launcher_path, "\" -E -I",
+            " \"", reportCfg.m_report_tool_path, "\"",
+            " --runtime-root \"", reportCfg.m_runtime_root, "\"",
             " --testname ", iRequestedTest
         };
         if ($system(cmd) != 0)

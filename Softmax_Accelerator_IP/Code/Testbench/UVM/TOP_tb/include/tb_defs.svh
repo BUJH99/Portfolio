@@ -139,13 +139,13 @@ endfunction
 
 function automatic string fnTopProjectRoot();
 begin
-    return fnTopDirname(fnTopDirname(fnTopTbDir()));
+    return fnTopDirname(fnTopDirname(fnTopDirname(fnTopTbDir())));
 end
 endfunction
 
 function automatic string fnTopRuntimeRoot();
 begin
-    return fnTopJoinPath(fnTopProjectRoot(), "tb_runtime");
+    return "tb_runtime"; // Isolated simulator working directory, never a source directory.
 end
 endfunction
 
@@ -170,6 +170,12 @@ endfunction
 function automatic string fnTopPythonToolPath();
 begin
     return fnTopJoinPath(fnTopJoinPath(fnTopTbDir(), "tools"), "top_golden_model.py");
+end
+endfunction
+
+function automatic string fnTopPythonLauncherPath();
+begin
+    return fnTopJoinPath(fnTopJoinPath(fnTopTbDir(), "tools"), "run_python.bat");
 end
 endfunction
 

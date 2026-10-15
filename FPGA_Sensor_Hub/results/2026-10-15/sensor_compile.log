@@ -1,0 +1,88 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/ascii_decoder.v" into library work
+INFO: [VRFC 10-311] analyzing module ascii_decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/AsciiMux.v" into library work
+INFO: [VRFC 10-311] analyzing module AsciiMux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/AsciiSender.v" into library work
+INFO: [VRFC 10-311] analyzing module AsciiSender
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/AsciiSenderFsm.v" into library work
+INFO: [VRFC 10-311] analyzing module AsciiSenderFsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/baud_rate_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module baud_rate_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/BcdCounter.v" into library work
+INFO: [VRFC 10-311] analyzing module BcdCounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/ControlUnit.v" into library work
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/CounterFilter.v" into library work
+INFO: [VRFC 10-311] analyzing module CounterFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/Debounce.v" into library work
+INFO: [VRFC 10-311] analyzing module Debounce
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/DebounceWrapper.v" into library work
+INFO: [VRFC 10-311] analyzing module DebounceWrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/Dht11Core.v" into library work
+INFO: [VRFC 10-311] analyzing module Dht11Core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/DisplayModeSelector.v" into library work
+INFO: [VRFC 10-311] analyzing module DisplayModeSelector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/DisplayMux.v" into library work
+INFO: [VRFC 10-311] analyzing module DisplayMux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/DoubleDabble.v" into library work
+INFO: [VRFC 10-311] analyzing module DoubleDabble
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/EdgePulse.v" into library work
+INFO: [VRFC 10-311] analyzing module EdgePulse
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/FndBcdDecoder.v" into library work
+INFO: [VRFC 10-311] analyzing module FndBcdDecoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/FndBlinkEffect.v" into library work
+INFO: [VRFC 10-311] analyzing module FndBlinkEffect
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/FndController.v" into library work
+INFO: [VRFC 10-311] analyzing module FndController
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/FndDigitSelector.v" into library work
+INFO: [VRFC 10-311] analyzing module FndDigitSelector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/FndScanCounter.v" into library work
+INFO: [VRFC 10-311] analyzing module FndScanCounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/GlobalTickGen.v" into library work
+INFO: [VRFC 10-311] analyzing module GlobalTickGen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/Hcsr04Core.v" into library work
+INFO: [VRFC 10-311] analyzing module Hcsr04Core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/InputControl.v" into library work
+INFO: [VRFC 10-311] analyzing module InputControl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/InputDistributor.v" into library work
+INFO: [VRFC 10-311] analyzing module InputDistributor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/INPUTFPGA.v" into library work
+INFO: [VRFC 10-311] analyzing module INPUTFPGA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/InputPriority.v" into library work
+INFO: [VRFC 10-311] analyzing module InputPriority
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/rx_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module rx_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/SensorBcdConverter.v" into library work
+INFO: [VRFC 10-311] analyzing module SensorBcdConverter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/SensorControlUnit.v" into library work
+INFO: [VRFC 10-311] analyzing module SensorControlUnit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/StopwatchCore.v" into library work
+INFO: [VRFC 10-311] analyzing module StopwatchCore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/StopwatchCounter.v" into library work
+INFO: [VRFC 10-311] analyzing module StopwatchCounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/StopwatchFsm.v" into library work
+INFO: [VRFC 10-311] analyzing module StopwatchFsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/SwitchInput.v" into library work
+INFO: [VRFC 10-311] analyzing module SwitchInput
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/sync_2ff.v" into library work
+INFO: [VRFC 10-311] analyzing module sync_2ff
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/TOP.v" into library work
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/tx_arbiter.v" into library work
+INFO: [VRFC 10-311] analyzing module tx_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/tx_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module tx_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/uart_interface.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/WatchCore.v" into library work
+INFO: [VRFC 10-311] analyzing module WatchCore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/WatchCounter.v" into library work
+INFO: [VRFC 10-311] analyzing module WatchCounter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/src/WatchFsm.v" into library work
+INFO: [VRFC 10-311] analyzing module WatchFsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PORTFOLIO>/FPGA_Sensor_Hub/tb/TbTop.sv" into library work
+INFO: [VRFC 10-311] analyzing module TbTop

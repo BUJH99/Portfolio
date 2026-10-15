@@ -1,0 +1,20 @@
+{
+  "filesets": {
+    "fft": {
+      "top": "TbTop",
+      "sources": [
+        "Sourcecode/*.sv",
+        "Testbench/TbTop.sv"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "fft_directed",
+      "fileset": "fft",
+      "require": [
+        "^TB_PASS$"
+      ]
+    }
+  ]
+}

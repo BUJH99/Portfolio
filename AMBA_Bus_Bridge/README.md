@@ -41,3 +41,9 @@ SoC 내부 버스 표준인 **AMBA 프로토콜**을 분석하고, 고속 **AHB*
 ## 📂 포트폴리오 목차
 - **[📂 Source Code](./Source_Code)** : RTL 소스 및 테스트벤치
 - **[📂 Report](./Report)** : 설계 및 검증 보고서
+
+## 🔎 설계·검증 바로 보기
+
+- [최종 TOP](./Source_Code/Project/Project_Top.v) · [AHB–APB Bridge](./Source_Code/Project/Ahb2Apb_Top.v)
+- [최종 테스트벤치](./Source_Code/Project/TbTop_prj.v) · [결과 파형](<./Source_Code/Project/pro waveform.png>)
+- [Lab 1](./Source_Code/Lab1) · [Lab 2](./Source_Code/Lab2) · [Lab 3-1](./Source_Code/Lab3-1) · [Lab 3-2](./Source_Code/Lab3-2) · [Lab 4](./Source_Code/Lab4) · [Lab 5](./Source_Code/Lab5) · [Lab 6](./Source_Code/Lab6)

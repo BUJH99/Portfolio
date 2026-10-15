@@ -1,0 +1,51 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 16:31:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/modules/xsim_script.tcl
+# xsim {modules} -autoloadwcfg -runall -sv_seed 1
+Time resolution is 1 ps
+run -all
+====================================
+Standalone Convolution Benchmark
+Accepted input pixels         : 130560
+Output pixels                 : 130560
+Output span cycles            : 130560
+Frame time                    : 1.305600 ms
+Equivalent FPS                : 765.931 FPS
+Throughput                    : 100.000 MPixel/s
+Peak initiation interval      : 1 cycle/pixel
+====================================
+====================================
+Two-Line-Buffer Window Benchmark
+Output pixels                 : 130560
+BRAM read requests            : 130560
+Average BRAM reads/pixel      : 1.000
+Output span cycles            : 130560
+Frame time                    : 1.305600 ms
+Equivalent FPS                : 765.931 FPS
+Throughput                    : 100.000 MPixel/s
+Average transfer interval     : 1.000000 cycles/pixel
+Min/Max transfer interval     : 1 / 1 cycles
+====================================
+====================================
+Legacy Window Benchmark
+Output pixels                 : 130560
+BRAM read requests            : 390720
+Average BRAM reads/pixel      : 2.993
+Output span cycles            : 1042968
+Frame time                    : 10.429680 ms
+Equivalent FPS                : 95.880 FPS
+Throughput                    : 12.518 MPixel/s
+Average transfer interval     : 7.988473 cycles/pixel
+Min/Max transfer interval     : 3 / 11 cycles
+====================================
+MODULE_PERF_PASS
+$finish called at time : 10429846 ns : File "<PORTFOLIO>/FPGA_Image_Filtering/Code/TestBench/TbTop_module_perf.sv" Line 344
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 16:31:43 2026...

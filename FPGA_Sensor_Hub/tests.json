@@ -1,0 +1,20 @@
+{
+  "filesets": {
+    "sensor": {
+      "top": "TbTop",
+      "sources": [
+        "src/*.v",
+        "tb/TbTop.sv"
+      ]
+    }
+  },
+  "jobs": [
+    {
+      "name": "sensor_smoke",
+      "fileset": "sensor",
+      "require": [
+        "SENSOR_SMOKE_PASS"
+      ]
+    }
+  ]
+}

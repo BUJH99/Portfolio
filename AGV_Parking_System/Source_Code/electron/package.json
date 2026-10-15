@@ -1,0 +1,17 @@
+{
+  "name": "agv-electron-shell",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron shell for the AGV render IPC backend",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.5.1"
+  },
+  "dependencies": {
+    "motion": "^12.36.0"
+  }
+}
