@@ -1,6 +1,6 @@
-# Recovered from the original project archive; see SOURCE_VERSION.md.
-import argparse, sys, json
-parser = argparse.ArgumentParser(description="Recovered four-key rhythm game")
+# Four-key rhythm game with procedural demo assets.
+import argparse, json
+parser = argparse.ArgumentParser(description="Four-key rhythm game")
 parser.add_argument("--headless", action="store_true")
 parser.add_argument("--smoke-test", action="store_true")
 parser.add_argument("--screenshot")
@@ -10,9 +10,9 @@ if args.headless:
     os.environ["SDL_VIDEODRIVER"] = "dummy"
     os.environ["SDL_AUDIODRIVER"] = "dummy"
 import demo_assets
-import pygame, math, time, os
+import pygame, math, time
 
-from PIL import Image, ImageFilter, ImageEnhance
+from PIL import ImageFilter, ImageEnhance
 
 from decimal import Decimal
 
@@ -696,7 +696,6 @@ while main:
             lobby_select_anim = 0
     
             continue
-            song.play
         if event.key == pygame.K_d:
           keyset[0] = 1
           if len(t1) > 0:
@@ -801,25 +800,6 @@ while main:
     
     rate_l = pygame.transform.smoothscale(rate_line, ((int((w / 4.4) * anim), w / 30)))
     screen.blit(rate_l, (w / 2 - rate_l.get_width() / 2, (h / 24) * 17 - (rate_l.get_height() / 2)))
-    #key fx===========================================================================================================
-    
-    '''
-
-    for i in range(7):
-      i += 1
-      pygame.draw.rect(screen, (0, 150 - (50 / 7) * i, 255 - ((200 / 7) * i)), (w / 2 - w / 8 + w / 32 - (w / 32) * keys[0], (h / 24) * 16 - (h / 30) * keys[0] * i, w / 16 * keys[0], (h / 35) / i))
-    for i in range(7):
-      i += 1
-      pygame.draw.rect(screen, (0, 150 - (50 / 7) * i, 255 - ((200 / 7) * i)), (w / 2 - w / 16 + w / 32 - (w / 32) * keys[1], (h / 24) * 16 - (h / 30) * keys[1] * i, w / 16 * keys[1], (h / 35) / i))
-    for i in range(7):
-      i += 1
-      pygame.draw.rect(screen, (0, 150 - (50 / 7) * i, 255 - ((200 / 7) * i)), (w / 2 + w / 32 - (w / 32) * keys[2], (h / 24) * 16 - (h / 30) * keys[2] * i, w / 16 * keys[2], (h / 35) / i))
-    for i in range(7):
-      i += 1
-      pygame.draw.rect(screen, (0, 150 - (50 / 7) * i, 255 - ((200 / 7) * i)), (w / 2 + w / 16 + w / 32 - (w / 32) * keys[3], (h / 24) * 16 - (h / 30) * keys[3] * i, w / 16 * keys[3], (h / 35) / i))
-
-    '''
-
     #note============================================================================================================================
     for tile_data in t1:
       tile_data[0] = ((h / 24) * 17) + (Time + sst - tile_data[1]) * 350 * speed * (h / 900)

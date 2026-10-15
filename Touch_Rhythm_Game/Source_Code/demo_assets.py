@@ -1,7 +1,6 @@
-"""Original procedural demo assets for the recovered rhythm-game runtime.
+"""Procedural demo assets for the four-key rhythm game.
 
-No archived music, fonts, or graphics are needed. Existing user-supplied assets
-can still be placed at the original paths; missing assets use these fallbacks.
+Fonts, graphics, audio, and charts are generated when an asset file is missing.
 """
 import array
 import io
@@ -9,8 +8,6 @@ import math
 from pathlib import Path
 import pygame
 from PIL import Image
-
-TRACKS = ['Pulse Steps', 'Four Corners', 'Neon Practice']
 
 def font(path, size):
     return pygame.font.Font(str(path) if Path(path).is_file() else None, max(1,int(size)))
@@ -46,7 +43,7 @@ def pil_image(path):
 
 def chart(path, mode='r'):
     if Path(path).is_file(): return open(path,mode,encoding='utf-8')
-    # Fixed-width chart layout expected by the recovered parser.
+    # Fixed-width chart layout expected by the game parser.
     lines=['NOTE_START=0.0000','SONG_START=2.0000','BPM_VALUE =120.00']
     for idx in range(32):
         lanes=str((idx%4)+1).ljust(4,'0')

@@ -42,7 +42,7 @@
 | **[MCU Register Control](./MCU_Control)** | 라이브러리 없는 Bare-metal 펌웨어 개발 | `Embedded C`, `AVR/ARM` |
 | **[AGV Parking System](./AGV_Parking_System)** 🏆 | C++ 엔진·Electron UI로 개선한 다개체 AGV 시뮬레이터, **형남과학상 동상** | `C++20`, `Electron`, `Algorithm` |
 | **[Elevator PCB Design](./Elevator_Circuit_PCB)** | 엘리베이터 제어 회로 설계 및 PCB 제작 | `OrCAD`, `PCB` |
-| **[Touch Rhythm Game](./Touch_Rhythm_Game)** | 원본 Python 코드 복구 및 자체 데모 자산을 포함한 4-key 실행본 | `Python`, `Pygame` |
+| **[터치식 리듬게임](./Touch_Rhythm_Game)** | 4레인 노트·타이밍 판정·콤보·Fever를 구현한 리듬게임 | `Python`, `Pygame` |
 
 ### 🧪 Process & Others
 | Project | Description | Tech Stack |
