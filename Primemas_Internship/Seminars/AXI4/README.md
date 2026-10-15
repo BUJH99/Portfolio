@@ -16,4 +16,4 @@
 - [Memory attributes](./images/axi-memory-attributes.svg) · [Exclusive access](./images/axi-exclusive-access.png)
 - [SoC AXI4-Lite–APB 적용](../../../RISC_V_SoC)
 
-직접 구성한 도식과 학습 요약입니다. AXI4 세미나의 범위와 실제 SoC에서 구현한 AXI4-Lite 범위를 구분합니다.
+AXI4 세미나의 학습 요약과 설명 자료입니다. 세미나의 범위와 실제 SoC에서 구현한 AXI4-Lite 범위를 구분합니다.

@@ -2,14 +2,6 @@
   "snapshot_date": "2026-10-15",
   "files": [
     {
-      "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-architecture.svg",
-      "destination": "Primemas_Internship/Seminars/UVM/images/uvm-architecture.svg",
-      "original_sha256": "02519e5e6d22a601e51ea40ac6f54718fcae3eb9f2fb80df02cbfd0d9ffaa81d",
-      "published_sha256": "02519e5e6d22a601e51ea40ac6f54718fcae3eb9f2fb80df02cbfd0d9ffaa81d",
-      "commit": null,
-      "status": "packaged"
-    },
-    {
       "source": "자소서/03_자료/04_프로젝트/Primemas/03_UVM/uvm-oop-concepts-explained.svg",
       "destination": "Primemas_Internship/Seminars/UVM/images/uvm-oop-concepts-explained.svg",
       "original_sha256": "0419afe1ed4334d4389076ea9eca7b88cacdf4853728e5a8ba89ee1319d2994b",
