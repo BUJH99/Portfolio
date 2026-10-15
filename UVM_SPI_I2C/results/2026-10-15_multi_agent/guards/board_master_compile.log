@@ -1,0 +1,35 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/common/serial_protocol_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/CommandLatch.sv" into library work
+INFO: [VRFC 10-311] analyzing module CommandLatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterClockDivider.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterClockDivider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterCtrl.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterCtrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterDatapath.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterDatapath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterInputSync.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterInputSync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterIo.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterIo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/I2cMasterSubsystem.sv" into library work
+INFO: [VRFC 10-311] analyzing module I2cMasterSubsystem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/MasterSequencer.sv" into library work
+INFO: [VRFC 10-311] analyzing module MasterSequencer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SerialMasterCore.sv" into library work
+INFO: [VRFC 10-311] analyzing module SerialMasterCore
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterClockDivider.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterClockDivider
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterCtrl.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterCtrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterDatapath.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterDatapath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterInputSync.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterInputSync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterIo.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterIo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/SpiMasterSubsystem.sv" into library work
+INFO: [VRFC 10-311] analyzing module SpiMasterSubsystem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/master/Timer10ms.sv" into library work
+INFO: [VRFC 10-311] analyzing module Timer10ms
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tbdk5/Desktop/MAIN/0_Working/Portfolio/UVM_SPI_I2C/src/boards/master/TOP.sv" into library work
+INFO: [VRFC 10-311] analyzing module TOP

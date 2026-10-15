@@ -1,0 +1,262 @@
+{
+  "tests": [
+    {
+      "test": "SerialSmokeTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialSpiSmokeTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 0,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialI2cSmokeTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 0,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialProtocolSwitchTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {
+        "switch_forward": 1,
+        "switch_reverse": 1
+      }
+    },
+    {
+      "test": "SerialRandTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "stimulus_controls": 16,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialRandTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 17,
+      "expect_equal": {
+        "stimulus_controls": 16,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialRandTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 2026,
+      "expect_equal": {
+        "stimulus_controls": 16,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialCoverageClosureTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 8,
+        "i2c_verified": 8,
+        "spi_hit_mask": 495,
+        "i2c_hit_mask": 495,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SpiSlaveUnitTest",
+      "topology": "SPI_SLAVE_UNIT",
+      "topology_id": 1,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 12,
+        "i2c_verified": 0,
+        "spi_hit_mask": 511,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "I2cSlaveUnitTest",
+      "topology": "I2C_SLAVE_UNIT",
+      "topology_id": 2,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 0,
+        "i2c_verified": 13,
+        "i2c_hit_mask": 511,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialDualBusParallelTest",
+      "topology": "DUAL_SLAVE_UNIT",
+      "topology_id": 3,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {
+        "overlap_pairs": 1
+      }
+    },
+    {
+      "test": "SerialRepeatedPayloadTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialRepeatedPayloadTest",
+      "topology": "SPI_SLAVE_UNIT",
+      "topology_id": 1,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 0,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialRepeatedPayloadTest",
+      "topology": "I2C_SLAVE_UNIT",
+      "topology_id": 2,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 0,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialRepeatedPayloadTest",
+      "topology": "DUAL_SLAVE_UNIT",
+      "topology_id": 3,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 4,
+        "i2c_verified": 4,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialResetRecoveryTest",
+      "topology": "LOOPBACK",
+      "topology_id": 0,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 2,
+        "i2c_verified": 2,
+        "aborted_observed": 2,
+        "aborted_expected": 0,
+        "resets": 2,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialResetRecoveryTest",
+      "topology": "SPI_SLAVE_UNIT",
+      "topology_id": 1,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 2,
+        "i2c_verified": 0,
+        "aborted_observed": 1,
+        "aborted_expected": 1,
+        "resets": 1,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialResetRecoveryTest",
+      "topology": "I2C_SLAVE_UNIT",
+      "topology_id": 2,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 0,
+        "i2c_verified": 2,
+        "aborted_observed": 1,
+        "aborted_expected": 1,
+        "resets": 1,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialResetRecoveryTest",
+      "topology": "DUAL_SLAVE_UNIT",
+      "topology_id": 3,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 2,
+        "i2c_verified": 2,
+        "aborted_observed": 2,
+        "aborted_expected": 2,
+        "resets": 1,
+        "expected_diagnostics": 0
+      },
+      "expect_min": {}
+    },
+    {
+      "test": "SerialScoreboardNegativeTest",
+      "topology": "SPI_SLAVE_UNIT",
+      "topology_id": 1,
+      "seed": 1,
+      "expect_equal": {
+        "spi_verified": 3,
+        "i2c_verified": 0,
+        "expected_diagnostics": 3
+      },
+      "expect_min": {}
+    }
+  ]
+}

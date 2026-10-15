@@ -1,0 +1,90 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 15 15:12:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/serial_0/xsim_script.tcl
+# xsim {serial_0} -testplusarg UVM_TESTNAME=SerialRandTest -testplusarg UVM_NO_RELNOTES -cov_db_name SerialRandTest__LOOPBACK__seed17 -autoloadwcfg -runall -sv_seed 17
+Time resolution is 1 ps
+run -all
+UVM_INFO C:AMDDesignToo���5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:AMDDesignToo���5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0 ns: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0 ns: reporter [RNTST] Running test SerialRandTest...
+UVM_INFO C:AMDDesignToo���5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0 ns: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 8735 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=1 read=0 start_ns=2155 end_ns=8575 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 15175 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=1 read=1 start_ns=8595 end_ns=15015 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 23635 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=2 read=0 start_ns=17055 end_ns=23475 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 30075 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=2 read=1 start_ns=23495 end_ns=29915 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 38535 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=3 read=0 start_ns=31955 end_ns=38375 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 44975 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=3 read=1 start_ns=38395 end_ns=44815 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 53435 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=4 read=0 start_ns=46855 end_ns=53275 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 59875 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=4 read=1 start_ns=53295 end_ns=59715 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 68335 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=5 read=0 start_ns=61755 end_ns=68175 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 74775 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=5 read=1 start_ns=68195 end_ns=74615 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 88225 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=6 read=0 start_ns=76655 end_ns=88065 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 103845 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=6 read=1 start_ns=88075 end_ns=103685 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 117285 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=7 read=0 start_ns=105715 end_ns=117125 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 132905 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=7 read=1 start_ns=117135 end_ns=132745 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 141355 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=8 read=0 start_ns=134775 end_ns=141195 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 147795 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=8 read=1 start_ns=141215 end_ns=147635 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 156255 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=9 read=0 start_ns=149675 end_ns=156095 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 162695 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=9 read=1 start_ns=156115 end_ns=162535 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 176145 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=10 read=0 start_ns=164575 end_ns=175985 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 191765 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=10 read=1 start_ns=175995 end_ns=191605 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 205205 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=11 read=0 start_ns=193635 end_ns=205045 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 220825 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=11 read=1 start_ns=205055 end_ns=220665 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 229275 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=12 read=0 start_ns=222695 end_ns=229115 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 235715 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=12 read=1 start_ns=229135 end_ns=235555 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 249165 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=13 read=0 start_ns=237595 end_ns=249005 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 264785 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=13 read=1 start_ns=249015 end_ns=264625 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 273235 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=14 read=0 start_ns=266655 end_ns=273075 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 279675 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=0 epoch=1 config=14 read=1 start_ns=273095 end_ns=279515 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 293125 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=15 read=0 start_ns=281555 end_ns=292965 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 308745 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=15 read=1 start_ns=292975 end_ns=308585 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 322185 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=16 read=0 start_ns=310615 end_ns=322025 overlap=0
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/scoreboard/SerialScoreboard.svh(111) @ 337805 ns: uvm_test_top.env.scoreboard [WIRE_VERIFIED] endpoint=1 epoch=1 config=16 read=1 start_ns=322035 end_ns=337645 overlap=0
+UVM_INFO C:AMDDesignToo���5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 337835 ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO C:Users	bdk5DesktopMAIN_WorkingPortfolioUVM_SPI_I2C/tb/tests/SerialBaseTest.svh(31) @ 337835 ns: uvm_test_top [SERIAL_RESULT] {"spi_verified":18,"i2c_verified":14,"spi_observed":18,"i2c_observed":14,"aborted_observed":0,"aborted_expected":0,"pending":0,"expected_diagnostics":0,"unexpected_errors":0,"overlap_pairs":0,"resets":0,"switch_forward":4,"switch_reverse":3,"stimulus_controls":16,"spi_hit_mask":132,"i2c_hit_mask":133}
+UVM_INFO C:AMDDesignToo���5.2Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 337835 ns: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   38
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[SERIAL_RESULT]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[WIRE_VERIFIED]    32
+
+$finish called at time : 337835 ns : File "C:\AMDDesignTools\2025.2\Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 15 15:12:47 2026...

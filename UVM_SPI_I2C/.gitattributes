@@ -1,0 +1,4 @@
+# Preserve exact bytes for reproducible source and historical-artifact SHA-256 checks.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Simulator-generated formatting is retained as evidence.
+results/** -whitespace
