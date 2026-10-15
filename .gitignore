@@ -5,3 +5,6 @@
 **/.venv/
 /.Xil/
 /dfx_runtime.txt
+
+# Personal migration records are kept locally.
+/docs/portfolio_expansion_2026-10-15/

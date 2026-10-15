@@ -51,9 +51,3 @@
 | **[FPGAClaw](./FPGA_Automation)** | Manifest 기반 FPGA 시뮬레이션·빌드·보고서 자동화 | `BAT`, `Python`, `Tcl` |
 | **[ChipBook](./ChipBook)** | 반도체 설계 개념·도식·문제 풀이 웹 가이드북 | `HTML`, `CSS`, `JavaScript` |
 | **[UVM / AXI4 Seminars](./Primemas_Internship)** | 인턴십 기술 세미나 요약과 직접 구성한 대표 도식 | `UVM`, `AXI4`, `Documentation` |
-
----
-
-각 프로젝트의 README에서 현재 코드, 실행 방법과 검증 결과를 확인할 수 있습니다. 과거 보고서·발표자료는 원문을 보존하고, 새 검증과 범위를 구분해 안내합니다.
-
-[2026-10-15 코드 이관·검증·자료 보존 기록](./docs/portfolio_expansion_2026-10-15)
