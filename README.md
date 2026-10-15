@@ -50,4 +50,4 @@
 | **[Semiconductor Process](./Semiconductor_Display_Process)** | CMOS LDO 공정 흐름(Process Flow) 설계 | `Process Integration` |
 | **[FPGAClaw](./FPGA_Automation)** | Manifest 기반 FPGA 시뮬레이션·빌드·보고서 자동화 | `BAT`, `Python`, `Tcl` |
 | **[ChipBook](./ChipBook)** | 반도체 설계 개념·도식·문제 풀이 웹 가이드북 | `HTML`, `CSS`, `JavaScript` |
-| **[UVM / AXI4 Seminars](./Primemas_Internship)** | 공개 사양서 기반 UVM 검증 구조·AXI4 프로토콜 기술 정리 | `UVM`, `AXI4`, `Documentation` |
+| **[UVM / AXI4 Seminars](./Primemas_Internship)** | SPEC 기반 UVM 검증 구조 ·AXI4 Protocol 정리 | `UVM`, `AXI4`, `Documentation` |
