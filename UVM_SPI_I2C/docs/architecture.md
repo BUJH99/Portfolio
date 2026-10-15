@@ -1,5 +1,24 @@
 # Verification architecture
 
+```mermaid
+flowchart LR
+  Test[UVM Test] --> VSeq[SerialVirtualSeq]
+  VSeq --> VSeqr[SerialVirtualSequencer]
+  VSeqr --> Ctrl[SerialCtrlAgent]
+  VSeqr --> SPI[SpiAgent]
+  VSeqr --> I2C[I2cAgent]
+  Ctrl --> DUT[SerialDutHarness / RTL]
+  SPI <--> DUT
+  I2C <--> DUT
+  Ctrl --> Predictor[SerialPredictor]
+  Predictor --> SB[SerialScoreboard]
+  SPI --> SB
+  I2C --> SB
+  DUT --> Status[Status Monitor]
+  Status --> SB
+  SB --> Cov[Verified Completion Coverage]
+```
+
 ## Static and UVM boundaries
 
 `TbTop` separates clock generation, the initial reset request, watchdog, waveform setup, and UVM bootstrap. `SerialDutHarness` elaborates exactly one of four topologies. Its selected parameter is injected into the test; configuration mismatches terminate before stimulus.
