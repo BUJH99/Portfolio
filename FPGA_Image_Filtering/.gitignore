@@ -1,0 +1,14 @@
+# Local simulation, synthesis, and generated report files.
+/Code/.sim_build/
+/Code/results/
+/Report/benchmark_*/
+/Report/verification_*/
+**/xsim.dir/
+**/.Xil/
+*.log
+*.jou
+*.pb
+*.wdb
+*.wcfg
+*.str
+dfx_runtime.txt
