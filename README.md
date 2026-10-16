@@ -48,11 +48,48 @@ RTL 기반 SoC·하드웨어 가속기 설계, UVM 검증, 임베디드 시스�
 
 ## 🛠 Tech Stack
 
-| 분야 | 주요 기술·도구 |
-| :--- | :--- |
-| **RTL & SoC** | `Verilog`, `SystemVerilog`, `Vivado` |
-| **Verification** | `UVM 1.2`, `SVA`, `XSim`, `ModelSim` |
-| **Firmware** | `Embedded C`, `AVR`, `GPIO / ADC / Timer`, `UART / SPI / I2C` |
-| **Circuit Design** | `Cadence Virtuoso`, `ADE`, `OrCAD` |
-| **Software & Automation** | `C++20`, `Python`, `BAT`, `Tcl`, `CMake` |
-| **UI & Web** | `HTML`, `CSS`, `JavaScript`, `Electron`, `pygame-ce` |
+### RTL & SoC
+
+![Verilog](https://img.shields.io/badge/Verilog-HDL-1F6FEB?style=flat-square)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-RTL-1F6FEB?style=flat-square)
+![Vivado](https://img.shields.io/badge/Vivado-FPGA-E31837?style=flat-square)
+
+### Verification
+
+![UVM 1.2](https://img.shields.io/badge/UVM-1.2-6F42C1?style=flat-square)
+![SVA](https://img.shields.io/badge/SVA-Assertions-6F42C1?style=flat-square)
+![XSim](https://img.shields.io/badge/XSim-Simulation-6F42C1?style=flat-square)
+![ModelSim](https://img.shields.io/badge/ModelSim-Simulation-6F42C1?style=flat-square)
+
+### Firmware
+
+![Embedded C](https://img.shields.io/badge/C-Embedded-00599C?style=flat-square&logo=c&logoColor=white)
+![AVR](https://img.shields.io/badge/AVR-MCU-00979D?style=flat-square)
+![GPIO / ADC / Timer](https://img.shields.io/badge/GPIO%20%2F%20ADC%20%2F%20Timer-Peripherals-00979D?style=flat-square)
+![UART / SPI / I2C](https://img.shields.io/badge/UART%20%2F%20SPI%20%2F%20I2C-Interfaces-00979D?style=flat-square)
+
+### Circuit Design
+
+![Cadence Virtuoso](https://img.shields.io/badge/Cadence-Virtuoso-111111?style=flat-square)
+![ADE](https://img.shields.io/badge/ADE-Simulation-111111?style=flat-square)
+![OrCAD](https://img.shields.io/badge/OrCAD-PCB-22863A?style=flat-square)
+
+### Software & Automation
+
+![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Python](https://img.shields.io/badge/Python-Scripting-3776AB?style=flat-square&logo=python&logoColor=white)
+![BAT](https://img.shields.io/badge/BAT-Windows-4D4D4D?style=flat-square)
+![Tcl](https://img.shields.io/badge/Tcl-Automation-E4A62A?style=flat-square)
+![CMake](https://img.shields.io/badge/CMake-Build-064F8C?style=flat-square&logo=cmake&logoColor=white)
+
+### UI & Web
+
+![HTML](https://img.shields.io/badge/HTML-Web-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-Style-663399?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Web-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Electron](https://img.shields.io/badge/Electron-Desktop-47848F?style=flat-square&logo=electron&logoColor=white)
+![pygame-ce](https://img.shields.io/badge/pygame--ce-Game-3776AB?style=flat-square)
+
+## 📫 Contact
+
+**Email**: [eddlle15@gmail.com](mailto:eddlle15@gmail.com)
